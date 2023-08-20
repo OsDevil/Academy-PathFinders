@@ -383,6 +383,7 @@ header.hidden {
 
 .indexContent p {
 	margin: 30px 0;
+	text-align: justify;
 }
 
 .mainImage{
