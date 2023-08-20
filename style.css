@@ -29,6 +29,7 @@ body.loading {
 .header {
   background: #122331;
   position: fixed;
+  top: 0;
   width: 100%;
   margin: auto;
   display: flex;
