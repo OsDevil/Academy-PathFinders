@@ -41,6 +41,10 @@ body.loading {
   z-index: 1;
 }
 
+header.hidden {
+	transform: translateY(-100%);
+}
+
 .header a {
   text-decoration: none;
   color: #ffffff;
@@ -368,7 +372,7 @@ body.loading {
 /** -------------------------------------------------- INDEX -------------------------------------------------- **/
 
 .indexContent{
-	margin: 160px 10% 0 10%;
+	margin-top: 160px;
 }
 
 .indexContent h2{
@@ -394,12 +398,15 @@ body.loading {
 
 .encartPicto{
 	width: fit-content;
+	max-width: 100%;
 	padding: 0 20px;
 	margin: 20px auto;
 	background-color: #000000;
 	display: flex;
 	align-items: center;
 	border-radius: 10px;
+	font-size: 12px;
+	overflow: hidden;
 }
 
 .encartPicto a{
@@ -424,8 +431,8 @@ body.loading {
 }
 
 .encartPictoCitation{
-	width: 80%;
-	margin: 60px auto;
+	width: 60%;
+	margin: 80px auto 120px auto;
 	background-color: #122331;
 	display: flex;
 	align-items: center;
@@ -442,4 +449,10 @@ body.loading {
 	padding: 30px 30px 30px 10px;
 	text-align: justify;
 	margin: 0;
+}
+
+@media screen and (max-width: 970px) {
+	.encartPictoCitation{
+		width: 100%;
+	}
 }
