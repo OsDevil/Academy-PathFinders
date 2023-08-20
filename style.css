@@ -195,7 +195,7 @@ body.loading {
 }
 
 /* section */
-.section {
+/*.section {
   position: absolute;
   top: 0;
   left: 0;
@@ -212,7 +212,7 @@ body.loading {
   line-height: 6vw;
   color: #427dad;
   text-transform: uppercase;
-}
+}*/
 
 /* nav menu button */
 .menu-btn {
