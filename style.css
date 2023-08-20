@@ -20,12 +20,16 @@ body.loading {
     opacity: 0;
 }
 
+.spaceHead{
+  margin-bottom: 100px;
+}
+
 /* HEADER */
 
 .header {
   background: #122331;
-  position: relative;
-  max-width: 100vw;
+  position: fixed;
+  width: 100%;
   margin: auto;
   display: flex;
   align-items: center;
