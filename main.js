@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     container.addEventListener('click', (event) => {
-        if (event.target === container) {
+        if (event.target === container || event.target === fullscreenImage) {
             fullscreenImage.classList.remove('fullscreen');
             container.classList.remove('fullscreen-container');
         }
