@@ -41,13 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    function toggleAccordion(triggerAccordion) {
-      const content = triggerAccordion.nextElementSibling;
-    
-      content.classList.toggle('activeAccordion');
-      triggerAccordion.querySelector('.triangle').classList.toggle('triangle-down');
-    }
-
     // Fonctions d'écoute d'événement
     function setupBlocks() {
         const histoireBloc = document.querySelector(".histoireBloc");
@@ -89,3 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 });
+
+    function toggleAccordion(triggerAccordion) {
+      const content = triggerAccordion.nextElementSibling;
+    
+      content.classList.toggle('activeAccordion');
+      triggerAccordion.querySelector('.triangle').classList.toggle('triangle-down');
+    }
