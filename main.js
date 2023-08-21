@@ -86,6 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const fullscreenImage = document.getElementById('fullscreenImage');
     const container = document.querySelector('.containerGD');
+
+    container.addEventListener('click', () => {
+        if (isFullscreen) {
+            fullscreenImage.classList.remove('fullscreen');
+            container.classList.remove('fullscreen-container');
+            isFullscreen = false;
+        }
+    });
     
     fullscreenImage.addEventListener('click', () => {
         if (!isFullscreen) {
@@ -99,13 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    container.addEventListener('click', () => {
-        if (isFullscreen) {
-            fullscreenImage.classList.remove('fullscreen');
-            container.classList.remove('fullscreen-container');
-            isFullscreen = false;
-        }
-    });
+
 
 });
 
