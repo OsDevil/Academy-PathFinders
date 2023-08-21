@@ -19,7 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Fonctions de gestion des blocs
     function toggleBlock(block, contentBlock, otherBlock, otherContentBlock, introBlock) {
-        // ... (votre code de gestion des blocs)
+         if (block.classList.contains("activeBloc")) {
+            block.classList.remove("activeBloc");
+            contentBlock.classList.remove("activeContentBloc");
+        
+            if (!otherBlock.classList.contains("activeBloc")) {
+              introBlock.classList.remove("activeIntro");
+            }
+          } else {
+            block.classList.add("activeBloc");
+            contentBlock.classList.add("activeContentBloc");
+        
+            if (!otherBlock.classList.contains("activeBloc")) {
+              introBlock.classList.add("activeIntro");
+            }
+        
+            if (otherBlock.classList.contains("activeBloc")) {
+              otherBlock.classList.remove("activeBloc");
+              otherContentBlock.classList.remove("activeContentBloc");
+            }
+          }
     }
 
     // Fonctions d'écoute d'événement
