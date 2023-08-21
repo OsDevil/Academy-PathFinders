@@ -505,12 +505,19 @@ footer{
   align-items: center;
   box-shadow: 5px 5px 5px #000000;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
 }
 .histoireBloc{
   background-color: #de965750;
 }
 .ressourcesBloc{
   background-color: #b5f5fb50;
+}
+.histoireBloc:hover{
+  background-color: #de965782;
+}
+.ressourcesBloc:hover{
+  background-color: #b5f5fb82;
 }
 .histoireBloc:after, .ressourcesBloc:after {
   content: '+';
@@ -532,6 +539,12 @@ footer{
 .activeBloc:after{
   content: '-';
   transform: rotate(180deg);
+}
+.histoireBloc.activeBloc{
+  background-color: #de965782;
+}
+.ressourcesBloc.activeBloc{
+  background-color: #b5f5fb82;
 }
 .activeContentBloc {
     display: flex;
