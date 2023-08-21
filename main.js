@@ -88,18 +88,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector('.containerGD');
     
     fullscreenImage.addEventListener('click', () => {
-        isFullscreen = true;
-        fullscreenImage.classList.add('fullscreen');
-        container.classList.add('fullscreen-container');
-    });
-    
-    container.addEventListener('click', (event) => {
-        if ((event.target.classList.contains('fullscreen-container') || event.target.classList.contains('fullscreen')) && isFullscreen) {
+        if (!isFullscreen) {
+            fullscreenImage.classList.add('fullscreen');
+            container.classList.add('fullscreen-container');
+            isFullscreen = true;
+        } else {
             fullscreenImage.classList.remove('fullscreen');
             container.classList.remove('fullscreen-container');
             isFullscreen = false;
         }
     });
+
 
 });
 
