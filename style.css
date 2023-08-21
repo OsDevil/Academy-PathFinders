@@ -25,7 +25,7 @@ body.loading {
 }
 
 .spaceHead{
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 /** -------------------------------------------------- HEADER -------------------------------------------------- **/
@@ -471,3 +471,62 @@ footer{
 		width: 100%;
 	}
 }
+
+/** -------------------------------------------------- PAGES CONTENT -------------------------------------------------- **/
+
+.contentPage h1{
+	text-align: center;
+}
+.traitTitle{
+	height: 2px;
+	background: linear-gradient(to right, #09131B 0%, #C5C5C5 50%, #09131B 100%);
+	width: 50%;
+	margin: 15px auto 150px auto;
+}
+
+.introBloc {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+}
+.histoireBloc, .ressourcesBloc {
+  width: 30%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-shadow: 5px 5px 5px #000000;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.histoireBloc{
+  background-color: #de965750;
+}
+.ressourcesBloc{
+  background-color: #b5f5fb50;
+}
+.histoireBloc:after, .ressourcesBloc:after {
+  content: '+';
+  position: absolute;
+  right: 15px;
+  font-size: 24px;
+}
+.contentHistoire, .contentRessources {
+  display: none;
+  margin: 50px auto;
+  padding: 20px;
+  width: 90%;
+}
+.activeIntro{
+  box-shadow: 0px 5px 5px #000000;
+}
+.activeBloc:after{
+  content: '-';
+}
+.activeContentBloc{
+  display: flex;
+}
+
