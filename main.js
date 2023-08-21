@@ -81,6 +81,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.addEventListener('scroll', handleScroll);
+
+        const fullscreenImage = document.getElementById('fullscreenImage');
+    const container = document.querySelector('.container');
+
+    fullscreenImage.addEventListener('click', () => {
+        fullscreenImage.classList.add('fullscreen');
+        container.classList.add('fullscreen-container');
+    });
+
+    container.addEventListener('click', (event) => {
+        if (event.target === container) {
+            fullscreenImage.classList.remove('fullscreen');
+            container.classList.remove('fullscreen-container');
+        }
+    });
 });
 
 function toggleAccordion(triggerAccordion) {
