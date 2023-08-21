@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', handleScroll);
 
     const fullscreenImage = document.getElementById('fullscreenImage');
+    const fullscreenImageimg = document.getElementById('fullscreenImageimg');
     const container = document.querySelector('.containerGD');
     let isFullscreen = false;
     
@@ -95,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     container.addEventListener('click', (event) => {
-        if (isFullscreen && event.target !== fullscreenImage) {
+        if (isFullscreen && event.target !== fullscreenImageimg) {
             fullscreenImage.classList.remove('fullscreen');
             container.classList.remove('fullscreen-container');
             isFullscreen = false;
