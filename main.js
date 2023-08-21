@@ -82,20 +82,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    let isFullscreen = false;
+    
     const fullscreenImage = document.getElementById('fullscreenImage');
     const container = document.querySelector('.containerGD');
     
     fullscreenImage.addEventListener('click', () => {
+        isFullscreen = true;
         fullscreenImage.classList.add('fullscreen');
         container.classList.add('fullscreen-container');
     });
     
     container.addEventListener('click', (event) => {
-        if (event.target.classList.contains('fullscreen-container') || event.target.classList.contains('fullscreen')) {
-            setTimeout(() => {
-                fullscreenImage.classList.remove('fullscreen');
-                container.classList.remove('fullscreen-container');
-            }, 100); // Attendre 100 millisecondes avant de supprimer les classes
+        if ((event.target.classList.contains('fullscreen-container') || event.target.classList.contains('fullscreen')) && isFullscreen) {
+            fullscreenImage.classList.remove('fullscreen');
+            container.classList.remove('fullscreen-container');
+            isFullscreen = false;
         }
     });
 
