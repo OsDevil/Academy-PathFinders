@@ -145,6 +145,10 @@
     <div class="contentPage">
         {{ content }}
     </div>
+
+  {% if page.footer %}
+    {% include {{ page.footer }} %}
+  {% endif %}
     
   </body>
 </html>
