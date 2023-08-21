@@ -267,6 +267,9 @@ header.hidden {
 
 /* MEDIA QUERY */
 @media screen and (max-width: 970px) {
+  .header{
+    justify-content: center;
+  }
   .logo{
     display: flex;
     justify-content: center;
