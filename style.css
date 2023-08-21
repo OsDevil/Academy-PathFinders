@@ -513,16 +513,16 @@ footer{
   transition: 0.3s ease-in-out;
 }
 .histoireBloc{
-  background-color: #de965750;
+  background-color: #a16a1596;
 }
 .ressourcesBloc{
-  background-color: #b5f5fb50;
+  background-color: #4EA6ED96;
 }
 .histoireBloc:hover{
-  background-color: #de965782;
+  background-color: #a16a15;
 }
 .ressourcesBloc:hover{
-  background-color: #b5f5fb82;
+  background-color: #4EA6ED;
 }
 .histoireBloc:after, .ressourcesBloc:after {
   content: '+';
@@ -546,10 +546,10 @@ footer{
   transform: rotate(180deg);
 }
 .histoireBloc.activeBloc{
-  background-color: #de965782;
+  background-color: #a16a15;
 }
 .ressourcesBloc.activeBloc{
-  background-color: #b5f5fb82;
+  background-color: #4EA6ED;
 }
 .activeContentBloc {
     display: flex;
@@ -616,10 +616,10 @@ footer{
   display: block;
 }
 .levelUn .accordion-header {
-    color: #427dad;
+    color: #4694D4;
 }
 .levelDeux .accordion-header {
-    color: #ff652f;
+    color: #ED9266;
 }
 
 /* BLOCS GD */
