@@ -84,18 +84,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const fullscreenImage = document.getElementById('fullscreenImage');
     const container = document.querySelector('.containerGD');
-
+    
     fullscreenImage.addEventListener('click', () => {
         fullscreenImage.classList.add('fullscreen');
         container.classList.add('fullscreen-container');
     });
-
+    
     container.addEventListener('click', (event) => {
         if (event.target.classList.contains('fullscreen-container') || event.target.classList.contains('fullscreen')) {
-            fullscreenImage.classList.remove('fullscreen');
-            container.classList.remove('fullscreen-container');
+            setTimeout(() => {
+                fullscreenImage.classList.remove('fullscreen');
+                container.classList.remove('fullscreen-container');
+            }, 100); // Attendre 100 millisecondes avant de supprimer les classes
         }
     });
+
 });
 
 function toggleAccordion(triggerAccordion) {
