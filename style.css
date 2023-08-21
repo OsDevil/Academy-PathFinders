@@ -583,12 +583,11 @@ footer{
 /* ACCORDION */
 
 .accordion {
-  width: 300px;
+  width: 100%;
   margin: 20px auto;
 }
 
 .accordion-item {
-  border: 1px solid #ccc;
   margin-bottom: 5px;
 }
 
@@ -600,7 +599,7 @@ footer{
 }
 
 .accordion-header:hover {
-  background-color: #f0f0f0;
+  background-color: #122331;
 }
 
 .triangle {
