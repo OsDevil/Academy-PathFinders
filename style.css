@@ -270,10 +270,11 @@ header.hidden {
   .logo{
     display: flex;
     justify-content: center;
-    margin: auto;
   }
   .menu-btn {
     display: flex;
+    position: absolute;
+    left: 5%;
   }
 
   .header .menu-items {
