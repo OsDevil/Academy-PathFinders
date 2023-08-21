@@ -506,6 +506,7 @@ footer{
   box-shadow: 5px 5px 5px #000000;
   cursor: pointer;
   transition: background-color 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 .histoireBloc{
   background-color: #de965750;
@@ -518,21 +519,28 @@ footer{
   position: absolute;
   right: 15px;
   font-size: 24px;
+  transition: transform 0.3s;
 }
 .contentHistoire, .contentRessources {
   display: none;
   margin: 50px auto;
   padding: 20px;
   width: 90%;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s, transform 0.3s;
 }
 .activeIntro{
   box-shadow: 0px 5px 5px #000000;
 }
 .activeBloc:after{
   content: '-';
+  transform: rotate(90deg);
 }
 .activeContentBloc{
   display: flex;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media screen and (max-width: 970px) {
