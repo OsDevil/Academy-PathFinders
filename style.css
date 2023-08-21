@@ -14,18 +14,21 @@ body {
   background: #09131b;
   color: #ffffff;
   min-height: 100vh;
-  margin: 0 10%;
 }
 
 body.loading {
     opacity: 0;
 }
 
+.contentPage{
+    margin: 0 10%;
+}
+
 .spaceHead{
   margin-bottom: 100px;
 }
 
-/* HEADER */
+/** -------------------------------------------------- HEADER -------------------------------------------------- **/
 
 .header {
   background: #122331;
@@ -368,6 +371,15 @@ header.hidden {
   }
 }
 
+/** -------------------------------------------------- FOOTER -------------------------------------------------- **/
+
+footer{
+	background-color: #122331;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 /** -------------------------------------------------- INDEX -------------------------------------------------- **/
 
