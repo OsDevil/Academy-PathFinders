@@ -13,6 +13,7 @@ body {
   font-family: Montserrat, sans-serif;
   background-color: #09131b;
   color: #ffffff;
+  line-height: 1.6;
 }
 
 body.loading {
@@ -558,11 +559,20 @@ footer{
     height: -webkit-fill-available;
 }
 
+.centeredContent{
+    text-align: center;
+	margin: auto;
+	width: 60%;
+}
+
 @media screen and (max-width: 970px) {
 	.introBloc{
 		flex-direction: column;
 	}
 	.histoireBloc, .ressourcesBloc{
+		width: 100%;
+	}
+	.centeredContent{
 		width: 100%;
 	}
 }
