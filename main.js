@@ -83,9 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('scroll', handleScroll);
 });
 
-    function toggleAccordion(triggerAccordion) {
-      const content = triggerAccordion.nextElementSibling;
-    
-      content.classList.toggle('activeAccordion');
-      triggerAccordion.querySelector('.triangle').classList.toggle('triangle-down');
-    }
+function toggleAccordion(triggerAccordion) {
+  const content = triggerAccordion.nextElementSibling;
+
+  content.classList.toggle('activeAccordion');
+  triggerAccordion.querySelector('.triangle').classList.toggle('triangle-down');
+}
