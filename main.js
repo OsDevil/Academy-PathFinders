@@ -82,24 +82,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    let isFullscreen = false;
-    
     const fullscreenImage = document.getElementById('fullscreenImage');
     const container = document.querySelector('.containerGD');
+    let isFullscreen = false;
     
-    container.addEventListener('click', () => {
+    fullscreenImage.addEventListener('click', () => {
         if (!isFullscreen) {
             fullscreenImage.classList.add('fullscreen');
             container.classList.add('fullscreen-container');
             isFullscreen = true;
-        } else {
+        }
+    });
+    
+    container.addEventListener('click', (event) => {
+        if (isFullscreen && event.target !== fullscreenImage) {
             fullscreenImage.classList.remove('fullscreen');
             container.classList.remove('fullscreen-container');
             isFullscreen = false;
         }
     });
-
-
 
 });
 
