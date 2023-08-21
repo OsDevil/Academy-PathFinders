@@ -99,6 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    container.addEventListener('click', () => {
+        if (isFullscreen) {
+            fullscreenImage.classList.remove('fullscreen');
+            container.classList.remove('fullscreen-container');
+            isFullscreen = false;
+        }
+    });
 
 });
 
