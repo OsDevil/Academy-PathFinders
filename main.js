@@ -86,16 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const fullscreenImage = document.getElementById('fullscreenImage');
     const container = document.querySelector('.containerGD');
-
-    container.addEventListener('click', () => {
-        if (isFullscreen) {
-            fullscreenImage.classList.remove('fullscreen');
-            container.classList.remove('fullscreen-container');
-            isFullscreen = false;
-        }
-    });
     
-    fullscreenImage.addEventListener('click', () => {
+    container.addEventListener('click', () => {
         if (!isFullscreen) {
             fullscreenImage.classList.add('fullscreen');
             container.classList.add('fullscreen-container');
