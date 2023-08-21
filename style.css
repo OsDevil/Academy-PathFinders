@@ -520,12 +520,12 @@ footer{
   background-color: #09131b;
 }
 .histoireBloc:hover{
-  background-color: #09131b;
-  border-color: #09131b;
+  background-color: #122331;
+  border-color: #122331;
 }
 .ressourcesBloc:hover{
-  background-color: #09131b;
-  border-color: #09131b;
+  background-color: #122331;
+  border-color: #122331;
 }
 .histoireBloc:after, .ressourcesBloc:after {
   content: '+';
@@ -549,12 +549,12 @@ footer{
   transform: rotate(180deg);
 }
 .histoireBloc.activeBloc{
-  background-color: #09131b;
-  border-color: #09131b;
+  background-color: #122331;
+  border-color: #122331;
 }
 .ressourcesBloc.activeBloc{
-  background-color: #09131b;
-  border-color: #09131b;
+  background-color: #122331;
+  border-color: #122331;
 }
 .activeContentBloc {
     display: flex;
