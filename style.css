@@ -537,8 +537,7 @@ footer{
     display: flex;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
-    margin: 50px auto;
-    padding: 20px;
+    padding: 50px 30px;
     height: -webkit-fill-available;
 }
 
