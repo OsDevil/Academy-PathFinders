@@ -22,6 +22,7 @@ body.loading {
 
 .contentPage{
     margin: 0 10%;
+    min-height: calc(100vh - 190px);
 }
 
 .spaceHead{
