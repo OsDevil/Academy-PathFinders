@@ -509,20 +509,23 @@ footer{
   display: flex;
   align-items: center;
   box-shadow: 5px 5px 5px #000000;
+  border: 1px solid #000000;
   cursor: pointer;
   transition: 0.3s ease-in-out;
 }
 .histoireBloc{
-  background-color: #a16a1596;
+  background-color: #09131b;
 }
 .ressourcesBloc{
-  background-color: #4EA6ED96;
+  background-color: #09131b;
 }
 .histoireBloc:hover{
-  background-color: #a16a15;
+  background-color: #09131b;
+  border-color: #09131b;
 }
 .ressourcesBloc:hover{
-  background-color: #4EA6ED;
+  background-color: #09131b;
+  border-color: #09131b;
 }
 .histoireBloc:after, .ressourcesBloc:after {
   content: '+';
@@ -546,10 +549,12 @@ footer{
   transform: rotate(180deg);
 }
 .histoireBloc.activeBloc{
-  background-color: #a16a15;
+  background-color: #09131b;
+  border-color: #09131b;
 }
 .ressourcesBloc.activeBloc{
-  background-color: #4EA6ED;
+  background-color: #09131b;
+  border-color: #09131b;
 }
 .activeContentBloc {
     display: flex;
