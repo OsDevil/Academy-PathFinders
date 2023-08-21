@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 
-        const fullscreenImage = document.getElementById('fullscreenImage');
-    const container = document.querySelector('.container');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+    const container = document.querySelector('.containerGD');
 
     fullscreenImage.addEventListener('click', () => {
         fullscreenImage.classList.add('fullscreen');
