@@ -13,7 +13,6 @@ body {
   font-family: Montserrat, sans-serif;
   background-color: #09131b;
   color: #ffffff;
-  min-height: 100vh;
 }
 
 body.loading {
