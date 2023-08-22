@@ -716,6 +716,12 @@ footer{
     border: 1px solid #000000;
     border-radius: 15px;
 }
+.image-blockGD.fullscreenImage:hover {
+    cursor: pointer;
+}
+.image-blockGD.fullscreenImage.fullscreen:hover {
+    cursor: default;
+}
 .captionGD {
     text-align: center;
     font-style: italic;
