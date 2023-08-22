@@ -82,11 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Sélectionnez toutes les images et conteneurs en utilisant leurs classes
+    // Gestion de l'affichage plein écran des images
     const fullscreenImages = document.querySelectorAll('.fullscreenImage');
     const containers = document.querySelectorAll('.containerGD');
     
-    // Parcourez toutes les images pour ajouter des écouteurs d'événements
     fullscreenImages.forEach((fullscreenImage, index) => {
         fullscreenImage.addEventListener('click', (event) => {
             event.stopPropagation(); // Empêche la propagation de l'événement aux parents
@@ -103,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     
-    // Ajoutez un écouteur d'événement au document pour capturer les clics sur n'importe quelle partie
     document.addEventListener('click', () => {
         fullscreenImages.forEach((fullscreenImage, index) => {
             if (fullscreenImage.classList.contains('fullscreen')) {
