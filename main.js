@@ -82,24 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    const fullscreenImage = document.getElementById('fullscreenImage');
-    const fullscreenImageimg = document.getElementById('fullscreenImageimg');
-    const container = document.querySelector('.containerGD');
+    const fullscreenImages = document.querySelectorAll('.fullscreenImage');
+    const containers = document.querySelectorAll('.containerGD');
     let isFullscreen = false;
     
-    fullscreenImage.addEventListener('click', () => {
-        if (!isFullscreen) {
-            fullscreenImage.classList.add('fullscreen');
-            container.classList.add('fullscreen-container');
-            isFullscreen = true;
-        }
+    // Parcourez toutes les images pour ajouter des écouteurs d'événements
+    fullscreenImages.forEach((fullscreenImage, index) => {
+        fullscreenImage.addEventListener('click', () => {
+            if (!isFullscreen) {
+                fullscreenImage.classList.add('fullscreen');
+                containers[index].classList.add('fullscreen-container');
+                isFullscreen = true;
+            }
+        });
     });
     
-    container.addEventListener('click', (event) => {
-        if (isFullscreen && event.target !== fullscreenImageimg) {
-            fullscreenImage.classList.remove('fullscreen');
-            container.classList.remove('fullscreen-container');
-            isFullscreen = false;
+    // Ajoutez un écouteur d'événement au document pour capturer les clics sur n'importe quelle partie
+    document.addEventListener('click', (event) => {
+        if (isFullscreen) {
+            fullscreenImages.forEach((fullscreenImage, index) => {
+                if (event.target !== fullscreenImage && !fullscreenImage.contains(event.target)) {
+                    fullscreenImage.classList.remove('fullscreen');
+                    containers[index].classList.remove('fullscreen-container');
+                    isFullscreen = false;
+                }
+            });
         }
     });
 
