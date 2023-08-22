@@ -25,7 +25,7 @@ body.loading {
 .spaceHead{
   margin-bottom: 150px;
 }
-.blackblock{
+.imgback{
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -35,7 +35,7 @@ body.loading {
 	z-index: 999;
 	display: none;
 }
-.activeblackblock{
+.activeimgback{
 	display: block;
 }
 
