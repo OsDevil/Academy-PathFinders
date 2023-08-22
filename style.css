@@ -680,6 +680,11 @@ footer{
     z-index: 999;
 }
 
+.customGreenBold{
+	font-weight: 600;
+	color: #32bf6d;
+}
+
 @media screen and (max-width: 970px) {
     .containerGD {
         flex-direction: column;
