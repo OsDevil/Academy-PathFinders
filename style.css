@@ -31,7 +31,7 @@ body.loading {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.9);
 	z-index: 999;
 	display: none;
 }
@@ -716,11 +716,6 @@ footer{
     border: 1px solid #000000;
     border-radius: 15px;
 }
-.image-blockGD img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}
 .captionGD {
     text-align: center;
     font-style: italic;
@@ -744,11 +739,8 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    max-height: 100%;
-    object-fit: contain;
     max-width: 80%!important;
     z-index: 1000;
-    cursor: zoom-out;
 }
 .fullscreen img{
 	border-radius: 15px;
@@ -762,7 +754,6 @@ footer{
 }
 .image-blockGD .image-container img {
     width: 100%;
-    max-width: -webkit-fill-available;
     max-height: 70vh;
     display: block;
     object-fit: contain;
