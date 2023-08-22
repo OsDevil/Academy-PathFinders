@@ -82,33 +82,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener('scroll', handleScroll);
 
+    // Sélectionnez toutes les images et conteneurs en utilisant leurs classes
     const fullscreenImages = document.querySelectorAll('.fullscreenImage');
     const containers = document.querySelectorAll('.containerGD');
-    let isFullscreen = false;
     
     // Parcourez toutes les images pour ajouter des écouteurs d'événements
     fullscreenImages.forEach((fullscreenImage, index) => {
-        fullscreenImage.addEventListener('click', () => {
-            if (!isFullscreen) {
+        fullscreenImage.addEventListener('click', (event) => {
+            event.stopPropagation(); // Empêche la propagation de l'événement aux parents
+            if (!fullscreenImage.classList.contains('fullscreen')) {
+                fullscreenImages.forEach(image => image.classList.remove('fullscreen'));
+                containers.forEach(container => container.classList.remove('fullscreen-container'));
+                
                 fullscreenImage.classList.add('fullscreen');
                 containers[index].classList.add('fullscreen-container');
-                isFullscreen = true;
+            } else if (event.target !== fullscreenImage.querySelector('.fullscreenImageimg')) {
+                fullscreenImage.classList.remove('fullscreen');
+                containers[index].classList.remove('fullscreen-container');
             }
         });
     });
     
     // Ajoutez un écouteur d'événement au document pour capturer les clics sur n'importe quelle partie
-    document.addEventListener('click', (event) => {
-        if (isFullscreen) {
-            fullscreenImages.forEach((fullscreenImage, index) => {
-                if (event.target !== fullscreenImage && !fullscreenImage.contains(event.target)) {
-                    fullscreenImage.classList.remove('fullscreen');
-                    containers[index].classList.remove('fullscreen-container');
-                    isFullscreen = false;
-                }
-            });
-        }
+    document.addEventListener('click', () => {
+        fullscreenImages.forEach((fullscreenImage, index) => {
+            if (fullscreenImage.classList.contains('fullscreen')) {
+                fullscreenImage.classList.remove('fullscreen');
+                containers[index].classList.remove('fullscreen-container');
+            }
+        });
     });
+
 
 });
 
