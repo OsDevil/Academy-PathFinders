@@ -653,6 +653,10 @@ footer{
     list-style-type: disc;
     padding-left: 20px;
 }
+.customGreenBold{
+	font-weight: 600;
+	color: #32bf6d;
+}
 
 .fullscreen {
     position: fixed;
@@ -679,10 +683,8 @@ footer{
     height: 100%;
     z-index: 999;
 }
-
-.customGreenBold{
-	font-weight: 600;
-	color: #32bf6d;
+.fullscreen-container li .customGreenBold {
+    color: #00000000;
 }
 
 @media screen and (max-width: 970px) {
