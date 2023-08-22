@@ -699,7 +699,8 @@ footer{
 }
 .image-blockGD, .text-blockGD {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
+    margin: 10px;
     box-sizing: border-box;
 }
 .image-blockGD.fullscreenImage {
