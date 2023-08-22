@@ -84,29 +84,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Gestion de l'affichage plein écran des images
     const fullscreenImages = document.querySelectorAll('.fullscreenImage');
-    const containers = document.querySelectorAll('.containerGD');
+    const imgBackDiv = document.querySelector('.imgback');
     
     fullscreenImages.forEach((fullscreenImage, index) => {
         fullscreenImage.addEventListener('click', (event) => {
-            event.stopPropagation(); // Empêche la propagation de l'événement aux parents
+            event.stopPropagation();
+            
             if (!fullscreenImage.classList.contains('fullscreen')) {
                 fullscreenImages.forEach(image => image.classList.remove('fullscreen'));
-                containers.forEach(container => container.classList.remove('fullscreen-container'));
-                
+                imgBackDiv.classList.add('activeimgback');
                 fullscreenImage.classList.add('fullscreen');
-                containers[index].classList.add('fullscreen-container');
             } else if (event.target !== fullscreenImage.querySelector('.fullscreenImageimg')) {
                 fullscreenImage.classList.remove('fullscreen');
-                containers[index].classList.remove('fullscreen-container');
+                imgBackDiv.classList.remove('activeimgback');
             }
         });
     });
     
     document.addEventListener('click', () => {
-        fullscreenImages.forEach((fullscreenImage, index) => {
+        fullscreenImages.forEach((fullscreenImage) => {
             if (fullscreenImage.classList.contains('fullscreen')) {
                 fullscreenImage.classList.remove('fullscreen');
-                containers[index].classList.remove('fullscreen-container');
+                imgBackDiv.classList.remove('activeimgback');
             }
         });
     });
