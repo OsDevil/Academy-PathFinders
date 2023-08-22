@@ -701,6 +701,9 @@ footer{
 	font-weight: 600;
 	color: #32bf6d;
 }
+.customGrey{
+	color: #c5c5c5;
+}
 
 .fullscreen {
     position: fixed;
