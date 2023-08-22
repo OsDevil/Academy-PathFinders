@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fullscreenImages.forEach((fullscreenImage, index) => {
         fullscreenImage.addEventListener('click', (event) => {
             event.stopPropagation();
-            
+    
             if (!fullscreenImage.classList.contains('fullscreen')) {
-                fullscreenImages.forEach(image => image.classList.remove('fullscreen'));
+                closeFullscreenImages();
                 imgBackDiv.classList.add('activeimgback');
                 fullscreenImage.classList.add('fullscreen');
             } else if (event.target !== fullscreenImage.querySelector('.fullscreenImageimg')) {
@@ -102,13 +102,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     document.addEventListener('click', () => {
+        closeFullscreenImages();
+    });
+    
+    function closeFullscreenImages() {
         fullscreenImages.forEach((fullscreenImage) => {
             if (fullscreenImage.classList.contains('fullscreen')) {
                 fullscreenImage.classList.remove('fullscreen');
                 imgBackDiv.classList.remove('activeimgback');
             }
         });
-    });
+    }
+
 
 
 });
