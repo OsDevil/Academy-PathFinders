@@ -756,7 +756,6 @@ footer{
 	border-radius: 15px;
 }
 .image-container {
-    max-width: 80%;
     max-height: 80vh;
     margin: 0 auto;
     position: relative;
