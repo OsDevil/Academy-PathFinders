@@ -554,6 +554,9 @@ footer{
     width: 90%;
     opacity: 0;
 }
+.contentHistoire{
+	font-style: italic;
+}
 .activeIntro{
   box-shadow: 0px 5px 5px #000000;
   transition: 0.3s ease-in-out;
