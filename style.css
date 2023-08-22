@@ -541,7 +541,7 @@ footer{
   transition: transform 0.3s;
 }
 .contentHistoire, .contentRessources {
-    display: flex;
+    display: none;
     height: 0;
     width: 90%;
     opacity: 0;
