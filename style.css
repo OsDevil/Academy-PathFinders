@@ -738,8 +738,8 @@ footer{
     height: 100%;
     z-index: 999;
 }
-.fullscreen-container li .customGreenBold {
-    color: #00000000;
+.fullscreen-container .text-blockGD {
+    display: none;
 }
 
 @media screen and (max-width: 970px) {
