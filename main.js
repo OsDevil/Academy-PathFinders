@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 closeFullscreenImages();
                 imgBackDiv.classList.add('activeimgback');
                 fullscreenImage.classList.add('fullscreen');
-            } else if (event.target !== fullscreenImage.querySelector('.fullscreenImageimg')) {
+            } else if (event.target.closest('.fullscreenImage')) {
                 fullscreenImage.classList.remove('fullscreen');
                 imgBackDiv.classList.remove('activeimgback');
             }
@@ -113,8 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
-
 
 });
 
