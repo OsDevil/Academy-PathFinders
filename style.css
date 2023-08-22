@@ -702,6 +702,11 @@ footer{
     padding: 20px;
     box-sizing: border-box;
 }
+.image-blockGD.fullscreenImage {
+    box-shadow: 5px 5px 5px #000000;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
 .image-blockGD img {
     width: 100%;
     height: auto;
@@ -735,6 +740,9 @@ footer{
     max-width: 80%!important;
     z-index: 1000;
     cursor: zoom-out;
+}
+.fullscreen img{
+	border-radius: 15px;
 }
 
 @media screen and (max-width: 970px) {
