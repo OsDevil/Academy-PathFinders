@@ -663,6 +663,9 @@ footer{
   padding-left: 20px;
   border-left: 1px dashed #3e3e3e;
 }
+.accordion-content ul{
+	margin-left: 20px;
+}
 .activeAccordion {
   display: block;
 }
