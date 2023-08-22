@@ -435,6 +435,8 @@ footer{
 	color: #c5c5c5;
 	text-decoration: underline;
 	font-style: italic;
+	display: flex;
+    	align-items: center;
 }
 
 .encartPicto a img {
@@ -562,7 +564,44 @@ footer{
     transition: opacity 0.3s ease-in-out;
     padding: 50px 30px;
     height: -webkit-fill-available;
+    flew-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
 }
+.ressourcesCol {
+    width: fit-content;
+    min-width: 25%;
+}
+.encartRessource{
+    width: fit-content;
+    max-width: 100%;
+    padding: 10px;
+    border-left: 1px solid #122331;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    margin: 10px 10px 10px 0;
+}
+.encartRessource:hover {
+    background-color: #122331;
+    transition: 0.2s ease-in-out;
+    border-left-color: #c5c5c5;
+}
+.encartRessource a {
+    cursor: pointer;
+    color: #c5c5c5;
+    text-decoration: none;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+}
+.encartRessource a img {
+    width: 30px;
+    margin-right: 10px;
+}
+
 
 .centeredContent{
     text-align: center;
