@@ -753,6 +753,20 @@ footer{
 .fullscreen img{
 	border-radius: 15px;
 }
+.image-container {
+    max-width: 80%;
+    max-height: 80vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.image-blockGD .image-container img {
+    width: 100%;
+    max-width: -webkit-fill-available;
+    max-height: 70vh;
+    display: block;
+    object-fit: contain;
+}
 
 @media screen and (max-width: 970px) {
     .containerGD {
