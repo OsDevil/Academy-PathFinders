@@ -571,6 +571,7 @@ footer{
 .ressourcesCol {
     width: fit-content;
     min-width: 25%;
+    overflow: hidden;
 }
 .encartRessource{
     width: fit-content;
