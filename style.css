@@ -20,7 +20,7 @@ body.loading {
 .contentPage{
     margin: 0 10%;
     min-height: calc(100vh - 190px);
-    max-width: 1200px;
+    max-width: 1400px;
 }
 .spaceHead{
   margin-bottom: 150px;
@@ -52,7 +52,7 @@ p{
 	}
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1600px) {
 	.contentPage{
 	    margin: 0 auto;
 	}
