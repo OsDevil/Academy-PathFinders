@@ -564,9 +564,9 @@ footer{
     transition: opacity 0.3s ease-in-out;
     padding: 50px 30px;
     height: -webkit-fill-available;
-    flew-wrap: wrap;
+    flex-wrap: wrap;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .ressourcesCol {
     width: fit-content;
