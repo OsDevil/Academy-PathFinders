@@ -706,7 +706,6 @@ footer{
 .containerGD {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     align-content: center;
 }
 .image-blockGD, .text-blockGD {
@@ -714,6 +713,12 @@ footer{
     padding: 10px;
     margin: 10px;
     box-sizing: border-box;
+}
+.text-blockGD{
+	flex: 0.5;
+}
+.fullGD{
+	flex-direction: column;
 }
 .image-blockGD.fullscreenImage {
     box-shadow: 5px 5px 5px #000000;
