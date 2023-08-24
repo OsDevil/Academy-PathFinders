@@ -474,6 +474,10 @@ footer{
 	.colFoot1.activeFoot h3:after, .colFoot2.activeFoot h3:after, .colFoot3.activeFoot h3:after, .colFoot4.activeFoot h3:after {
 	    content: '▲';
 	}
+	.colFoot1 ul, .colFoot2 ul, .colFoot3 ul, .colFoot4 ul {
+	    overflow: hidden;
+	    height: 0px;
+	}
 	.colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
 	    text-align: center;
 	}
