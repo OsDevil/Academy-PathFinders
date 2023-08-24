@@ -49,13 +49,17 @@ document.addEventListener("DOMContentLoaded", () => {
         const contentRessources = document.querySelector(".contentRessources");
         const contentIntro = document.querySelector(".contentIntro");
 
-        histoireBloc.addEventListener("click", function () {
-            toggleBlock(histoireBloc, contentHistoire, ressourcesBloc, contentRessources, contentIntro);
-        });
+        if (histoireBloc && ressourcesBloc && contentHistoire && contentRessources && contentIntro) {
 
-        ressourcesBloc.addEventListener("click", function () {
-            toggleBlock(ressourcesBloc, contentRessources, histoireBloc, contentHistoire, contentIntro);
-        });
+            histoireBloc.addEventListener("click", function () {
+                toggleBlock(histoireBloc, contentHistoire, ressourcesBloc, contentRessources, contentIntro);
+            });
+    
+            ressourcesBloc.addEventListener("click", function () {
+                toggleBlock(ressourcesBloc, contentRessources, histoireBloc, contentHistoire, contentIntro);
+            });
+
+        }
     }
 
     // Initialisation des blocs
@@ -85,33 +89,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Gestion de l'affichage plein écran des images
     const fullscreenImages = document.querySelectorAll('.fullscreenImage');
     const imgBackDiv = document.querySelector('.imgback');
+
+    if (fullscreenImages && imgBackDiv) {
     
-    fullscreenImages.forEach((fullscreenImage, index) => {
-        fullscreenImage.addEventListener('click', (event) => {
-            event.stopPropagation();
-    
-            if (!fullscreenImage.classList.contains('fullscreen')) {
-                closeFullscreenImages();
-                imgBackDiv.classList.add('activeimgback');
-                fullscreenImage.classList.add('fullscreen');
-            } else if (event.target.closest('.fullscreenImage')) {
-                fullscreenImage.classList.remove('fullscreen');
-                imgBackDiv.classList.remove('activeimgback');
-            }
+        fullscreenImages.forEach((fullscreenImage, index) => {
+            fullscreenImage.addEventListener('click', (event) => {
+                event.stopPropagation();
+        
+                if (!fullscreenImage.classList.contains('fullscreen')) {
+                    closeFullscreenImages();
+                    imgBackDiv.classList.add('activeimgback');
+                    fullscreenImage.classList.add('fullscreen');
+                } else if (event.target.closest('.fullscreenImage')) {
+                    fullscreenImage.classList.remove('fullscreen');
+                    imgBackDiv.classList.remove('activeimgback');
+                }
+            });
         });
-    });
-    
-    document.addEventListener('click', () => {
-        closeFullscreenImages();
-    });
-    
-    function closeFullscreenImages() {
-        fullscreenImages.forEach((fullscreenImage) => {
-            if (fullscreenImage.classList.contains('fullscreen')) {
-                fullscreenImage.classList.remove('fullscreen');
-                imgBackDiv.classList.remove('activeimgback');
-            }
+        
+        document.addEventListener('click', () => {
+            closeFullscreenImages();
         });
+        
+        function closeFullscreenImages() {
+            fullscreenImages.forEach((fullscreenImage) => {
+                if (fullscreenImage.classList.contains('fullscreen')) {
+                    fullscreenImage.classList.remove('fullscreen');
+                    imgBackDiv.classList.remove('activeimgback');
+                }
+            });
+        }
     }
 
     //Gestion du wrapper footer - mobile
