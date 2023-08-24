@@ -139,7 +139,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toggleAccordion(triggerAccordion) {
   const content = triggerAccordion.nextElementSibling;
+  const currentHeight = content.style.height;
+
+  if (currentHeight === "0px" || currentHeight === "") {
+    content.style.height = content.scrollHeight + "px";
+  } else {
+    content.style.height = "0px";
+  }
 
   content.classList.toggle('activeAccordion');
   triggerAccordion.querySelector('.triangle').classList.toggle('triangle-down');
 }
+
