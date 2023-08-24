@@ -560,7 +560,7 @@ footer{
 }
 #fs-frm [type="submit"],
 #fs-frm [type="reset"] {
-  margin-bottom: 0;
+  margin: 0 auto;
 }
 #fs-frm select {
   text-transform: none;
