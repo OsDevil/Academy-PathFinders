@@ -11,18 +11,24 @@
     </div>
     <div class="colFoot2">
       <h3>Titre footer 2</h3>
-      <ul>
-        <li>Section 1</li>
-        <li>Section 2</li>
-      </ul>
-    </div>
-    <div class="colFoot3">
-      <h3>Titre footer 3</h3>
-      <ul>
-        <li>Section 1</li>
-        <li>Section 2</li>
-        <li>Section 3</li>
-      </ul>
+        <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/xpzgdyjy" method="post">
+          <fieldset id="fs-frm-inputs">
+            <div class="infosForm">
+              <div class="infosFormPseudo">
+                <label for="full-name"></label>
+                <input type="text" name="name" id="full-name" placeholder="Votre pseudo" required="">
+              </div>
+              <div class="infosFormMail">
+                <label for="email-address"></label>
+                <input type="email" name="_replyto" id="email-address" placeholder="email@mon-domaine.fr" required="">
+              </div>
+            </div>
+            <label for="message"></label>
+            <textarea rows="5" name="message" id="message" placeholder="Votre message ici..." required=""></textarea>
+            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+          </fieldset>
+          <input type="submit" value="Envoyer">
+        </form>
     </div>
     <div class="colFoot4">
       <h3>Réseaux</h3>
