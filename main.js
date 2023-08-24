@@ -114,6 +114,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    //Gestion du wrapper footer
+    const footerColumns = document.querySelectorAll(".colFoot1, .colFoot2, .colFoot3, .colFoot4");
+
+    footerColumns.forEach(column => {
+        const title = column.querySelector("h3");
+        const list = column.querySelector("ul");
+
+        title.addEventListener("click", function() {
+            if (list.style.display === "block") {
+                list.style.display = "none";
+                column.classList.remove("activeFoot");
+            } else {
+                list.style.display = "block";
+                column.classList.add("activeFoot");
+            }
+        });
+    });
+
 });
 
 function toggleAccordion(triggerAccordion) {
