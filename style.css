@@ -485,34 +485,26 @@ footer{
 
 /** -------------------------------------------------- INDEX -------------------------------------------------- **/
 
-.indexContent{
-	margin-top: 160px;
-}
-
-.indexContent h2{
+h2{
 	margin: 50px 0;
 	text-align: center;
 	font-size: 30px;
 }
-
-.indexContent p {
+p {
 	margin: 30px 0;
 	text-align: justify;
 	line-height: 1.6;
 	color: #c5c5c5;
 }
-
 .mainImage{
 	display: flex;
 	justify-content: center;
 	width: 100%;
 }
-
 .mainImage img{
 	max-width: 300px;
 	height: auto;
 }
-
 .encartPicto{
 	width: fit-content;
 	max-width: 100%;
@@ -525,7 +517,6 @@ footer{
 	font-size: 12px;
 	overflow: hidden;
 }
-
 .encartPicto a{
 	cursor: pointer;
 	color: #c5c5c5;
@@ -534,21 +525,17 @@ footer{
 	display: flex;
     	align-items: center;
 }
-
 .encartPicto a img {
 	width: 30px;
 	margin: 20px 20px 20px 0;
 }
-
 .encartPicto p{
 	padding: 0 10px;
 }
-
 .encartPicto img {
 	width: 30px;
 	margin: 20px;
 }
-
 .encartPictoCitation{
 	width: 60%;
 	margin: 80px auto 120px auto;
@@ -558,12 +545,10 @@ footer{
 	border-radius: 10px;
 	box-shadow: 3px 3px 5px #000000;
 }
-
 .encartPictoCitation img {
 	width: 30px;
 	margin: 20px;
 }
-
 .encartPictoCitation p {
 	padding: 30px 30px 30px 10px;
 	text-align: justify;
