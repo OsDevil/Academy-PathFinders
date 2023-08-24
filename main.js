@@ -114,23 +114,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    //Gestion du wrapper footer
-    const footerColumns = document.querySelectorAll(".colFoot1, .colFoot2, .colFoot3, .colFoot4");
+    //Gestion du wrapper footer - mobile
+    if (window.innerWidth < 970) {
 
-    footerColumns.forEach(column => {
-        const title = column.querySelector("h3");
-        const list = column.querySelector("ul");
-
-        title.addEventListener("click", function() {
-            if (column.classList.contains("activeFoot")) {
-                list.style.height = "0";
-                column.classList.remove("activeFoot");
-            } else {
-                list.style.height = list.scrollHeight + "px";
-                column.classList.add("activeFoot");
-            }
+        const footerColumns = document.querySelectorAll(".colFoot1, .colFoot2, .colFoot3, .colFoot4");
+    
+        footerColumns.forEach(column => {
+            const title = column.querySelector("h3");
+            const list = column.querySelector("ul");
+    
+            title.addEventListener("click", function() {
+                if (column.classList.contains("activeFoot")) {
+                    list.style.height = "0";
+                    column.classList.remove("activeFoot");
+                } else {
+                    list.style.height = list.scrollHeight + "px";
+                    column.classList.add("activeFoot");
+                }
+            });
         });
-    });
+    }
 
 });
 
