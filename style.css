@@ -438,6 +438,9 @@ footer{
 .colFoot1 h3, .colFoot2 h3, .colFoot3 h3, .colFoot4 h3 {
     margin-bottom: 50px;
 }
+.colFoot1 ul, .colFoot2 ul, .colFoot3 ul, .colFoot4 ul {
+    display: block;
+}
 .colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
     text-align: left;
     list-style: none;
@@ -472,7 +475,7 @@ footer{
 	}
 	.colFoot1 ul,
 	.colFoot2 ul,
-	.colFoot3t ul,
+	.colFoot3 ul,
 	.colFoot4 ul {
 		display: none;
 	}
