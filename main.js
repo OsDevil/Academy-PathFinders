@@ -139,12 +139,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function toggleAccordion(triggerAccordion) {
   const content = triggerAccordion.nextElementSibling;
-  const currentMaxHeight = content.style.maxHeight;
+  const currentHeight = content.style.height;
 
-  if (currentMaxHeight === "0px" || currentMaxHeight === "") {
-    content.style.maxHeight = "20000px";
+  if (currentHeight === "0px" || currentHeight === "") {
+    content.style.height = "auto";
   } else {
-    content.style.maxHeight = "0px";
+    content.style.height = "0px";
   }
 
   content.classList.toggle('activeAccordion');
