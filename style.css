@@ -582,7 +582,7 @@ footer{
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     padding: 50px 30px;
-    height: -webkit-fill-available;
+    height: fit-content;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
