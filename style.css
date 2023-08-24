@@ -109,6 +109,9 @@ header.hidden {
 .menu-items li:hover {
   background-color: #09131b;
 }
+li.nohover:hover{
+	background: none;
+}
 
 /* dropdown */
 .dropdown {
