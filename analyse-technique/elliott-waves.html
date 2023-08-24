@@ -124,288 +124,403 @@ title: PathFinders Academy - elliott waves
   </div>
   <div class="accordion-item levelUn">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Vagues impulsives
+      <div class="triangle">&#9658;</div> Vagues motrices
     </div>
     <div class="accordion-content">
-      <div class="accordion-item levelTrois">
+      <div class="accordion-item levelDeux">
         <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div class="triangle">&#9658;</div> 🧾 Règles
+          <div class="triangle">&#9658;</div> Impulsives
         </div>
         <div class="accordion-content">
-          <div class="containerGD fullGD">
-            <div class="image-blockGD fullscreenImage">
-              <div class="image-container">
-                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/impulsive.jpg" alt="vague impulsive" class="fullscreenImageimg" loading="lazy">
-              </div>
-                <p class="captionGD">Vague impulsive</p>
+          <div class="accordion-item levelTrois">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div class="triangle">&#9658;</div> 🧾 Règles
             </div>
-            <div class="text-blockGD">
-              <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
-                  <img src="https://osdevil.github.io/Academy-PathFinders/imgs/ampoule.png" alt="ampoule">
-                  <p>Fractale - <i>Décomposition en 3 impulsives + 2 correctives</i></p>
+            <div class="accordion-content">
+              <div class="containerGD fullGD">
+                <div class="image-blockGD fullscreenImage">
+                  <div class="image-container">
+                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/impulsive.jpg" alt="vague impulsive" class="fullscreenImageimg" loading="lazy">
+                  </div>
+                    <p class="captionGD">Vague impulsive</p>
+                </div>
+                <div class="text-blockGD">
+                  <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+                      <img src="https://osdevil.github.io/Academy-PathFinders/imgs/ampoule.png" alt="ampoule">
+                      <p>Fractale - <i>Décomposition en 3 impulsives + 2 correctives</i></p>
+                  </div>
+                    <ul>
+                        <li>2 ne peut pas retracer sous 1</li>
+                        <li>3 ne peut pas être la plus courte en prix de {1 ; 3 ; 5}</li>
+                        <li>Sommet de 3 plus haut que sommet de 1</li>
+                        <li>Sommet de 4 plus haut que sommet de 1</li>
+                        <li>Sommet de 5 plus haut que sommet de 3</li>
+                        <li>La 5 peut être tronquée et finir sous le sommet de 3 (rare, changement de tendance fort)</li>
+                        <li>La 4 (macro) termine généralement dans le range de la 4 (micro) de la 3 (macro)</li>
+                    </ul>
+                </div>
               </div>
-                <ul>
-                    <li>2 ne peut pas retracer sous 1</li>
-                    <li>3 ne peut pas être la plus courte en prix de {1 ; 3 ; 5}</li>
-                    <li>Sommet de 3 plus haut que sommet de 1</li>
-                    <li>Sommet de 4 plus haut que sommet de 1</li>
-                    <li>Sommet de 5 plus haut que sommet de 3</li>
-                    <li>La 5 peut être tronquée et finir sous le sommet de 3 (rare, changement de tendance fort)</li>
-                    <li>La 4 (macro) termine généralement dans le range de la 4 (micro) de la 3 (macro)</li>
-                </ul>
+            </div>
+          </div>
+          <div class="accordion-item levelTrois">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div class="triangle">&#9658;</div> 🏆 Objectifs
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Vague 2
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-2-objectifs.jpg" alt="Objectifs vague 2" class="fullscreenImageimg" loading="lazy">
+                      </div> 
+                        <p class="captionGD">Sommet 1 → Racine 1</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li class="customGrey">12% → [0.236 - 0.382]</li>
+                            <li>73% → [0.5 - <span class="customGreenBold">0.618</span>]</li>
+                            <li><span class="customGreenBold">0.65</span> : Niveau très pertinent</li>
+                            <li class="customGrey">15% → [0.786 - 0.854]</li>
+                            <br>
+                            <li class="customGrey">En BR, on n'attend pas 0.618</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Vague 3
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-3-objectifs.jpg" alt="Objectifs vague 3" class="fullscreenImageimg" loading="lazy">
+                      </div>
+                        <p class="captionGD">Racine 1 → Sommet 1 → Racine 3</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li class="customGrey">2% → 100%</li>
+                            <li class="customGrey">15% → ]1 - 1.618[</li>
+                            <li>45% → [<span class="customGreenBold">1.618</span> - 1.75]</li>
+                            <li>30% → [1.75 - 2.618]</li>
+                            <li>8% → > 2.618</li>
+                            <br>
+                            <li>Peut atteindre <span class="customGreenBold">2.618</span> voire <span class="customGreenBold">4.236</span> en BR</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Vague 4
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-4-objectifs.jpg" alt="Objectifs vague 4" class="fullscreenImageimg" loading="lazy">
+                      </div> 
+                        <p class="captionGD">Sommet 3 → Racine 3</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li class="customGrey">15% → [0.236 - 0.382]</li>
+                            <li>70% → [0.382 - <span class="customGreenBold">0.5</span>]</li>
+                            <li class="customGrey">15% → [0.5 - 0.618 (sommet 1)]</li>
+                        </ul>
+                        <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+                            <img src="https://osdevil.github.io/Academy-PathFinders/imgs/ampoule.png" alt="ampoule">
+                            <p>En ce moment les 4 retracent souvent [0.5 - 0.618]</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Vague 5
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-5-objectifs.jpg" alt="Objectifs vague 5" class="fullscreenImageimg" loading="lazy">
+                       </div> 
+                        <p class="captionGD">Racine 1 → Sommet 1 → Racine 5<br>Retracement Sommet 3 → Racine 2</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li>90% → Objectif mini de <span class="customGreenBold">100%</span></li>
+                            <li>Sinon 38.2% ou 61.8% de 0-3</li>
+                            <li>Si étendue, 1.618 ou 2.618 de 0-3</li>
+                            <br>
+                            <li class="customGrey">Si la 3 étend moins de 1.618, on peut tracer la fibo de 5 à partir de Racine 1 → Sommet 3 → Racine 5</li>
+                            <br>
+                            <li>5 est souvent canalisée</li>
+                            <br>
+                            <li class="customGrey">-0.14 / -0.236 / -0.28 sur la config de Jayzer en retracement (hors BR)</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Extensions
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li class="customGrey">Cas particulier, une extension peut se produire sur une 1, 3 ou 5. S’il y en a 2 (très rare), elles seront sur 3 et 5. - On compte donc en 9 (ou 13) au lieu de 5.</li>
+                    <li class="customGrey">La taille (en temps) d’une extension est égale à la somme des tailles de 4 autres vagues.</li>
+                    <li class="customGrey">Si 1 = 3 (temps), 5 sera souvent en extension.</li>
+                    <li class="customGrey">Si 3 est en extension, souvent 1 = 5 (temps).</li>
+                    <li class="customGrey">En BR, il peut arriver d’avoir une extension dans une extension.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item levelTrois">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div class="triangle">&#9658;</div> 💡 4 Astuces pour placer ses sommets
+            </div>
+            <div class="accordion-content">
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Canalisation des vagues
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/canalisation-impulsives.jpg" alt="canalisation des vagues" class="fullscreenImageimg" loading="lazy">
+                      </div>
+                        <p class="captionGD">Canalisation des vagues</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li>Les vagues impulsives sont comprises dans des canaux</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Alternance
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/alternance-un.jpg" alt="alternance" class="fullscreenImageimg" loading="lazy">
+                      </div>
+                        <p class="captionGD">Alternance</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li>Si 2 corrige plus que <span class="customGreenBold">0.618</span>, il n’est pas rare que 4 corrige faiblement <span class="customGreenBold">[0.236 - 0.382]</span></li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div style="height: 1px; margin: 20px 0; background-color:#232f39;"></div>
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/alternance-deux.jpg" alt="alternance" class="fullscreenImageimg" loading="lazy">
+                      </div>
+                        <p class="captionGD">Alternance</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li>Inversement, si 2 corrige moins que <span class="customGreenBold">0.5</span>, il n’est pas rare que 4 corrige fortement <span class="customGreenBold">[0.5 - sommet 1]</span></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> RSI sur V5
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/RSI-v5.jpg" alt="RSI V5" class="fullscreenImageimg" loading="lazy">
+                      </div>
+                        <p class="captionGD">RSI V5</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li>Pour trouver le sommet d’une 5, il n’est pas rare de trouver une divergence sur le RSI.</li>
+                            <li>Le retracement RSI ira souvent écraser ensuite la 4.</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Intensité des degrés décroissante
+                </div>
+                <div class="accordion-content">
+                  <div class="containerGD fullGD">
+                    <div class="image-blockGD fullscreenImage">
+                      <div class="image-container">
+                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/degres-decroissants.jpg" alt="intensité des degrés décroissante" class="fullscreenImageimg" loading="lazy">
+                      </div>
+                        <p class="captionGD">Intensité des degrés décroissante</p>
+                    </div>
+                    <div class="text-blockGD">
+                        <ul>
+                            <li>Les vagues sont fractales mais ont généralement des intensités de degrés décroissantes.</li>
+                            <li>Ici, la 1 (micro) de la 3 (macro) est plus petite que la 1 (macro)</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item levelTrois">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+              <div class="triangle">&#9658;</div> 🎯 Décomposition
+            </div>
+            <div class="accordion-content">
+              <div class="containerGD fullGD">
+                <div class="image-blockGD fullscreenImage">
+                  <div class="image-container">
+                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/decomposition-impulsives.jpg" alt="décomposition vagues impulsives" class="fullscreenImageimg" loading="lazy">
+                  </div>
+                    <p class="captionGD">Décomposition vagues impulsives</p>
+                </div>
+                <div class="text-blockGD">
+                    <p><u>On retrouve communément les impulsives dans ces situations :</u></p>
+                    <ul>
+                        <li class="customGrey">Vagues 1 ; 3 ; 5 d’impulsives</li>
+                        <li class="customGrey">Vagues 1 ; 3 ; 5 de leading diagonal</li>
+                        <li class="customGrey">Vagues A ; C de Zigzag</li>
+                        <li class="customGrey">Vague C de Flat</li>
+                    </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="accordion-item levelTrois">
+      <div class="accordion-item levelDeux">
         <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div class="triangle">&#9658;</div> 🏆 Objectifs
+          <div class="triangle">&#9658;</div> Leading & Ending diagonal
         </div>
         <div class="accordion-content">
           <div class="accordion-item levelTrois">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Vague 2
+              <div class="triangle">&#9658;</div> 🧾 Règles
             </div>
             <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-2-objectifs.jpg" alt="Objectifs vague 2" class="fullscreenImageimg" loading="lazy">
-                  </div> 
-                    <p class="captionGD">Sommet 1 → Racine 1</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li class="customGrey">12% → [0.236 - 0.382]</li>
-                        <li>73% → [0.5 - <span class="customGreenBold">0.618</span>]</li>
-                        <li><span class="customGreenBold">0.65</span> : Niveau très pertinent</li>
-                        <li class="customGrey">15% → [0.786 - 0.854]</li>
-                        <br>
-                        <li class="customGrey">En BR, on n'attend pas 0.618</li>
-                    </ul>
-                </div>
+              <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+                  <img src="https://osdevil.github.io/Academy-PathFinders/imgs/ampoule.png" alt="ampoule">
+                  <p>Ces décomptes sont des impulsives particulières dues à leurs décompositions</p>
               </div>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Vague 3
-            </div>
-            <div class="accordion-content">
               <div class="containerGD fullGD">
                 <div class="image-blockGD fullscreenImage">
                   <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-3-objectifs.jpg" alt="Objectifs vague 3" class="fullscreenImageimg" loading="lazy">
+                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/leading-ending.jpg" alt="Leading & Ending diagonal" class="fullscreenImageimg" loading="lazy">
                   </div>
-                    <p class="captionGD">Racine 1 → Sommet 1 → Racine 3</p>
+                    <p class="captionGD">Leading & Ending diagonal</p>
                 </div>
                 <div class="text-blockGD">
-                    <ul>
-                        <li class="customGrey">2% → 100%</li>
-                        <li class="customGrey">15% → ]1 - 1.618[</li>
-                        <li>45% → [<span class="customGreenBold">1.618</span> - 1.75]</li>
-                        <li>30% → [1.75 - 2.618]</li>
-                        <li>8% → > 2.618</li>
-                        <br>
-                        <li>Peut atteindre <span class="customGreenBold">2.618</span> voire <span class="customGreenBold">4.236</span> en BR</li>
-                    </ul>
+                  <ul>
+                    <li>Structure 3-3-3-3-3 (peut être 5-3-5-3-5 en leading)</li>
+                    <li>2 ne retrace pas 100% de 1</li>
+                    <li>4 finit dans le range de 2</li>
+                    <li>Une ending est souvent suivie d’un changement violent de tendance</li>
+                  </ul>
                 </div>
               </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Expanding
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>1 plus courte que 3</li>
+                    <li>2 plus courte que 4</li>
+                    <li>3 plus courte que 5</li>
+                    <li>Divergence entre 1-3 et 2-4</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="accordion-item levelTrois">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <div class="triangle">&#9658;</div> Contracting
+                </div>
+                <div class="accordion-content">
+                  <ul>
+                    <li>1 plus longue que 3</li>
+                    <li>2 plus longue que 4</li>
+                    <li>3 plus longue que 5</li>
+                    <li>Convergence entre 1-3 et 2-4</li>
+                  </ul>
+                </div>
+              </div>
+              <br>
+              <p>→ Une <span style="font-style: italic; color: #4694D4;">Leading diagonal</span> est seulement dans une 1 ⇒ On attend une 3 étendue</p>
+              <p>→ Une <span style="font-style: italic; color: #4694D4;">Ending diagonal</span> est seulement dans une 5 et finit souvent avant la trendline {1 - 3}</p>
+              <p>→ Si une 3 d'impulsive n'est pas étendue, la 5 a peu de chances d'être une ending</p>
+              <p>→ On ne peut pas avoir à la fois une <span style="font-style: italic; color: #4694D4;">Leading</span> et une <span style="font-style: italic; color: #4694D4;">Ending</span> dans un même décompte</p>
+              <br>
+              <p>La même chose s’applique en corrective. Leading dans une A, ending dans une C, impossible d’avoir les deux dans le même décompte.</p>
             </div>
           </div>
           <div class="accordion-item levelTrois">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Vague 4
+              <div class="triangle">&#9658;</div> 🏆 Objectifs
             </div>
             <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-4-objectifs.jpg" alt="Objectifs vague 4" class="fullscreenImageimg" loading="lazy">
-                  </div> 
-                    <p class="captionGD">Sommet 3 → Racine 3</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li class="customGrey">15% → [0.236 - 0.382]</li>
-                        <li>70% → [0.382 - <span class="customGreenBold">0.5</span>]</li>
-                        <li class="customGrey">15% → [0.5 - 0.618 (sommet 1)]</li>
-                    </ul>
-                    <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
-                        <img src="https://osdevil.github.io/Academy-PathFinders/imgs/ampoule.png" alt="ampoule">
-                        <p>En ce moment les 4 retracent souvent [0.5 - 0.618]</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Vague 5
-            </div>
-            <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-5-objectifs.jpg" alt="Objectifs vague 5" class="fullscreenImageimg" loading="lazy">
-                   </div> 
-                    <p class="captionGD">Racine 1 → Sommet 1 → Racine 5<br>Retracement Sommet 3 → Racine 2</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li>90% → Objectif mini de <span class="customGreenBold">100%</span></li>
-                        <li>Sinon 38.2% ou 61.8% de 0-3</li>
-                        <li>Si étendue, 1.618 ou 2.618 de 0-3</li>
-                        <br>
-                        <li class="customGrey">Si la 3 étend moins de 1.618, on peut tracer la fibo de 5 à partir de Racine 1 → Sommet 3 → Racine 5</li>
-                        <br>
-                        <li>5 est souvent canalisée</li>
-                        <br>
-                        <li class="customGrey">-0.14 / -0.236 / -0.28 sur la config de Jayzer en retracement (hors BR)</li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Extensions
-            </div>
-            <div class="accordion-content">
+              <p>Objectifs similaires à une impulsive avec ces points de vigilance :</p>
+              <br>
               <ul>
-                <li class="customGrey">Cas particulier, une extension peut se produire sur une 1, 3 ou 5. S’il y en a 2 (très rare), elles seront sur 3 et 5. - On compte donc en 9 (ou 13) au lieu de 5.</li>
-                <li class="customGrey">La taille (en temps) d’une extension est égale à la somme des tailles de 4 autres vagues.</li>
-                <li class="customGrey">Si 1 = 3 (temps), 5 sera souvent en extension.</li>
-                <li class="customGrey">Si 3 est en extension, souvent 1 = 5 (temps).</li>
-                <li class="customGrey">En BR, il peut arriver d’avoir une extension dans une extension.</li>
+                <li>La 3 respecte rarement un niveau</li>
+                <li>2 corrige souvent dans l’intervalle <span class="customGreenBold">[0.786 - 0.854]</span></li>
+                <li>4 corrige souvent dans l’intervalle <span class="customGreenBold">[0.5 - 0.618]</span> en expanding </li>
+                <li>4 corrige souvent dans l’intervalle <span class="customGreenBold">[0.382 - 0.5]</span> en contracting</li>
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="accordion-item levelTrois">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div class="triangle">&#9658;</div> 💡 4 Astuces pour placer ses sommets
-        </div>
-        <div class="accordion-content">
           <div class="accordion-item levelTrois">
             <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Canalisation des vagues
+              <div class="triangle">&#9658;</div> 🎯 Décomposition
             </div>
             <div class="accordion-content">
               <div class="containerGD fullGD">
                 <div class="image-blockGD fullscreenImage">
                   <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/canalisation-impulsives.jpg" alt="canalisation des vagues" class="fullscreenImageimg" loading="lazy">
+                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/decomposition-leading-ending.jpg" alt="Décomposition leading & ending" class="fullscreenImageimg" loading="lazy">
                   </div>
-                    <p class="captionGD">Canalisation des vagues</p>
+                    <p class="captionGD">Décomposition leading & ending</p>
                 </div>
                 <div class="text-blockGD">
-                    <ul>
-                        <li>Les vagues impulsives sont comprises dans des canaux</li>
-                    </ul>
+                  <p><u>On retrouve communément les diagonal dans ces situations :</u></p>
+                  <ul>
+                    <li class="customGrey">Vague 1 d’impulsives en leading</li>
+                    <li class="customGrey">Vague A de Zigzag en leading</li>
+                    <br>
+                    <li class="customGrey">Vague 5 d’impulsives en ending</li>
+                    <li class="customGrey">Vague C de Zigzag en ending</li>
+                    <li class="customGrey">Vague C de Flat en ending</li>
+                  </ul>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Alternance
-            </div>
-            <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/alternance-un.jpg" alt="alternance" class="fullscreenImageimg" loading="lazy">
-                  </div>
-                    <p class="captionGD">Alternance</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li>Si 2 corrige plus que <span class="customGreenBold">0.618</span>, il n’est pas rare que 4 corrige faiblement <span class="customGreenBold">[0.236 - 0.382]</span></li>
-                    </ul>
-                </div>
-              </div>
-              <div style="height: 1px; margin: 20px 0; background-color:#232f39;"></div>
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/alternance-deux.jpg" alt="alternance" class="fullscreenImageimg" loading="lazy">
-                  </div>
-                    <p class="captionGD">Alternance</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li>Inversement, si 2 corrige moins que <span class="customGreenBold">0.5</span>, il n’est pas rare que 4 corrige fortement <span class="customGreenBold">[0.5 - sommet 1]</span></li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> RSI sur V5
-            </div>
-            <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/RSI-v5.jpg" alt="RSI V5" class="fullscreenImageimg" loading="lazy">
-                  </div>
-                    <p class="captionGD">RSI V5</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li>Pour trouver le sommet d’une 5, il n’est pas rare de trouver une divergence sur le RSI.</li>
-                        <li>Le retracement RSI ira souvent écraser ensuite la 4.</li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> Intensité des degrés décroissante
-            </div>
-            <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/degres-decroissants.jpg" alt="intensité des degrés décroissante" class="fullscreenImageimg" loading="lazy">
-                  </div>
-                    <p class="captionGD">Intensité des degrés décroissante</p>
-                </div>
-                <div class="text-blockGD">
-                    <ul>
-                        <li>Les vagues sont fractales mais ont généralement des intensités de degrés décroissantes.</li>
-                        <li>Ici, la 1 (micro) de la 3 (macro) est plus petite que la 1 (macro)</li>
-                    </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item levelTrois">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div class="triangle">&#9658;</div> 🎯 Décomposition
-        </div>
-        <div class="accordion-content">
-          <div class="containerGD fullGD">
-            <div class="image-blockGD fullscreenImage">
-              <div class="image-container">
-                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/decomposition-impulsives.jpg" alt="décomposition vagues impulsives" class="fullscreenImageimg" loading="lazy">
-              </div>
-                <p class="captionGD">Décomposition vagues impulsives</p>
-            </div>
-            <div class="text-blockGD">
-                <p><u>On retrouve communément les impulsives dans ces situations :</u></p>
-                <ul>
-                    <li class="customGrey">Vagues 1 ; 3 ; 5 d’impulsives</li>
-                    <li class="customGrey">Vagues 1 ; 3 ; 5 de leading diagonal</li>
-                    <li class="customGrey">Vagues A ; C de Zigzag</li>
-                    <li class="customGrey">Vague C de Flat</li>
-                </ul>
             </div>
           </div>
         </div>
@@ -414,7 +529,7 @@ title: PathFinders Academy - elliott waves
   </div>
   <div class="accordion-item levelUn">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Vagues correctives & Particularités
+      <div class="triangle">&#9658;</div> Vagues correctives
     </div>
     <div class="accordion-content">
       <div class="accordion-item levelDeux">
@@ -529,114 +644,6 @@ title: PathFinders Academy - elliott waves
                     <li class="customGrey">Vague B de Zigzag</li>
                     <li class="customGrey">Vagues A ; B de Flat</li>
                     <li class="customGrey">Vagues A ; B ; C ; D ; E de Triangles</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item levelDeux">
-        <div class="accordion-header" onclick="toggleAccordion(this)">
-          <div class="triangle">&#9658;</div> Leading & Ending diagonal
-        </div>
-        <div class="accordion-content">
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> 🧾 Règles
-            </div>
-            <div class="accordion-content">
-              <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
-                  <img src="https://osdevil.github.io/Academy-PathFinders/imgs/ampoule.png" alt="ampoule">
-                  <p>Ces décomptes sont des impulsives particulières dues à leurs décompositions</p>
-              </div>
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/leading-ending.jpg" alt="Leading & Ending diagonal" class="fullscreenImageimg" loading="lazy">
-                  </div>
-                    <p class="captionGD">Leading & Ending diagonal</p>
-                </div>
-                <div class="text-blockGD">
-                  <ul>
-                    <li>Structure 3-3-3-3-3 (peut être 5-3-5-3-5 en leading)</li>
-                    <li>2 ne retrace pas 100% de 1</li>
-                    <li>4 finit dans le range de 2</li>
-                    <li>Une ending est souvent suivie d’un changement violent de tendance</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion-item levelTrois">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                  <div class="triangle">&#9658;</div> Expanding
-                </div>
-                <div class="accordion-content">
-                  <ul>
-                    <li>1 plus courte que 3</li>
-                    <li>2 plus courte que 4</li>
-                    <li>3 plus courte que 5</li>
-                    <li>Divergence entre 1-3 et 2-4</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="accordion-item levelTrois">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                  <div class="triangle">&#9658;</div> Contracting
-                </div>
-                <div class="accordion-content">
-                  <ul>
-                    <li>1 plus longue que 3</li>
-                    <li>2 plus longue que 4</li>
-                    <li>3 plus longue que 5</li>
-                    <li>Convergence entre 1-3 et 2-4</li>
-                  </ul>
-                </div>
-              </div>
-              <br>
-              <p>→ Une <span style="font-style: italic; color: #4694D4;">Leading diagonal</span> est seulement dans une 1 ⇒ On attend une 3 étendue</p>
-              <p>→ Une <span style="font-style: italic; color: #4694D4;">Ending diagonal</span> est seulement dans une 5 et finit souvent avant la trendline {1 - 3}</p>
-              <p>→ Si une 3 d'impulsive n'est pas étendue, la 5 a peu de chances d'être une ending</p>
-              <p>→ On ne peut pas avoir à la fois une <span style="font-style: italic; color: #4694D4;">Leading</span> et une <span style="font-style: italic; color: #4694D4;">Ending</span> dans un même décompte</p>
-              <br>
-              <p>La même chose s’applique en corrective. Leading dans une A, ending dans une C, impossible d’avoir les deux dans le même décompte.</p>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> 🏆 Objectifs
-            </div>
-            <div class="accordion-content">
-              <p>Objectifs similaires à une impulsive avec ces points de vigilance :</p>
-              <br>
-              <ul>
-                <li>La 3 respecte rarement un niveau</li>
-                <li>2 corrige souvent dans l’intervalle <span class="customGreenBold">[0.786 - 0.854]</span></li>
-                <li>4 corrige souvent dans l’intervalle <span class="customGreenBold">[0.5 - 0.618]</span> en expanding </li>
-                <li>4 corrige souvent dans l’intervalle <span class="customGreenBold">[0.382 - 0.5]</span> en contracting</li>
-              </ul>
-            </div>
-          </div>
-          <div class="accordion-item levelTrois">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-              <div class="triangle">&#9658;</div> 🎯 Décomposition
-            </div>
-            <div class="accordion-content">
-              <div class="containerGD fullGD">
-                <div class="image-blockGD fullscreenImage">
-                  <div class="image-container">
-                    <img src="https://osdevil.github.io/Academy-PathFinders/imgs/decomposition-leading-ending.jpg" alt="Décomposition leading & ending" class="fullscreenImageimg" loading="lazy">
-                  </div>
-                    <p class="captionGD">Décomposition leading & ending</p>
-                </div>
-                <div class="text-blockGD">
-                  <p><u>On retrouve communément les diagonal dans ces situations :</u></p>
-                  <ul>
-                    <li class="customGrey">Vague 1 d’impulsives en leading</li>
-                    <li class="customGrey">Vague A de Zigzag en leading</li>
-                    <br>
-                    <li class="customGrey">Vague 5 d’impulsives en ending</li>
-                    <li class="customGrey">Vague C de Zigzag en ending</li>
-                    <li class="customGrey">Vague C de Flat en ending</li>
                   </ul>
                 </div>
               </div>
