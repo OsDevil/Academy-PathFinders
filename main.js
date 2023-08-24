@@ -142,7 +142,7 @@ function toggleAccordion(triggerAccordion) {
   const currentHeight = content.style.height;
 
   if (currentHeight === "0px" || currentHeight === "") {
-    content.style.height = content.scrollHeight + "px";
+    content.style.height = "100%";
   } else {
     content.style.height = "0px";
   }
