@@ -109,8 +109,38 @@ header.hidden {
 .menu-items li:hover {
   background-color: #09131b;
 }
+li.nohover {
+    display: flex;
+    padding: 0;
+    margin-left: 20px;
+}
+li.nohover a {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+li.nohover a img {
+    width: 30px;
+    height: 30px;
+}
 li.nohover:hover{
 	background: none;
+}
+@media screen and (max-width: 970px) {
+	li.nohover {
+	    margin-top: 100px;
+	    justify-content: center;
+	    flex-direction: column;
+	    align-items: center;
+	    margin-left: 0px;
+	}
+	li.nohover a {
+	    margin: 20px;
+	}
+	li.nohover a img {
+	    width: 50px;
+	    height: 50px;
+	}
 }
 
 /* dropdown */
