@@ -485,6 +485,9 @@ footer{
 	.colFoot4.activeFoot ul {
 		display: block;
 	}
+	.colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
+	    text-align: center;
+	}
 }
 
 /** -------------------------------------------------- INDEX -------------------------------------------------- **/
