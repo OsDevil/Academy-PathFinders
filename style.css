@@ -439,7 +439,8 @@ footer{
     margin-bottom: 50px;
 }
 .colFoot1 ul, .colFoot2 ul, .colFoot3 ul, .colFoot4 ul {
-    display: block;
+    height: 100%;
+    transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)
 }
 .colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
     text-align: left;
@@ -472,18 +473,6 @@ footer{
 	}
 	.colFoot1.activeFoot h3:after, .colFoot2.activeFoot h3:after, .colFoot3.activeFoot h3:after, .colFoot4.activeFoot h3:after {
 	    content: '▲';
-	}
-	.colFoot1 ul,
-	.colFoot2 ul,
-	.colFoot3 ul,
-	.colFoot4 ul {
-		display: none;
-	}
-	.colFoot1.activeFoot ul,
-	.colFoot2.activeFoot ul,
-	.colFoot3.activeFoot ul,
-	.colFoot4.activeFoot ul {
-		display: block;
 	}
 	.colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
 	    text-align: center;
