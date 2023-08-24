@@ -505,7 +505,7 @@ footer{
 }
 
 .contentIntro{
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 }
 .introBloc {
   display: flex;
@@ -624,9 +624,9 @@ footer{
 
 
 .centeredContent{
-    text-align: center;
+	text-align: center;
 	margin: auto;
-	width: 60%;
+	width: 80%;
 }
 
 @media screen and (max-width: 970px) {
