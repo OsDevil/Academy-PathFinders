@@ -527,6 +527,7 @@ footer{
   background-color: #09131B;
   padding: .75em 1rem;
   margin-bottom: 1.5rem;
+  resize: none;
 }
 #fs-frm input:focus,
 #fs-frm select:focus,
