@@ -122,11 +122,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const list = column.querySelector("ul");
 
         title.addEventListener("click", function() {
-            if (list.style.display === "block") {
-                list.style.display = "none";
+            if (column.classList.contains("activeFoot")) {
+                list.style.height = "0";
                 column.classList.remove("activeFoot");
             } else {
-                list.style.display = "block";
+                list.style.height = list.scrollHeight + "px";
                 column.classList.add("activeFoot");
             }
         });
