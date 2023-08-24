@@ -755,9 +755,9 @@ footer{
 }
 .accordion-content {
   display: block;
-  height: 0px;
+  max-height: 0px;
   overflow: hidden;
-  transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), margin 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: max-height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), margin 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /*margin: 0 10px;*/
   /*padding: 50px 0;*/
   /*padding-left: 20px;*/
