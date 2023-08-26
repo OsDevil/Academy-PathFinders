@@ -881,7 +881,7 @@ p {
     color: #ED9266;
 }
 .levelTrois .accordion-header {
-    color: #FFFFFF;
+    color: #3ce2dc;
 }
 
 @media screen and (max-width: 970px) {
@@ -926,7 +926,7 @@ p {
 	margin: auto;
 	margin-bottom: 50px;
 }
-.imgSolo.image-container img{
+.imgSolo .image-container img{
 	width: 100%;
 }
 .captionGD {
