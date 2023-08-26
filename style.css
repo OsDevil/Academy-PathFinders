@@ -935,6 +935,9 @@ p {
 .imgSolo.fullscreenImage:hover {
     cursor: pointer;
 }
+.imgSolo.fullscreenImage.fullscreen:hover {
+    cursor: default;
+}
 .imgSolo .image-container img{
 	width: 100%;
 }
