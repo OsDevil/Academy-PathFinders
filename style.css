@@ -45,6 +45,9 @@ p{
 	margin: 10px 0;
 	text-align: justify;
 }
+a{
+	color: #4694D4;
+}
 
 @media screen and (max-width: 970px) {
 	.contentPage{
