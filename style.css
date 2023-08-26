@@ -925,6 +925,9 @@ p {
 	width: 80%;
 	margin: auto;
 	margin-bottom: 50px;
+	border-radius: 15px;
+	padding-bottom: 5px;
+	box-shadow: 0px 3px 5px #000000;
 }
 .imgSolo .image-container img{
 	width: 100%;
@@ -933,6 +936,7 @@ p {
     text-align: center;
     font-style: italic;
     color: #4694D4;
+	margin: 5px 0;
 }
 .text-blockGD ul {
     list-style-type: disc;
@@ -985,14 +989,19 @@ p.customBlue {
 }
 
 @media screen and (max-width: 970px) {
-    .containerGD {
-        flex-direction: column;
-    }
-    .image-blockGD, .text-blockGD {
-        flex: none;
-        width: 100%;
-    }
-    .fullscreen{
-        max-width: 100%!important; 
-    }
+	.containerGD {
+		flex-direction: column;
+	}
+	.image-blockGD, .text-blockGD {
+		flex: none;
+		width: 100%;
+	}
+	.fullscreen{
+		max-width: 100%!important;
+	    margin: auto;
+	    padding: 10px;
+	}
+	.imgSolo{
+		width: 90%;
+	}
 }
