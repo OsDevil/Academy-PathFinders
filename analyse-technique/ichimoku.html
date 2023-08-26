@@ -12,7 +12,17 @@ title: PathFinders Academy - ichimoku
     <div class="ressourcesBloc">Ressources</div>
   </div>
   <div class="contentHistoire">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <div class="containerGD">
+      <div class="image-blockGD fullscreenImage" style="flex: 0.5;">
+        <div class="image-container">
+          <img src="https://osdevil.github.io/Academy-PathFinders/imgs/goichi-hosoda.jpg" alt="Goichi Hosoda" class="fullscreenImageimg" loading="lazy">
+        </div>
+          <p class="captionGD">Goichi Hosoda</p>
+      </div>
+      <div class="text-blockGD" style="flex: 1;">
+          <p>Goichi Hosoda (1878 - 1982), un analyste japonais des marchés financiers, a laissé une empreinte durable dans le domaine de l'analyse technique avec la création de l'outil bien connu sous le nom d'Ichimoku Kinko Hyo. Hosoda a développé cet indicateur dans les années 1930. Ichimoku, dont le nom peut être traduit par "équilibre d'un coup d'œil", reflète son objectif de fournir une représentation visuelle concise de la dynamique des marchés. Cet indicateur est devenu une ressource précieuse pour les traders et les investisseurs cherchant à comprendre les tendances, les niveaux de support et de résistance, ainsi que les signaux de trading potentiels en un seul coup d'œil.</p>
+      </div>
+    </div>
   </div>
   <div class="contentRessources">
     <div class="ressourcesCol">
@@ -37,12 +47,402 @@ title: PathFinders Academy - ichimoku
     </div>
     <div class="ressourcesCol">
     	<div class="encartRessource">
-    		<a href="#" target="_blank"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/link.png" alt="picto Lien"></a>
-    		<a href="#" target="_blank">...</a>
+    		<a href="https://www.xtb.com/fr/formation/ichimoku" target="_blank"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/link.png" alt="picto Lien"></a>
+    		<a href="https://www.xtb.com/fr/formation/ichimoku" target="_blank">XTB - Trader en Bourse avec Ichimoku</a>
     	</div>
     </div>
   </div>
 </div>
 
 
-<div style="display: flex; justify-content:center;"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/coming_soon_default.jpg" alt="coming soon" style="max-width: 100%;"></div>
+<div class="centeredContent">Voyons ensemble les clés d'une analyse graphique à l'aide d'Ichimoku et ses principes.</div>
+<br>
+<br>
+
+<h2 class="customBlue">Ichimoku : quel est cet indicateur boursier ?</h2>
+<p>Le système Ichimoku a été créé dans le but de compléter l’information disponible dans les <span class="customGreenBold">chandeliers japonais</span>.</p>
+<p>Ichimoku fournit une vision unique sur l’évolution des prix en se basant sur le passé, le présent et le futur. Du fait de sa versatilité, Ichimoku est bien plus qu’un indicateur et peut être assimilé à un système de trading complet. De plus, Ichimoku permet de déceler les niveaux clés de support et de résistance ayant agi par le passé mais également ceux qui agiront dans le futur. Ce système est connu pour un de ses composants inédit : le nuage.</p>
+<p>Le nuage du système Ichimoku permet de définir les zones d’équilibre et donne un rapide aperçu de la tendance actuelle. Ainsi, ce système est considéré comme un outil de tendance, et interdit la prise de position lorsque les cours sont à l’équilibre donc à l’intérieur du nuage.</p>
+
+<h2 class="customBlue">De quoi se compose le système de trading Ichimoku ? Quelles interprétations en tirer ?</h2>
+<p>Le système Ichimoku est constitué de cinq lignes. Deux d'entre elles évoluent avec le cours présent, tandis que deux autres représentent la projection de l'équilibre du marché dans le futur (ces deux forment les limites du nuage). La dernière ligne est la projection du cours actuel à la clôture 26 périodes dans le passé et est considérée comme la "mémoire du marché".</p>
+<div style="display: flex; justify-content:center;"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/ichimoku-systeme.jpg" alt="Ichimoku Systeme" style="max-width: 100%;"></div>
+<br>
+<div class="accordion" style="margin: auto;">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> La Tenkan-sen (turning line)
+    </div>
+    <div class="accordion-content">
+      <p>La Tenkan-sen est la moyenne du plus haut et du plus bas sur les 9 dernières périodes. Elle représente l’équilibre de court terme.</p>
+      <p>La pente de la Tenkan-sen nous indique la force de la tendance.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> La Kijun-sen (standard line)
+    </div>
+    <div class="accordion-content">
+      <p>La Kijun est calculée de la même manière que la Tenkan, mais sur les 26 dernières périodes. Elle représente l’équilibre de moyen-terme.</p>
+      <p>La Kijun agit comme un support ou une résistance. Le franchissement de la Kijun par les prix est un signal d’achat ou de vente, selon le sens de franchissement.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Le Senkou-Span A (SSA)
+    </div>
+    <div class="accordion-content">
+      <p>Le Senkou-Span A (SSA) est la moyenne des lignes Tenkan et Kijun, projetée 26 périodes dans le futur.</p>
+      <p>Un signal important est donné lorsque les cours franchissent la Senkou-Span A pour sortir du nuage (les prix quittent la zone d'équilibre)</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Le Senkou-Span B (SSB)
+    </div>
+    <div class="accordion-content">
+      <p>Le Senkou-Span B est la moyenne du  plus haut et du plus bas sur les 52 dernières périodes, projetée 26 périodes dans le futur.</p>
+      <p>Un signal important est donné lorsque les cours franchissent la Senkou-Span B pour sortir du nuage (les prix quittent la zone d'équilibre). La SSB est une importante zone agissant comme support ou résistance, notamment lorsque celle-ci est à l’horizontal (en pallier).</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Le nuage
+    </div>
+    <div class="accordion-content">
+      <p>Le nuage correspond à la zone entre le SSA et le SSB, qui est un des aspects originaux du système Ichimoku.</p>
+      <p>L'épaisseur du nuage nous donne également des indications : un nuage épais sera plus difficile à traverser qu'un nuage plus fin.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> La Chikou-Span (Lagging span)
+    </div>
+    <div class="accordion-content">
+      <p>La Chikou-Span est la ligne de prix (à la clôture) décalée de 26 périodes dans le passé. Cette ligne interagit avec les autres lignes du système mais également avec les cours présents, et passés.</p>
+      <p>La Chikou-Span est considérée comme la mémoire du marché. Le but de cette ligne est de confirmer les signaux déclenchés par des franchissements de la ligne Kijun ou de la ligne SSB. La validation a lieu lorsque la Chikou-span ne dispose d’aucun obstacle à la hausse, en cas d’un signal d’achat, ou à la baisse en cas de signal de vente.</p>
+    </div>
+  </div>
+</div>
+
+
+<h2 class="customBlue">Ichimoku : signaux d'achat et de vente - gestion de position</h2>
+<div class="accordion" style="margin: auto;">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Signal de vente
+    </div>
+    <div class="accordion-content">
+      <p>Le signal le plus pertinent est donné lors d’un franchissement de la Kijun par les prix. Lorsque les cours franchissent la Kijun à  la baisse, nous pouvons interpréter cela comme un signal baissier et rechercher une confirmation de la Chikou-span. Si la Chikou-span n’a pas d’obstacle (cours passés, élément du système ichimoku), le signal de vente est validé et l’entrée en position peut avoir lieu.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Signal d’achat
+    </div>
+    <div class="accordion-content">
+      <p>Lorsque le cours franchi à la hausse la  Kijun, nous pouvons interpréter cela comme un signal haussier et rechercher une confirmation de la Chikou-span. La Chikou-span est considérée comme un filtre dans le système de lecture Ichimoku. Cette dernière  confirme le signal s'il n'y a pas d'obstacle sur son chemin.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Gestion de position
+    </div>
+    <div class="accordion-content">
+      <p>Une fois le signal fourni par Ichimoku et que l'entrée à l’achat ou à la vente est définie, il reste à fixer un stop-loss et un take-profit. Afin de minimiser le risque il peut être judicieux de placer son stop-loss au point d’entrée, une fois que le cours est à mi-chemin de l’objectif (50%).</p>
+      <p>Les composants de l’indicateur Ichimoku peuvent également servir de base à la gestion de position. En effet il est pertinent de placer un stop-loss aux alentours de la Tenkan, voire de la SSB.</p>
+    </div>
+  </div>
+</div>
+
+<h2 class="customBlue">Les 3 piliers du système Ichimoku</h2>
+<div class="accordion" style="margin: auto;">
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Pilier 1 - Théorie du temps - La suite d’Hosoda
+    </div>
+    <div class="accordion-content">
+      <p>Au début de l’entreprise de ses recherches en vue de compléter l’information disponible dans les chandeliers japonais, Goicihi Hosoda a consacré plus de 4 ans à l’étude des suites numériques orientales et occidentales. Cette étude poussée lui a permis de déterminer sa propre suite numérique, qui sera la base de tous ses travaux. La suite de Goichi Hosoda est la suivante :</p>
+      <br>
+      <p><span class="customGreenBold">9, 17, 26, 33, 42, 65, 76, 129, 172, 200</span></p>
+      <br>
+      <p>Ces chiffres sont parsemés dans toutes les théories développées par Goichi Hosoda. A titre d’exemple, les calculs de la Tenkan, de la Kijun  sont basés sur les 9 ou 26 dernières périodes.</p>
+      <p>D’une manière générale, les chiffres composants la suite d’Hosoda sont liés entre eux mathématiquement :</p>
+      <p>9+17 = 26</p>
+      <p>26+17 = 42+1</p>
+      <p>33+9 = 42</p>
+      <p>33×2 = 65+1</p>
+      <p>42+33 = 76-1</p>
+      <p>65×2 = 129+1</p>
+      <p>129+42 = 172-1 …</p>
+      <p>Les 3 premiers nombres de la suite d’Hosoda déterminent le système Ichimoku dans son ensemble :</p>
+      <ul>
+        <li>9 : représente une "section"</li>
+        <li>17 : représente deux "sections"</li>
+        <li>26 : représente une "période"</li>
+      </ul>
+      <p>Les paramètres graphiques d'affichage du système Ichimoku sur une chart sont d'ailleurs directement liés à ces trois premiers nombres :</p>
+      <ul>
+        <li>La Tenkan est basée sur 9 périodes</li>
+        <li>La Kijun et la Chikou sont basées sur 26 périodes (9+17)</li>
+        <li>Les SSA et SSB sont basées sur 52 périodes (9+17+26)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Pilier 2 - Théorie des vagues
+    </div>
+    <div class="accordion-content">
+      <p>La théorie des vagues a permis à son créateur de différencier les différentes oscillations de marché en les nommant selon leurs caractéristiques. La théorie des vagues de Goichi Hosoda se rapproche fortement de la théorie des vagues d’Elliot. Ainsi, les Elliottistes peuvent ajouter Ichimoku à leur processus d’analyse.</p>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague en "I"
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-i.jpg" alt="vague I" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague en I</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                    <li>Une seule impulsion rectiligne ou droite (normalement forte) haussière ou baissière sans mouvement correctif notable.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague en "V"
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-v.jpg" alt="vague v" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague en V</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                    <li>Une vague composée de deux vagues “I” successives, une forte impulsion haussière suivie d'une forte poussée baissière, ou une forte poussée baissière suivie d'une forte impulsion haussière.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague en "N"
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-n.jpg" alt="vague N" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague en N</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                  <li>vague up-down-up ou down-up-down. C'est le pattern de vague le plus couramment rencontré sur le marché.</li>
+                  <li>Les vagues « N » sont les plus courantes sur les marchés et sont la base de toute tendance haussière. Ainsi, une tendance haussière peut être décomposée en une succession de vagues « N ». Les vagues « N » sont également omniprésentes dans le processus de formation de certaines figures chartistes, à l’image des triangles symétriques ou des formations en épaules-tête-épaule. Nous aborderons la théorie des vagues en complément des figures chartistes lors d’une prochaine section.</li>
+                  <li>Il est important de maîtriser les vagues « N » pour deux principales raisons. Tout d’abord, comme évoqué précédemment, les vagues « N » sont les plus répandues sur les marchés. Ensuite, l’espérance de gain en cas de finalisation de la formation de la vague est relativement élevée, comparé aux autres vagues dénombrées par Goichi Hosoda. Seule la vague en « double creux » ou « double sommet » offre une espérance de gain supérieure à celle des vagues « N ».</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague en "Y"
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-y.jpg" alt="vague Y" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague en Y</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague en "P"
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-p.jpg" alt="vague P" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague en P</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague en "S"
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-s.jpg" alt="vague S" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague en S</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague double creux
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-double-creux.jpg" alt="vague double creux" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague double creux</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Vague double sommet
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/vague-double-sommet.jpg" alt="vague double sommet" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Illustration - Vague souble sommet</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Pilier 3 - Théorie des prix
+    </div>
+    <div class="accordion-content">
+      <p>La théorie des vagues aura donc permis à Goichi Hosoda de dénombrer les différentes formations récurrentes sur les marchés. L’analyse poussée de ces formations lui a permis d’en tirer des projections de prix, plus communément appelées projections d’Hosoda, permettant de définir des objectifs de prix suite à la formation d’une vague, notamment à la formation du point C sur l’exemple des vagues en « N » décomposées en A, B, C et un objectif final N.</p>
+      <p>Nous allons à présent déterminer le calcul des principales projections d’Hosoda selon le type de vague N, des vagues N qui se différencieront  par l’ampleur de la correction suite à la formation du sommet B (creux B pour une vague N baissière).</p>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Projection N
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/projection-n.jpg" alt="projection N" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Projection N</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                   <li>Formation haussière : La vague « i » baissière (BC) retrace près de 50% de la 1 vague « i » haussière (AB).</li>
+                  <li>Formation baissière : La vague « i » haussière (BC) retrace près de 50% de la 1 vague « i » baissière (AB).</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Projection E
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/projection-e.jpg" alt="projection E" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Projection E</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                  <li>Formation haussière : La vague « i » baissière (BC) retrace plus de 50% de la 1 vague « i » haussière (AB).</li>
+                  <li>Formation baissière : La vague « i » haussière (BC) retrace plus de 50% de la 1 vague « i » baissière (AB).</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Projection V
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/projection-v.jpg" alt="projection V" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Projection V</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                  <li>Formation haussière : La vague « i » baissière (BC) retrace moins de 50% de la 1 vague « i » haussière (AB).</li>
+                  <li>Formation baissière : La vague « i » haussière (BC) retrace moins de 50% de la 1 vague « i » baissière (AB).</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Projection NT
+        </div>
+        <div class="accordion-content">
+          <div class="containerGD">
+            <div class="image-blockGD fullscreenImage">
+              <div class="image-container">
+                <img src="https://osdevil.github.io/Academy-PathFinders/imgs/projection-nt.jpg" alt="projection NT" class="fullscreenImageimg" loading="lazy">
+              </div>
+                <p class="captionGD">Projection NT</p>
+            </div>
+            <div class="text-blockGD">
+                <ul>
+                  <li>Formation haussière : La vague « i » baissière (BC) retrace moins de 50% de la 1 vague « i » haussière (AB). BC se formera dans sur un horizon de temps élevé.</li>
+                  <li>Formation baissière : La vague « i » haussière (BC) retrace moins de 50% de la 1 vague « i » baissière (AB). BC se formera dans sur un horizon de temps élevé.</li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="customBlue">Exemple : Dow Jones en H1</h2>
+<div style="display: flex; justify-content:center;"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/dow-jones-h1.jpg" alt="Dow Jones H1" style="max-width: 100%;"></div>
+<p>Tout d’abord, intéressons-nous aux bases de l’indicateur Ichimoku. Au cours du dernier mouvement haussier, deux signaux Ichimoku ont été activés. Tout d’abord, le franchissement de la Kijun par les prix précédant le point bas aux alentours de 22718 points. Ce signal n’a pas été validé par la lagging span qui au moment du signal d’achat s’apprêtait à rencontrer des obstacles de taille : un chandelier japonais baissier à long corps ainsi que la Kijun. Il est important de noter que la lagging span s’est repliée au contact de la Kijun, ce qui a correspondu au repli des cours au contact du haut du nuage (la SSA), avant de replier en direction du bas de ce dernier (la SSA).</p>
+<p>Un second signal sera lui validé par la lagging span, et aura été activé au moment de la sortie du nuage par le haut. Concernant la gestion de position de ce type de signal d’achat, les différents paliers de SSB et de Kijun peuvent représenter des objectifs optimaux.</p>
+<p>Nous allons à présent intégrer le raisonnement issu de la théorie des vagues et de la théorie des prix afin de compléter la vision classique de l’indicateur Ichimoku.</p>
+<p>Tout d’abord nous allons déterminer les 3 premiers points de la vague ayant initié le dernier mouvement haussier. Le creux aux alentours des 22718 points sera notre A, le teste de la borne supérieure de notre nuage (la SSB) sera notre point B, et le teste de la borne inférieure sera notre point C. Les trois points A, B et C ayant été déterminés nous pouvons à présent appliquer les projections d’Hosoda disponibles sur la plateforme Xstation, ce qui permet de placer automatiquement nos projections NT, V, N et E.</p>
+<p>Nous allons à présent déterminer le type de vague en cours de formation. La vague « i » baissière (BC) retrace moins de 50% de la 1ère  vague « i » haussière (AB), nous pouvons donc affirmer que le marché forme une vague « V ».</p>
+<p>Projection V = 24075 points</p>
+<p>La projection « V » a bien été atteinte, et même dépassée. Après avoir marqué le point « V », une succession de vagues haussières en « i » a permis au marché de rallier la projection « E ». Chaque vague en « i » est allée validée la prochaine projection permettant ainsi une poursuite discontinue du mouvement haussier.</p>
+<p>Une fois toutes les projections d’Hosoda validées par le marché, ces dernières restent valables. Nous assistons donc à une inversion de polarité (résistance devenue support ou inversement).</p>
+<div style="display: flex; justify-content:center;"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/dow-jones-h1-2.jpg" alt="Dow Jones H1 - Analyse" style="max-width: 100%;"></div>
+<p>Ainsi, l’application coordonnée des éléments que nous avons abordés permet une vision plus complète que celle offerte par l’indicateur Ichimoku utilisé indépendamment des piliers de la théorie.
+
+
+
+
+  
