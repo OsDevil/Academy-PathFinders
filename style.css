@@ -921,6 +921,14 @@ p {
 .image-blockGD.fullscreenImage.fullscreen:hover {
     cursor: default;
 }
+.imgSolo{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 50px;
+}
+.imgSolo.image-container img{
+	width: 100%;
+}
 .captionGD {
     text-align: center;
     font-style: italic;
