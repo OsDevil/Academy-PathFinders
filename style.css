@@ -933,9 +933,9 @@ p {
 	width: 100%;
 }
 .captionGD {
-    text-align: center;
-    font-style: italic;
-    color: #4694D4;
+	text-align: center;
+	font-style: italic;
+	color: #c5c5c5;
 	margin: 5px 0;
 }
 .text-blockGD ul {
