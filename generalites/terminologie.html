@@ -8,108 +8,184 @@ title: PathFinders Academy - Terminologie et Concepts de Base
 
 <h2 class="customBlue">Types d'ordres</h2>
 <p>Plusieurs types d'ordres existent sur les marchés pour entrer et sortir de position de manière efficace et correspondant à votre stratégie de trading.</p>
-<br>
-<h3 class="customOrange">Ordre au marché (market)</h3>
-<br>
-<p>L'ordre au marché est l'un des types d'ordres les plus simples et couramment utilisés sur les marchés financiers. Lorsque vous placez un ordre au marché, vous demandez à votre courtier d'exécuter l'ordre immédiatement au meilleur prix disponible sur le marché. Cela signifie que l'ordre sera exécuté instantanément, quelle que soit la cotation actuelle de l'actif.</p>
-<p>⚠ L'ordre sera exécuté au meilleur prix offert par les vendeurs ou demandé par les acheteurs au moment de la soumission de l'ordre. Cela implique qu'un marché très volatile ou un marché avec peu de volume vous fera souvent exécuter votre ordre marché à un prix légèrement différent de celui attendu.</p>
-<p>L'ordre au marché est donc un bon moyen de rentrer instantanément en position, mais n'est pas celui que nous recommandons dans la plupart des cas. Il est également à noter que sur certains broker et en particulier sur les exchanges de crypto, un ordre au marché engendrera plus de frais qu'un autre type d'ordre.</p>
-<br>
-<h3 class="customOrange">Ordre limite</h3>
-<br>
-<p>Bien plus fréquent et recommandé dans un plan de trading, l'ordre limite est un type d'ordre qui permet aux traders de spécifier un prix précis auquel ils souhaitent acheter ou vendre un actif. Contrairement à l'ordre au marché, qui est exécuté immédiatement au meilleur prix disponible, l'ordre limite ne sera exécuté que si le marché atteint ou dépasse le prix que vous avez défini.</p>
-<p>Cela vous permet donc d'avoir un contrôle plus précis sur le prix d'exécution de votre transaction et de ne rentrer en position que lorsque le prix atteint le niveau attendu qui découle de votre analyse.</p>
-<br>
-<h3 class="customOrange">Ordre conditionnel</h3>
-<br>
-<p>Moins fréquent mais permettant encore plus de contrôle, l'ordre conditionnel vise à exécuter une transaction à un prix spécifié après que le marché a atteint un niveau prédéfini.</p>
-<p>On attend donc ici deux niveaux de validation avant l'exécution de l'ordre. D'abord on attend que le prix atteigne le niveau 1, puis un ordre limite est placé sur le marché au prix du second niveau, lequel s'exécute lorsque ce niveau est atteint.</p>
+<div class="accordion">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre au marché (market)
+    </div>
+    <div class="accordion-content">
+      <p>L'ordre au marché est l'un des types d'ordres les plus simples et couramment utilisés sur les marchés financiers. Lorsque vous placez un ordre au marché, vous demandez à votre courtier d'exécuter l'ordre immédiatement au meilleur prix disponible sur le marché. Cela signifie que l'ordre sera exécuté instantanément, quelle que soit la cotation actuelle de l'actif.</p>
+      <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+          <img src="https://osdevil.github.io/Academy-PathFinders/imgs/danger.png" alt="danger">
+          <p>L'ordre sera exécuté au meilleur prix offert par les vendeurs ou demandé par les acheteurs au moment de la soumission de l'ordre. Cela implique qu'un marché très volatile ou un marché avec peu de volume vous fera souvent exécuter votre ordre marché à un prix légèrement différent de celui attendu.</p>
+      </div>
+      <p>L'ordre au marché est donc un bon moyen de rentrer instantanément en position, mais n'est pas celui que nous recommandons dans la plupart des cas. Il est également à noter que sur certains broker et en particulier sur les exchanges de crypto, un ordre au marché engendrera plus de frais qu'un autre type d'ordre.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre limite
+    </div>
+    <div class="accordion-content">
+      <p>Bien plus fréquent et recommandé dans un plan de trading, l'ordre limite est un type d'ordre qui permet aux traders de spécifier un prix précis auquel ils souhaitent acheter ou vendre un actif. Contrairement à l'ordre au marché, qui est exécuté immédiatement au meilleur prix disponible, l'ordre limite ne sera exécuté que si le marché atteint ou dépasse le prix que vous avez défini.</p>
+      <p>Cela vous permet donc d'avoir un contrôle plus précis sur le prix d'exécution de votre transaction et de ne rentrer en position que lorsque le prix atteint le niveau attendu qui découle de votre analyse.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre conditionnel
+    </div>
+    <div class="accordion-content">
+      <p>Moins fréquent mais permettant encore plus de contrôle, l'ordre conditionnel vise à exécuter une transaction à un prix spécifié après que le marché a atteint un niveau prédéfini.</p>
+      <p>On attend donc ici deux niveaux de validation avant l'exécution de l'ordre. D'abord on attend que le prix atteigne le niveau 1, puis un ordre limite est placé sur le marché au prix du second niveau, lequel s'exécute lorsque ce niveau est atteint.</p>
+    </div>
+  </div>
+</div>
 
 <h2 class="customBlue">Types de Trading</h2>
 <p>Avant d'aborder comment se composent les ordres vus plus haut et la manière de les utiliser en maitrisant votre risque, il est important que vous ayez à l'esprit qu'il existe plusieurs types de trading, dont certains correspondront plus à votre profil que d'autres.</p>
-<br>
-<h3 class="customOrange">Spot</h3>
-<br>
-<p>Le Spot va vous permettre de rentrer uniquement à l'achat sur un actif. Les traders visent généralement ici à accumuler des actifs (bags d'actifs) pour profiter d'une hausse future à long terme. Ici, le DCA est très souvent partiqué, un concept que nous aborderons un peu plus loin.</p>
-<br>
-<h3 class="customOrange">Trading sur Contrats à Terme (Futures)</h3>
-<br>
-<p>Le trading sur contrats à terme implique l'achat ou la vente de contrats à terme standardisés pour des actifs . Ces contrats fixent le prix et la date de règlement à l'avance, ce qui permet aux traders de spéculer sur la direction des prix.</p>
-<p>On pourra inclure dans ce type de trading le trading de dérivées que l'on retrouve sur les exchanges de cryptomonnaies notamment, permettant de rentrer à l'achat comme à la vente sur les actifs présents sur la plateforme.</p>
-<br>
-<h3 class="customOrange">Trading sur Marge</h3>
-<br>
-<p>Le trading sur marge permet aux traders d'emprunter des fonds auprès de leur courtier pour augmenter leur exposition sur le marché. Cela peut amplifier les gains potentiels, mais augmente également le risque de pertes. Le trading sur marge est courant dans le trading de devises et de contrats à terme.</p>
-<br>
-<h3 class="customOrange">Scalping</h3>
-<br>
-<p>Le scalping est une stratégie de trading à très court terme où les traders cherchent à réaliser de petits gains en exploitant de petites fluctuations de prix. Les scalpers effectuent de nombreuses transactions dans une journée et recherchent des mouvements rapides du marché. La volatilité est donc généralement leur meilleur allié.</p>
-<br>
-<h3 class="customOrange">Day Trading</h3>
-<br>
-<p>Les day traders ouvrent et ferment des positions au cours d'une seule journée de trading. Ils cherchent à profiter des mouvements de prix à court terme, mais ferment toutes leurs positions avant la fin de la journée pour éviter les risques liés aux mouvements de prix nocturnes. Leurs positions durent en général de quelques minutes à quelques heures.</p>
-<br>
-<h3 class="customOrange">Swing Trading</h3>
-<br>
-<p>Les swing traders cherchent à capturer les mouvements de prix à moyen terme. Ils gardent souvent leurs positions ouvertes pendant plusieurs jours voire semaines, profitant des tendances et des retournements de marché.</p>
-<br>
-<h3 class="customOrange">Position Trading</h3>
-<br>
-<p>Les position traders maintiennent leurs positions ouvertes pendant des périodes prolongées, allant de quelques semaines à plusieurs mois voire années. Ils visent à profiter des tendances à long terme et des changements fondamentaux.</p>
-<br>
-<h3 class="customOrange">Algotrading</h3>
-<br>
-<p>Catégorie très spécifique et souvent professionnelle, l'algotrading implique l'utilisation de programmes informatiques et d'algorithmes pour exécuter automatiquement des transactions en fonction de critères prédéfinis. Cette approche repose sur l'analyse de données et l'automatisation des décisions de trading.</p>
+<div class="accordion">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Spot
+    </div>
+    <div class="accordion-content">
+      <p>Le Spot va vous permettre de rentrer uniquement à l'achat sur un actif. Les traders visent généralement ici à accumuler des actifs (bags d'actifs) pour profiter d'une hausse future à long terme. Ici, le DCA est très souvent pratiqué, un concept que nous aborderons un peu plus loin.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Trading sur Contrats à Terme (Futures)
+    </div>
+    <div class="accordion-content">
+      <p>Le trading sur contrats à terme implique l'achat ou la vente de contrats à terme standardisés pour des actifs . Ces contrats fixent le prix et la date de règlement à l'avance, ce qui permet aux traders de spéculer sur la direction des prix.</p>
+      <p>On pourra inclure dans ce type de trading le trading de dérivées que l'on retrouve sur les exchanges de cryptomonnaies notamment, permettant de rentrer à l'achat comme à la vente sur les actifs présents sur la plateforme.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Trading sur Marge
+    </div>
+    <div class="accordion-content">
+      <p>Le trading sur marge permet aux traders d'emprunter des fonds auprès de leur courtier pour augmenter leur exposition sur le marché. Cela peut amplifier les gains potentiels, mais augmente également le risque de pertes. Le trading sur marge est courant dans le trading de devises et de contrats à terme.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Scalping
+    </div>
+    <div class="accordion-content">
+      <p>Le scalping est une stratégie de trading à très court terme où les traders cherchent à réaliser de petits gains en exploitant de petites fluctuations de prix. Les scalpers effectuent de nombreuses transactions dans une journée et recherchent des mouvements rapides du marché. La volatilité est donc généralement leur meilleur allié.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Day Trading
+    </div>
+    <div class="accordion-content">
+      <p>Les day traders ouvrent et ferment des positions au cours d'une seule journée de trading. Ils cherchent à profiter des mouvements de prix à court terme, mais ferment toutes leurs positions avant la fin de la journée pour éviter les risques liés aux mouvements de prix nocturnes. Leurs positions durent en général de quelques minutes à quelques heures.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Swing Trading
+    </div>
+    <div class="accordion-content">
+      <p>Les swing traders cherchent à capturer les mouvements de prix à moyen terme. Ils gardent souvent leurs positions ouvertes pendant plusieurs jours voire semaines, profitant des tendances et des retournements de marché.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Position Trading
+    </div>
+    <div class="accordion-content">
+      <p>Les position traders maintiennent leurs positions ouvertes pendant des périodes prolongées, allant de quelques semaines à plusieurs mois voire années. Ils visent à profiter des tendances à long terme et des changements fondamentaux.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Algotrading
+    </div>
+    <div class="accordion-content">
+      <p>Catégorie très spécifique et souvent professionnelle, l'algotrading implique l'utilisation de programmes informatiques et d'algorithmes pour exécuter automatiquement des transactions en fonction de critères prédéfinis. Cette approche repose sur l'analyse de données et l'automatisation des décisions de trading.</p>
+    </div>
+  </div>
+</div>
 
 <h2 class="customBlue">Position Long et Short</h2>
 <p>Comme évoqué à demi-mots ci-dessus, il est parfois possible de rentrer sur les marchés dans deux directions : la hausse (long) et la baisse (short).</p>
-<div class="containerGD">
-  <div class="image-blockGD fullscreenImage">
-    <div class="image-container">
-      <img src="https://osdevil.github.io/Academy-PathFinders/imgs/position-long.jpg" alt="Position Long" class="fullscreenImageimg" loading="lazy">
+<div class="accordion">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre au marché (market)
     </div>
-      <p class="captionGD">Position Long</p>
+    <div class="accordion-content">
+      <div class="containerGD">
+        <div class="image-blockGD fullscreenImage">
+          <div class="image-container">
+            <img src="https://osdevil.github.io/Academy-PathFinders/imgs/position-long.jpg" alt="Position Long" class="fullscreenImageimg" loading="lazy">
+          </div>
+            <p class="captionGD">Position Long</p>
+        </div>
+        <div class="text-blockGD">
+          <p>Les positions long sont conceptuellement très facile à comprendre. Le trader se positionné à l'achat puisque son analyse lui indique de fortes probabilités que le prix parte à la hausse. Il cherche donc à acheter bas et vendre haut. Par exemple, le trader se positionne sur un actif à l'achat au prix de 100$, puis attendra que le prix atteigne 150$ pour le revendre. Il aura donc réalisé une plus-value sur la hausse.</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="text-blockGD">
-    <p>Les positions long sont conceptuellement très facile à comprendre. Le trader se positionné à l'achat puisque son analyse lui indique de fortes probabilités que le prix parte à la hausse. Il cherche donc à acheter bas et vendre haut. Par exemple, le trader se positionne sur un actif à l'achat au prix de 100$, puis attendra que le prix atteigne 150$ pour le revendre. Il aura donc réalisé une plus-value sur la hausse.</p>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre limite
+    </div>
+    <div class="accordion-content">
+      <div class="containerGD">
+        <div class="image-blockGD fullscreenImage">
+          <div class="image-container">
+            <img src="https://osdevil.github.io/Academy-PathFinders/imgs/position-short.jpg" alt="Position Short" class="fullscreenImageimg" loading="lazy">
+          </div>
+            <p class="captionGD">Position Short</p>
+        </div>
+        <div class="text-blockGD">
+          <p>Les positions short sont cette fois plus compliquées à comprendre puisque le trader souhaite se positionner à la vente. Son analyse lui indique que le prix a de fortes probabilités de baisser et il souhaite profiter de ce mouvement. Il va donc placer un short, c'est-à-dire "vendre" virtuellement un actif, pour le racheter plus bas. Il ne possède donc cette fois pas l'actif en question lors de l'exécution de l'ordre, il le vend avec la promesse de le racheter plus tard. Par exemple, le trader se positionne sur un actif à la vente au prix de 100$, puis attendra que le prix atteigne 50$ pour le racheter. Il aura donc réalisé une plus-value sur la baisse.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<div class="containerGD">
-  <div class="image-blockGD fullscreenImage">
-    <div class="image-container">
-      <img src="https://osdevil.github.io/Academy-PathFinders/imgs/position-short.jpg" alt="Position Short" class="fullscreenImageimg" loading="lazy">
-    </div>
-      <p class="captionGD">Position Short</p>
-  </div>
-  <div class="text-blockGD">
-    <p>Les positions short sont cette fois plus compliquées à comprendre puisque le trader souhaite se positionner à la vente. Son analyse lui indique que le prix a de fortes probabilités de baisser et il souhaite profiter de ce mouvement. Il va donc placer un short, c'est-à-dire "vendre" virtuellement un actif, pour le racheter plus bas. Il ne possède donc cette fois pas l'actif en question lors de l'exécution de l'ordre, il le vend avec la promesse de le racheter plus tard. Par exemple, le trader se positionne sur un actif à la vente au prix de 100$, puis attendra que le prix atteigne 50$ pour le racheter. Il aura donc réalisé une plus-value sur la baisse.</p>
-  </div>
-</div>
-
 
 
 <h2 class="customBlue">Stop-Loss (SL) et Take-Profit (TP)</h2>
 <p>Les ordres stop-loss (SL) et take-profit (TP) sont des outils essentiels pour gérer les positions de trading et atteindre des objectifs spécifiques en termes de pertes et de profits. Ces ordres vont vous permettre de mettre en place une gestion disciplinée des risques et de sécuriser vos gains potentiels.</p>
+<br>
 <div class="image-blockGD fullscreenImage">
   <div class="image-container">
     <img src="https://osdevil.github.io/Academy-PathFinders/imgs/tp-sl.jpg" alt="TP / SL" class="fullscreenImageimg" loading="lazy">
   </div>
     <p class="captionGD">TP / SL</p>
 </div>
-<br>
-<h3 class="customOrange">Stop-Loss</h3>
-<br>
-<p>L'ordre stop-loss (SL) est un niveau de prix prédéterminé auquel une position est automatiquement fermée pour limiter les pertes.</p>
-<p>Par exemple, vous choisissez de rentrer à l'achat sur l'actif X avec un ordre limite au prix de 100$ avec un SL au niveau des 90$. Le prix atteint 100$, vous rentrez donc en position. Le prix fluctue, puis atteint 90$. Votre position est automatiquement fermée.</p>
-<p>Ce qu'il est extrêmement important de comprendre, c'est que votre plan de trading (sauf exception sur de l'investissement en DCA) doit TOUJOURS être associé à un niveau d'invalidation. C'est-à-dire, un niveau de prix qui, s'il est franchit, vous indique que votre analyse était fausse. Votre Stop-Loss doit donc se trouver sur ce niveau, c'est votre ceinture de sécurité qui vous permet de limiter vos pertes lorsques vos analyses sont inexactes.</p>
-<p>Nous aborderons un peu plus loin les bases de la gestion de risque, mais vous comprenez déjà pourquoi il est extrêmement important de positionner un Stop-Loss à chaque trade sur lequel vous vous positionnez. En cas de mauvaise analyse, pas de mauvaise surprise, vous perdez ce que vous vous étiez autorisé à perdre et vous ne perdrez pas plus.</p>
-<br>
-<h3 class="customOrange">Take-Profit</h3>
-<br>
-<p>Tout comme le Stop-Loss, il est très important d'avoir déjà en tête vos objectifs de prise de profits lorsque vous entrez en trade, et ce pour plusieurs raisons.</p>
-<p>Tout d'abord, placer vos TP et vous y astreindre est un exercice obligatoire pour que votre psychologie ne vous joue pas des tours que vous regretterez. Il est tellement facile de voir sa position en positif, vouloir pousser un peu le bouchon en espérant des profits toujours plus gros (ce qu'on appelle le greed), et de finalement voir le prix revenir à votre point d'entrée, voire pire, votre SL, sans avoir TP alors que vous en aviez l'opportunité...</p>
-<p>Également, connaitre vos niveaux de TP et vos niveaux de SL vous permettra de déterminer ce qu'on appelle votre Risk-Reward. Il s'agit simplement du ratio entre ce que vous vous apprêtez à gagner en cas de TP et ce que vous êtes prêts à perdre en cas de SL. Par exemple, un PE à 100$, un SL à 90$ et un TP à 130$ vous offrira un RR de 3 (vous êtes prêt à perdre 10 pour gagner 30, 30/10 = 3). Ce petit ratio que nous reverrons plus tard vous permettra de trier vos setups pour ne garder que les plus intéressants qui maximiseront vos chances de gains sur le long terme.</p>
-
+<div class="accordion">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre au marché (market)
+    </div>
+    <div class="accordion-content">
+      <p>L'ordre stop-loss (SL) est un niveau de prix prédéterminé auquel une position est automatiquement fermée pour limiter les pertes.</p>
+      <p>Par exemple, vous choisissez de rentrer à l'achat sur l'actif X avec un ordre limite au prix de 100$ avec un SL au niveau des 90$. Le prix atteint 100$, vous rentrez donc en position. Le prix fluctue, puis atteint 90$. Votre position est automatiquement fermée.</p>
+      <p>Ce qu'il est extrêmement important de comprendre, c'est que votre plan de trading (sauf exception sur de l'investissement en DCA) doit TOUJOURS être associé à un niveau d'invalidation. C'est-à-dire, un niveau de prix qui, s'il est franchit, vous indique que votre analyse était fausse. Votre Stop-Loss doit donc se trouver sur ce niveau, c'est votre ceinture de sécurité qui vous permet de limiter vos pertes lorsques vos analyses sont inexactes.</p>
+      <p>Nous aborderons un peu plus loin les bases de la gestion de risque, mais vous comprenez déjà pourquoi il est extrêmement important de positionner un Stop-Loss à chaque trade sur lequel vous vous positionnez. En cas de mauvaise analyse, pas de mauvaise surprise, vous perdez ce que vous vous étiez autorisé à perdre et vous ne perdrez pas plus.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Ordre limite
+    </div>
+    <div class="accordion-content">
+      <p>Tout comme le Stop-Loss, il est très important d'avoir déjà en tête vos objectifs de prise de profits lorsque vous entrez en trade, et ce pour plusieurs raisons.</p>
+      <p>Tout d'abord, placer vos TP et vous y astreindre est un exercice obligatoire pour que votre psychologie ne vous joue pas des tours que vous regretterez. Il est tellement facile de voir sa position en positif, vouloir pousser un peu le bouchon en espérant des profits toujours plus gros (ce qu'on appelle le greed), et de finalement voir le prix revenir à votre point d'entrée, voire pire, votre SL, sans avoir TP alors que vous en aviez l'opportunité...</p>
+      <p>Également, connaitre vos niveaux de TP et vos niveaux de SL vous permettra de déterminer ce qu'on appelle votre Risk-Reward. Il s'agit simplement du ratio entre ce que vous vous apprêtez à gagner en cas de TP et ce que vous êtes prêts à perdre en cas de SL. Par exemple, un PE à 100$, un SL à 90$ et un TP à 130$ vous offrira un RR de 3 (vous êtes prêt à perdre 10 pour gagner 30, 30/10 = 3). Ce petit ratio que nous reverrons plus tard vous permettra de trier vos setups pour ne garder que les plus intéressants qui maximiseront vos chances de gains sur le long terme.</p>
+    </div>
+  </div>
+</div>
 
 <ul>
   <li>Types d'ordres (marché, limite, stop, etc.)</li>
