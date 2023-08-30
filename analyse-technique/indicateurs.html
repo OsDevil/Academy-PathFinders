@@ -45,4 +45,159 @@ title: PathFinders Academy - indicateurs
 </div>
 
 
-<div style="display: flex; justify-content:center;"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/coming_soon_default.jpg" alt="coming soon" style="max-width: 100%;"></div>
+<div class="accordion">
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> OBV
+    </div>
+    <div class="accordion-content">
+      <p>...</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> CVD
+    </div>
+    <div class="accordion-content">
+      <p>Le CVD est le Delta de Volume Cumulatif. Concrètement, il s'agit de la différence entre les volumes d'achat et les volumes de vente sur une période.</p>
+      <ul>
+        <li>Ligne de CVD Up ⇒ intérêt en hausse</li>
+        <li>Ligne de CVD Down ⇒ intérêt en baisse</li>
+      </ul>
+      <p>Attention cependant, le CVD est un indicateur qui trouve souvent sa pertinence sur des timeframes H1 minimum.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Funding Rate
+    </div>
+    <div class="accordion-content">
+      <p>Le Funding Rate est la représentation graphique de l'écart des prix en pourcentage entre le marché des dérivés et le Spot.</p>
+      <p>L'augmentation du Funding Rate d'un côté comme de l'autre aura pour conséquence l'augmentation des frais de financement.</p>
+      <p>On en déduit donc que plus le funding est élevé d'un côté ou de l'autre, plus un renversement du prix dans le sens opposé est probable !</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Open Interest
+    </div>
+    <div class="accordion-content">
+      <p>Il s'agit de la représentation graphique des contrats passés sur les dérivés. Quand un contrat s'ouvre, l'OI augmente. Quand un contrat se ferme, l'OI baisse.</p>
+      <ul>
+        <li>{Prix monte + OI monte} ⇒ Ouverture Long</li>
+        <li>{Prix baissee + OI baisse} ⇒ Fermeture Long</li>
+        <li>{Prix baisse + OI monte} ⇒ Ouverture Short</li>
+        <li>{Prix monte + OI baisse} ⇒ Fermeture Short</li>
+      </ul>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> RSI
+    </div>
+    <div class="accordion-content">
+      <p>Le RSI (Relative Strength Index) est un indicateur de momentum développé par J. Welles Wilder Jr qui mesure la vélocité et la variation du prix d'un actif afin d'évaluer s'il se situe en zone de surachat ou de survente.</p>
+      <p>Son affichage se fait sous forme d'une courbe linéaire similaire à celle du prix, sur une échelle de 0 à 100. Globalement, cet indicateur permet de confirmer des analyses techniques en validant de potentiels renversements, pullback ou continuation de tendance. Généralement, nous pourrons dire qu'un RSI supérieur à 70 indique une situation de surachat, tandis qu'un RSI inférieur à 30 indique une situation de survente.</p>
+      <p>Attention cependant, il est important de noter que cet indicateur est TOUJOURS en retard par rapport au prix. Il s'agit d'un calcul de momentum reliant les forces acheteuses et forces vendeuses en présence (RSI = 100 - [100 / (1 + (MH/MB))] ; MH et MB les moyennes des hausses et des baisses sur les X dernières unités de temps). Plus l'historique utilisé est important, plus l'information donnée est donc pertinente.</p>
+      <p>La longueur par défaut utilisée pour le calcul du RSI est de 14.</p>
+      <div class="fullscreenImage imgSolo">
+        <div class="image-container">
+          <img src="https://osdevil.github.io/Academy-PathFinders/imgs/rsi-illustration.jpg" alt="RSI Illustration" class="fullscreenImageimg" loading="lazy">
+        </div>
+          <p class="captionGD">RSI Illustration</p>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Utilisation du RSI - Étape 1
+        </div>
+        <div class="accordion-content">
+          <p>La première étape consiste à déterminer dans quelle zone se trouve le prix.</p>
+          <ul>
+            <li>Surachat : RSI > 70</li>
+            <li>Neutralité : 30 ≤ RSI ≤ 70</li>
+            <li>Neutralité : RSI < 30</li>
+          </ul>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Utilisation du RSI - Étape 2
+        </div>
+        <div class="accordion-content">
+          <p>Une approche est ensuite de réaliser l'opposé de ce que nous montre le RSI en zones extrêmes.</p>
+          <ul>
+            <li>Vendre en zone de surachat</li>
+            <li>Acheter en zone de survente</li>
+          </ul>
+          <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+            <img src="https://osdevil.github.io/Academy-PathFinders/imgs/danger.png" alt="danger">
+            <p>Cette méthode d'analyse très naïve ne se suffit pas à elle-même ! Le RSI est un indicateur qui doit venir confirmer une analyse préalable. Un prix en zone de surachat peut bien entendu continuer d'augmenter.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Utilisation du RSI - Étape 3
+        </div>
+        <div class="accordion-content">
+          <p>Nous pouvons autrement nous baser sur la simple zone de neutralité pour lancer nos trades !</p>
+          <ul>
+            <li>Si le PA est bull, le croisement de la médiane à la hausse par le RSI en restant au-dessus peut constituer un signal d'achat, ou de prise de profits pour un short en cours.</li>
+            <li>Si le PA est bear, le croisement de la médiane à la baisse par le RSI en restant en-dessous peut constituer un signal de vente, ou de prise de profits pour un long en cours.</li>
+          </ul>
+          <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+            <img src="https://osdevil.github.io/Academy-PathFinders/imgs/danger.png" alt="danger">
+            <p>Cette méthode d'analyse très naïve ne se suffit pas à elle-même ! Le RSI est un indicateur qui doit venir confirmer une analyse préalable. Un prix en zone de surachat peut bien entendu continuer à augmenter.</p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item levelDeux">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <div class="triangle">&#9658;</div> Utilisation du RSI - Étape 4
+        </div>
+        <div class="accordion-content">
+          <p>Plus avancé mais extrêmement puissant pour corréler d'autres analyses, nous pouvons observer les divergences entre le RSI et le PA de la chart.</p>
+          <p>Une divergence est caractérisée par une incohérence entre ce que montre le RSI et ce que montre le PA. Ce sont des anomalies qui peuvent nous indiquer des changements de tendances à venir.</p>
+          <ul>
+            <li>Divergence haussière : Le PA dessine des creux de plus en plus bas alors que le RSI dessine des creux de plus en plus hauts</li>
+            <li>Divergence baissière : Le PA dessine des creux de plus en plus hauts alors que le RSI dessine des creux de plus en plus bas</li>
+          </ul>
+          <div class="fullscreenImage imgSolo">
+            <div class="image-container">
+              <img src="https://osdevil.github.io/Academy-PathFinders/imgs/rsi-div.jpg" alt="RSI Divergences" class="fullscreenImageimg" loading="lazy">
+            </div>
+              <p class="captionGD">Divergences RSI</p>
+          </div>
+          <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
+            <img src="https://osdevil.github.io/Academy-PathFinders/imgs/danger.png" alt="danger">
+            <p>Cette méthode d'analyse très naïve ne se suffit pas à elle-même ! Le RSI est un indicateur qui doit venir confirmer une analyse préalable. Un prix en zone de surachat peut bien entendu continuer à augmenter.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> MACD
+    </div>
+    <div class="accordion-content">
+      <p>...</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Volume
+    </div>
+    <div class="accordion-content">
+      <p>...</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Volume Profile
+    </div>
+    <div class="accordion-content">
+      <p>...</p>
+    </div>
+  </div>
+</div>
