@@ -191,6 +191,50 @@ title: PathFinders Academy - Terminologie et Concepts de Base
   </div>
 </div>
 
+<h2 class="customBlue">Effets de levier</h2>
+<p>L'effet de levier est un outil très intéressant pour un trader puisqu'il va lui permettre de multiplier virtuellement son capital pour entrer en position. Mais attention ! Si cet outil paraît alléchant au premier abord, il faut bien comprendre qu'il peut être aussi bénéfique que dévastateur. Multiplier ses gains potentiels implique également l'autre côté de la balance : multiplier ses pertes.</p>
+<p>Pour faire simple, nous allons raisonner en taille de position. Entrer en position avec 10$ levier 10 est équivalent sur le marché à entrer avec 100$ levier 1. Ou encore 100$ en x5 équivaut à 5$ en x100. Alors quelle est la différence ? Le prix de liquidation.</p>
+<p>Avec 100$ en x5, une variation de 1% sur le marché équivaut à une variation de 5% sur votre capital. Si vous êtes en position isolée (voir section suivante), cela signifie qu'une variation de 20% sur le marché impliquera une variation de 100% sur votre position, c'est-à-dire, une liquidation de votre position, vous avez perdu 100$.</p>
+<p>Prenons maintenant 5$ en x100. Vous l'avez compris, une variation de 1% sur le marché équivaut déjà à une variation de 100% sur votre capital ! Dans les mêmes conditions, cette variation de 1% entrainera automatiquement la liquidation de votre position et la perte de vos 5$.</p>
+<p>En somme, utiliser un fort effet de levier est intéressant dans une dynamique d'ouverture simultanée de plusieurs positions avec un faible capital, autrement il ne servira qu'à vous la péter avec de gros %, c'est-à-dire à rien si ce n'est vous faire prendre des risques non réfléchis. Préférez donc généralement utiliser une grosse position et un faible levier, ainsi qu'un SL bien placé pour maitriser votre risque.</p>
+<p>En outre et puisque la question revient souvent concernant les frais de trading sur les exchanges crypto, que cela soit dit une bonne fois pour toute : C'est la taille qui compte (de position bien sûr, coquin). L'effet de levier n'a aucun impact sur les frais, 100$ en x5 ou 5$ en x100 impliquent tous les deux une position sur le marché de 500$, vous paierez les mêmes frais.</p>
+
+<h2 class="customBlue">Trading croisé ou isolé ? (Cross / isolated)</h2>
+<p>Lorsque vous ferez vos premiers pas sur les marchés, et peut-être sur certains exchanges crypto pour trade en dérivées, vous serez amené à choisir entre ouvrir une position isolée ou une position croisée.</p>
+<p>La différence est très simple et votre choix éclairé doit dépendre de la façon dont vous gérez votre risque :</p>
+<div class="accordion">
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Position isolée
+    </div>
+    <div class="accordion-content">
+      <p>Ouvrir une position isolée signifie que vous utilisez seulement la marge allouée à une position pour qu'elle se déroule. En cas d'une variation de prix trop importante et de SL ou liquidation, seule cette marge sera perdue.</p>
+      <p>Imaginons que vous ayez 10 000$ sur votre compte et que vous souhaitez ouvrir une position long avec 1 000$ de marge en levier 20. Par exemple, vous achetez l'actif A au prix de 500$ l'unité. À ce stade, il vous reste 9 000$ sur votre compte et 1 000$ investis en long sur l'actif A.</p>
+      <p>Le levier 20, comme nous l'avons vu, multiplie les variations de prix. Autrement dit, une variation de 5% sur le prix de l'actif correspond à une variation de 100% sur votre capital ! Votre prix de liquidation se situe donc à 475$ (500*0.95); Si le prix atteint ce niveau et que votre SL n'était pas placé plus haut, l'entièreté de la marge disponible (1 000$) ne sera plus suffisante pour couvrir vos pertes, vous serz donc liquidé au prix de 475$, la position est fermée et vous perdez l'intégralité des 1 000$. Il ne vous reste plus que 9 000$ sur votre compte.</p>
+      <p>Vous l'avez compris, le gros avantage du trading en isolé pour un débutant est que vous assurez vos arrières ! En cas d'erreur, seule la marge allouée à votre trade pourra être perdue, aucun risque de perdre 100% de votre capital tant que vous n'êtes pas rentré en position avec 100% du capital de votre compte et sans SL...</p>
+    </div>
+  </div>
+  <div class="accordion-item levelDeux">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Position croisée
+    </div>
+    <div class="accordion-content">
+      <p>Ouvrir une position croisée signifie que l'entièreté du capital de votre compte de trading peut être utilisée pour couvrir vos pertes en cas de mauvaise analyse. Attention ! C'est extrêmement dangereux pour votre compte si vous ne mettez pas de SL sur vos trades. Vous avez un risque de liquidation totale.</p>
+      <p>Reprenons notre exemple précédent, vous avez 10 000$ sur votre compte et ouvrez une position long sur l'actif A à 500$ l'unité, avec 1 000$ de marge et un levier 20.</p>
+      <p>Comme précédemment, une variation de 5% sur le prix de l'actif correspond à une variation de 100% sur votre capital. Mais cette fois, vous avez autorisé le broker à utiliser la marge totale disponible sur le compte (les 10 000$) pour couvrir vos pertes potentielles.</p>
+      <p>Votre analyse était fausse et le prix descend à 450$. Pour le moment, vous n'êtes pas liquidé, votre position n'est pas non plus fermée mais vous avez une perte latente de 2 000$ sur votre compte. C'est plus que les 1 000$ que vous aviez alloués en marge à votre position !</p>
+      <p>Scénario catastrophe, vous laissez courir, le prix passe à 250$, soit une variation réelle de 50% et donc 1 000% avec votre levier 20. La marge nécessaire à la couverture de cette perte latente est de 10 000$ et vous avez... 10 000$ sur votre compte. Pas plus. Votre position est liquidée et vous retrouvez votre compte avec 0$.</p>
+      <p>Alors quels sont les avantages d'une position croisée ? Très simple, vous pouvez vous permettre d'appliquer des leviers intéressants à vos positions (vous permettant virtuellement de multiplier votre capital, donc votre marge de manoeuvre), tout en autorisant des PNL (Profit & Loss) latents de plus de 100% sans vous faire liquider. Attention cependant, cette façon de procéder n'est vraiment pas adaptée pour un débutant.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
 <ul>
   <li>Types d'ordres (marché, limite, stop, etc.)</li>
   <li>Introduction à l'effet de levier</li>
