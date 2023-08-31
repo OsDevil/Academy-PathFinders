@@ -809,6 +809,8 @@ footer{
 }
 .contactRessource a{
 	font-size: 20px;
+	color: #1abc9c;
+	font-weight: 600;
 }
 .contactRessource a img{
 	width: 50px;
