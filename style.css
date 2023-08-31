@@ -38,6 +38,9 @@ body.loading {
 .activeimgback{
 	display: block;
 }
+ul{
+	margin-left: 20px;
+}
 li{
 	margin: 10px 0;
 }
