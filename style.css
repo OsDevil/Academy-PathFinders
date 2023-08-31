@@ -807,7 +807,13 @@ footer{
     width: 30px;
     margin-right: 10px;
 }
-
+.contactRessource a{
+	font-size: 20px;
+}
+.contactRessource a img{
+	width: 50px;
+	margin-right: 20px;
+}
 
 .centeredContent{
 	text-align: center;
