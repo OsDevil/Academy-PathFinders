@@ -40,13 +40,21 @@ body.loading {
 }
 ul{
 	margin-left: 20px;
+	color: #c5c5c5;
 }
 li{
 	margin: 10px 0;
 }
-p{
-	margin: 10px 0;
+h2{
+	margin: 50px 0;
+	text-align: center;
+	font-size: 30px;
+}
+p {
+	margin: 20px 0;
 	text-align: justify;
+	line-height: 1.6;
+	color: #c5c5c5;
 }
 a{
 	color: #4694D4;
@@ -605,17 +613,6 @@ footer{
 
 /** -------------------------------------------------- INDEX -------------------------------------------------- **/
 
-h2{
-	margin: 50px 0;
-	text-align: center;
-	font-size: 30px;
-}
-p {
-	margin: 20px 0;
-	text-align: justify;
-	line-height: 1.6;
-	color: #c5c5c5;
-}
 .mainImage{
 	display: flex;
 	justify-content: center;
