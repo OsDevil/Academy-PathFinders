@@ -1033,8 +1033,8 @@ p.customBlue {
 /* GLOSSAIRE */
 
 .searchContainer {
-	margin: 20px 0;
-	text-align: center;
+	margin: 20px 0 20px 20px;
+	text-align: left;
 }
 
 #searchInput {
