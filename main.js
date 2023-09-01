@@ -142,6 +142,29 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    //Gestion du glossaire
+    const searchInput = document.getElementById("searchInput");
+    const definitionList = document.getElementById("definitionList");
+    const definitions = definitionList.getElementsByTagName("li");
+
+    if (searchInput && definitionList && definitions){
+
+        searchInput.addEventListener("input", function () {
+            const searchTerm = searchInput.value.toLowerCase();
+    
+            for (let i = 0; i < definitions.length; i++) {
+                const definition = definitions[i];
+                const title = definition.querySelector("h2").textContent.toLowerCase();
+    
+                if (searchTerm === "" || title.includes(searchTerm)) {
+                    definition.style.display = "block";
+                } else {
+                    definition.style.display = "none";
+                }
+            }
+        });
+    }
+
 });
 
 function toggleAccordion(triggerAccordion) {
