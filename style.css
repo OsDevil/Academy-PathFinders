@@ -1029,3 +1029,31 @@ p.customBlue {
 		width: 90%;
 	}
 }
+
+/* GLOSSAIRE */
+
+.searchContainer {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+#definitionList li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#definitionList h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#definitionList p {
+    font-size: 16px;
+    margin: 0;
+}
