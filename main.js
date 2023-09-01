@@ -146,24 +146,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const searchInput = document.getElementById("searchInput");
     const definitionList = document.getElementById("definitionList");
     const definitions = definitionList.getElementsByTagName("li");
-
-    if (searchInput && definitionList && definitions){
-
+    
+    if (searchInput && definitionList && definitions) {
+    
         searchInput.addEventListener("input", function () {
             const searchTerm = searchInput.value.toLowerCase();
     
             for (let i = 0; i < definitions.length; i++) {
                 const definition = definitions[i];
                 const titleElement = definition.querySelector("h2");
-                const title = definition.querySelector("h2").textContent.toLowerCase();
+                const title = titleElement.textContent;
     
-                if (searchTerm === "" || title.includes(searchTerm)) {
+                if (searchTerm === "" || title.toLowerCase().includes(searchTerm)) {
                     definition.style.display = "block";
     
                     // Mettre en surbrillance les caractères de recherche dans le titre
                     if (searchTerm !== "") {
                         const highlightedTitle = highlightText(title, searchTerm);
                         titleElement.innerHTML = highlightedTitle;
+                    } else {
+                        titleElement.innerHTML = title;
                     }
                 } else {
                     definition.style.display = "none";
@@ -171,12 +173,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-
+    
     // Fonction pour mettre en surbrillance les caractères de recherche
     function highlightText(text, searchTerm) {
         const regex = new RegExp(searchTerm, "gi");
-        return text.replace(regex, (match) => `<span style="background-color: #000000; color: #FFFFFF">${match}</span>`);
+        return text.replace(regex, (match) => `<span style="background-color: #000000;">${match}</span>`);
     }
+
 
 });
 
