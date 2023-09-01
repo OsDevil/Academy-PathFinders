@@ -154,15 +154,28 @@ document.addEventListener("DOMContentLoaded", () => {
     
             for (let i = 0; i < definitions.length; i++) {
                 const definition = definitions[i];
+                const titleElement = definition.querySelector("h2");
                 const title = definition.querySelector("h2").textContent.toLowerCase();
     
                 if (searchTerm === "" || title.includes(searchTerm)) {
                     definition.style.display = "block";
+    
+                    // Mettre en surbrillance les caractères de recherche dans le titre
+                    if (searchTerm !== "") {
+                        const highlightedTitle = highlightText(title, searchTerm);
+                        titleElement.innerHTML = highlightedTitle;
+                    }
                 } else {
                     definition.style.display = "none";
                 }
             }
         });
+    }
+
+    // Fonction pour mettre en surbrillance les caractères de recherche
+    function highlightText(text, searchTerm) {
+        const regex = new RegExp(searchTerm, "gi");
+        return text.replace(regex, (match) => `<span style="background-color: #000000; color: #FFFFFF">${match}</span>`);
     }
 
 });
