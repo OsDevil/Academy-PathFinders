@@ -506,6 +506,12 @@ footer{
 	.colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
 	    text-align: center;
 	}
+	.colFoot1 h3{
+		display: none;
+	}
+	.colFoot1 h3 img{
+		margin: 20px 0;
+	}
 }
 
 /** -------------------------------------------------- FORM CONTACT -------------------------------------------------- **/
