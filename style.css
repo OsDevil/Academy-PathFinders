@@ -451,7 +451,7 @@ footer{
 	width: 25%;
 }
 .colFoot2{
-	width: 30%;
+	width: 40%;
 }
 .colFoot1 h3, .colFoot2 h3, .colFoot3 h3, .colFoot4 h3 {
    width: 100%;
@@ -463,8 +463,9 @@ footer{
 	margin-bottom: 20px;
 }
 .colFoot1 ul, .colFoot2 ul, .colFoot3 ul, .colFoot4 ul {
-    height: 100%;
-    transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	margin-left: 0;
+	height: 100%;
+	transition: height 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .colFoot1 ul li, .colFoot2 ul li, .colFoot3 ul li, .colFoot4 ul li {
     text-align: center;
