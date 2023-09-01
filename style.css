@@ -1037,21 +1037,22 @@ p.customBlue {
 	text-align: center;
 }
 
-
 #searchInput {
-	padding: 10px;
-	width: 300px;
-	max-width: 90%;
-	font-size: 16px;
-	background: none;
-	border: 1px solid #595959;
-	border-radius: 15px;
-	color: #ffffff;
-	outline: none;
-	margin-bottom: 50px;
+    padding: 10px;
+    width: 90%;
+    max-width: 90%;
+    font-size: 16px;
+    background: none;
+    border: none;
+    border: 2px solid #09131b;
+    box-shadow: 5px 5px 10px #000000;
+    border-radius: 15px;
+    color: #ffffff;
+    outline: none;
+    margin-bottom: 50px;
 }
 #searchInput:focus {
-	border-color: #c5c5c5;
+    border: 2px solid #000000;
 }
 
 #definitionList li {
