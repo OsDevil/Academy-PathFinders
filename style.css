@@ -1051,9 +1051,6 @@ p.customBlue {
     outline: none;
     margin-bottom: 50px;
 }
-#searchInput:focus {
-    border: 2px solid #000000;
-}
 
 #definitionList li {
 	display: block;
