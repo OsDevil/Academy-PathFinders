@@ -28,4 +28,25 @@ title: PathFinders Academy - outils
       </div>
     </div>
   </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> GEX - Gamma & Vanna
+    </div>
+    <div class="accordion-content">
+      <p>Le GEX récupère les order flow BTC pour reconstruire les positions globales des dealers sur le marché et ainsi en déduire les expositions Gamma et Vanna des makers/takers.</p>
+      <p>Les couleurs bleues/vertes ou violettes/rouges représentent les deltas de positions par rapport à l'action du prix (Price action)</p>
+      <p>Une courbe majoritairement bleue/verte montre que les makers se hedgent <u>contre</u> la tendance de prix. A l'inverse, une courbe rouge/violette montrent que les makers ouvrent des positions <u>dans le sens</u> de la tendance. Autrement dit, les tendances bleues/vertes montrent un delta positif sur le marché qui apporte des positions de couverture et probablement de la compression. </p>
+      <p>Les bandes de transparence valident une indécision market marker et notamment un delta nul (=0) sur le marché et donc met en avant une possible volatilité car une inversion marché respectivement au price action est possible.</p>
+      <div class="encartRessource">
+        <a href="https://www.youtube.com/watch?v=zfkOCc2evEk" target="_blank"><img src="https://osdevil.github.io/Academy-PathFinders/imgs/youtube.png" alt="picto Video"></a>
+        <a href="https://www.youtube.com/watch?v=zfkOCc2evEk" target="_blank">Gamma and Vanna exposures</a>
+      </div>
+      <div class="fullscreenImage imgSolo">
+        <div class="image-container">
+          <img src="https://osdevil.github.io/Academy-PathFinders/imgs/long-short-celli.jpg" alt="Ratio Long Short" class="fullscreenImageimg" loading="lazy">
+        </div>
+          <p class="captionGD">Exemple de ratio Long Short - BTCUSDT</p>
+      </div>
+    </div>
+  </div>
 </div>
