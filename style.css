@@ -398,6 +398,7 @@ li.nohover:hover{
 	.mega-menu .content {
 		grid-template-columns: auto;
 		padding: 1rem 1rem 0 0;
+		display: block;
 	}
 	.mega-menu .content .col {
 		width: 100%;
