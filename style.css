@@ -98,7 +98,8 @@ header.hidden {
 }
 
 .header ul {
-  list-style: none;
+	list-style: none;
+	margin-left: 0;
 }
 
 .logo{
@@ -115,6 +116,9 @@ header.hidden {
 .menu-items {
   display: flex;
   align-items: center;
+}
+ul.menu-items.open {
+    margin-left: 0;
 }
 .menu-items li {
   padding: 0.5rem 1rem;
@@ -341,7 +345,8 @@ li.nohover:hover{
 	}
 	
 	.menu-items li {
-		margin: 15px 10px;
+		margin: 15px 10px 15px 0;
+		padding-left: 0;
 	}
 	.menu-items li a {
 		padding: 0 1rem;
@@ -392,7 +397,7 @@ li.nohover:hover{
 	}
 	.mega-menu .content {
 		grid-template-columns: auto;
-		padding: 1rem 1rem 0 1rem;
+		padding: 1rem 1rem 0 0;
 	}
 	.mega-menu .content .col {
 		width: 100%;
@@ -405,7 +410,7 @@ li.nohover:hover{
 	}
 	.content .col .mega-links {
 		border-left: 0px;
-		padding-left: 1rem;
+		//padding-left: 1rem;
 	}
 	.col .mega-links li {
 		margin: 0;
