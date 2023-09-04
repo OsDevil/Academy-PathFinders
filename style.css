@@ -87,7 +87,6 @@ a{
   padding: 1rem 2rem;
   z-index: 1;
 }
-
 header.hidden {
 	transform: translateY(-100%);
 }
