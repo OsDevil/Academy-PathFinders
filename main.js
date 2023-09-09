@@ -145,10 +145,10 @@ document.addEventListener("DOMContentLoaded", () => {
     //Gestion du glossaire
     const searchInput = document.getElementById("searchInput");
     const definitionList = document.getElementById("definitionList");
-    const definitions = definitionList.getElementsByTagName("li");
-    
-    if (searchInput && definitionList && definitions) {
-    
+
+    if (searchInput && definitionList) {
+        
+        const definitions = definitionList.getElementsByTagName("li");
         searchInput.addEventListener("input", function () {
             const searchTerm = searchInput.value.toLowerCase();
     
