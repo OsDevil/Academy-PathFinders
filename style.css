@@ -1152,11 +1152,12 @@ p.customBlue {
 }
 
 .containerInputLabel input[type="number"] {
-    margin-top: 5px;
+    margin-top: 20px;
+    font-size: 16px;
     width: 40px;
     border: none;
     background-color: #09131b;
-    color: #ffffff;
+    color: #c5c5c5;
     outline: none;
     text-align: center;
 }
