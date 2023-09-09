@@ -43,7 +43,7 @@
           myChart.destroy();
       }
   
-      let myChart = new Chart(ctx, {
+      myChart = new Chart(ctx, {
           type: 'line',
           data: data,
           options: {
