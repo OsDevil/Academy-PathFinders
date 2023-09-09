@@ -181,7 +181,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     //Chart
-    console.log('init chart');
     initializeChart();
 
 
