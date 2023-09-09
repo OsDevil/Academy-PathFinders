@@ -1,4 +1,5 @@
-let ctx = document.getElementById("myChart").getContext('2d');
+  let myChart;
+  let ctx = document.getElementById("myChart").getContext('2d');
   let wrRangeInput = document.getElementById("wrRange");
   let rrRangeInput = document.getElementById("rrRange");
   let riskRangeInput = document.getElementById("riskRange");
