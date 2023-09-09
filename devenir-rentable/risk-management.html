@@ -3,6 +3,186 @@ layout: header_base
 title: PathFinders Academy - risk management
 ---
 
+<script>
+  let ctx = document.getElementById("myChart").getContext('2d');
+  let wrRangeInput = document.getElementById("wrRange");
+  let rrRangeInput = document.getElementById("rrRange");
+  let riskRangeInput = document.getElementById("riskRange");
+  let wrNumberInput = document.getElementById("wrNumber");
+  let rrNumberInput = document.getElementById("rrNumber");
+  let riskNumberInput = document.getElementById("riskNumber");
+  
+  let xAxisLabels = [0, 5, 10, 20, 50, 100, 200, 400];
+  let xAxisData = [];
+  for (let i = 0; i <= 400; i++) {
+      xAxisData.push(i);
+  }
+  
+  const resultCells = [
+      document.getElementById("result1"),
+      document.getElementById("result2"),
+      document.getElementById("result3"),
+      document.getElementById("result4")
+  ];
+  
+  function initializeChart() {
+      let initialData = xAxisData.map(value => {
+          const E = ((40 / 100) * 3 - (1 - (40 / 100))) * (1 / 100);
+          const yAxisData = (value / 100) / Math.log(1 + E);
+          return yAxisData;
+      });
+  
+      let data = {
+          labels: xAxisData,
+          datasets: [{
+              label: 'Nb trades',
+              data: initialData,
+              backgroundColor: 'rgba(9, 19, 27, 0)',
+              borderColor: '#ED9266',
+              borderWidth: 2,
+              pointRadius: 0,
+          }]
+      }
+  
+      let myChart = new Chart(ctx, {
+          type: 'line',
+          data: data,
+          options: {
+              responsive: true,
+              scales: {
+                  y: {
+                      beginAtZero: true,
+                      grid: {
+                          color: '#262626'
+                      },
+                      ticks: {
+                          color: '#ffffff'
+                      },
+                      title: {
+                          display: true,
+                          text: 'Nombre de trades',
+                          color: '#C5C5C5',
+                      },
+                  },
+                  x: {
+                      type: 'logarithmic',
+                      grid: {
+                          color: '#09131b'
+                      },
+                      ticks: {
+                          color: '#ffffff',
+                          min: 0,
+                          max: 10000,
+                          maxTicksLimit: 500,
+                          callback: function (value, index, values) {
+                              if (xAxisLabels.includes(value)) {
+                                  return '+' + value + '%';
+                              } else {
+                                  return '';
+                              }
+                          }
+                      },
+                      title: {
+                          display: true,
+                          text: '% augmentation capital',
+                          color: '#C5C5C5',
+                      },
+                  },
+              },
+              plugins: {
+                  legend: {
+                      display: false,
+                  },
+                  title: {
+                      display: true,
+                      text: 'Nombres de trades nécessaires à une augmentation de X% du capital',
+                      color: '#C5C5C5',
+                      padding: {
+                          top: 0,
+                          bottom: 30,
+                      },
+                      
+                  },
+  
+              }
+          }
+      });
+  
+      function updateChart(wr, rr, risk) {
+          let updatedData = xAxisData.map(value => {
+              const E = ((wr / 100) * rr - (1 - (wr / 100))) * (risk / 100);
+              const yAxisData = (value / 100) / Math.log(1 + E);
+              return yAxisData;
+          });
+  
+          myChart.data.datasets[0].data = updatedData;
+          myChart.update();
+      }
+  
+      function updateTableResults(wr, rr, risk) {
+          const tableData = [
+              { value: 100, multiplier: 2 },
+              { value: 400, multiplier: 5 },
+              { value: 900, multiplier: 10 },
+              { value: 9900, multiplier: 100 }
+          ];
+  
+          for (let i = 0; i < tableData.length; i++) {
+              const result = calculateResult(tableData[i].value, tableData[i].multiplier, wr, rr, risk);
+              resultCells[i].textContent = result;
+          }
+      }
+  
+      function calculateResult(value, multiplier, wr, rr, risk) {
+          const E = ((wr / 100) * rr - (1 - (wr / 100))) * (risk / 100);
+          const yAxisData = (value / 100) / Math.log(1 + E);
+          const result = (yAxisData).toFixed(0);
+          return result;
+      }
+  
+      wrRangeInput.addEventListener('input', function () {
+          wrNumberInput.value = wrRangeInput.value;
+          updateChart(wrRangeInput.value, rrRangeInput.value, riskRangeInput.value);
+          updateTableResults(wrRangeInput.value, rrRangeInput.value, riskRangeInput.value);
+      });
+  
+      rrRangeInput.addEventListener('input', function () {
+          rrNumberInput.value = rrRangeInput.value;
+          updateChart(wrRangeInput.value, rrRangeInput.value, riskRangeInput.value);
+          updateTableResults(wrRangeInput.value, rrRangeInput.value, riskRangeInput.value);
+      });
+  
+      riskRangeInput.addEventListener('input', function () {
+          riskNumberInput.value = riskRangeInput.value;
+          updateChart(wrRangeInput.value, rrRangeInput.value, riskRangeInput.value);
+          updateTableResults(wrRangeInput.value, rrRangeInput.value, riskRangeInput.value);
+      });
+  
+      wrNumberInput.addEventListener('input', function () {
+          wrRangeInput.value = wrNumberInput.value;
+          updateChart(wrNumberInput.value, rrNumberInput.value, riskNumberInput.value);
+          updateTableResults(wrNumberInput.value, rrNumberInput.value, riskNumberInput.value);
+      });
+  
+      rrNumberInput.addEventListener('input', function () {
+          rrRangeInput.value = rrNumberInput.value;
+          updateChart(wrNumberInput.value, rrNumberInput.value, riskNumberInput.value);
+          updateTableResults(wrNumberInput.value, rrNumberInput.value, riskNumberInput.value);
+      });
+  
+      riskNumberInput.addEventListener('input', function () {
+          riskRangeInput.value = riskNumberInput.value;
+          updateChart(wrNumberInput.value, rrNumberInput.value, riskNumberInput.value);
+          updateTableResults(wrNumberInput.value, rrNumberInput.value, riskNumberInput.value);
+      });
+  
+      updateChart(40, 3, 1);
+      updateTableResults(40, 3, 1);
+  }
+  
+      initializeChart();
+</script>
+
 <h1>Risk Management</h1>
 <div class="traitTitle"></div>
 
@@ -40,6 +220,72 @@ title: PathFinders Academy - risk management
       <p>Dans 75% des cas, OUI. Cependant, si le RR est maitrisé et bien géré sur les deux trades, le résultat global sera positif. Perdre 1 pour gagner 8, évidemment le choix est vite fait.</p>
       <p>Attention cependant, nul besoin de chercher des longs à chaque position short et inversement, au risque de neutraliser toutes vos positions ! Simplement, lorsque vos positions sont à la hausse, certains tokens présenteront indéniablement des chart bear, malgré la tendance long. Ce sont vers ces tokens qu'il faudra vous tourner pour trouver des hedge.</p>
       <p>Une bonne pratique est donc de tenir une petite liste de tokens qui décorrèlent BTC / ETH sur les précédentes semaines. Typiquement, un token qui surperf aura tendance à retracer plus fort. Nous pouvons donc prendre un short dessus malgré un long BTC ou ETH. Très souvent, en cas d'analyse valide sur notre long, on arrivera à prendre à minima un TP sur le short, en plus du full TP long.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Risk Management
+    </div>
+    <div class="accordion-content">
+      <div class="containerLabelChart">
+        <div class="titleLabel">
+            <label for="wr">WR (%)</label>
+            <div class="containerInputLabel">
+                <input type="range" id="wrRange" min="0" max="100" step="1" value="40">
+                <input type="number" id="wrNumber" value="40">
+            </div>
+        </div>
+        <div class="titleLabel">
+            <label for="rr">RR</label>
+            <div class="containerInputLabel">
+                <input type="range" id="rrRange" min="0" max="100" step="1" value="3">
+                <input type="number" id="rrNumber" value="3">
+            </div>
+        </div>
+        <div class="titleLabel">
+            <label for="risk">Risk (%)</label>
+            <div class="containerInputLabel">
+                <input type="range" id="riskRange" min="0.1" max="100" step="0.1" value="1">
+                <input type="number" id="riskNumber" value="1">
+            </div>
+        </div>
+    </div>
+    
+    <div class="containerDatasChart">
+        <div class="containerChart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="containerDatasFix">
+            <!-- Tableau -->
+            <table>
+                <tr>
+                    <th>% Augmentation capital</th>
+                    <th>Multiplicateur du capital</th>
+                    <th>Nb trades nécessaires</th>
+                </tr>
+                <tr>
+                    <td>+100%</td>
+                    <td>x2</td>
+                    <td id="result1"></td>
+                </tr>
+                <tr>
+                    <td>+400%</td>
+                    <td>x5</td>
+                    <td id="result2"></td>
+                </tr>
+                <tr>
+                    <td>+900%</td>
+                    <td>x10</td>
+                    <td id="result3"></td>
+                </tr>
+                <tr>
+                    <td>+9900%</td>
+                    <td>x100</td>
+                    <td id="result4"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
     </div>
   </div>
   
