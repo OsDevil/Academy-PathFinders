@@ -1080,3 +1080,123 @@ p.customBlue {
 	font-size: 16px;
 	margin: 0;
 }
+
+/** -------------------------------------------------- RISK MANAGEMENT NOTICE CALCUL -------------------------------------------------- **/
+
+.containerDatasChart {
+    background-color: #09131b;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerChart {
+    width: 100%;
+    padding: 20px;
+    box-shadow: 5px 5px 5px #000000;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+.containerDatasFix{
+    max-width: 100%;
+    margin-top: 50px;
+    font-size: 12px;
+}
+.containerLabelChart {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+.titleLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.titleLabel label {
+    color: #C5C5C5;
+    margin-bottom: 10px;
+}
+.containerInputLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.containerInputLabel input[type="range"] {
+    margin-top: 5px;
+    background-color: #ED9266; /* Couleur de la barre */
+}
+.containerInputLabel input[type="range"]::-webkit-slider-thumb {
+    background-color: #C5C5C5; /* Couleur de la poignée de la barre */
+}
+.containerInputLabel input[type=range] {
+    -webkit-appearance: none;
+    padding: 0;
+    color: #ffffff;
+    background: #243645;
+    opacity: 1;
+    transition: opacity .2s;
+    border: 1px solid #122331;
+    border-radius: 15px;
+    height: 5px;
+}
+.containerInputLabel input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;     /*nécessaire pour Chrome */
+  width: 15px;
+  height: 15px;
+  border-radius: 50px;
+  background: #122331;
+  cursor: pointer;
+  border: 2px solid #122331;
+}
+
+.containerInputLabel input[type="number"] {
+    margin-top: 5px;
+    width: 40px;
+    border: none;
+    background-color: #09131b;
+    color: #ffffff;
+    outline: none;
+    text-align: center;
+}
+/* Firefox */
+.containerInputLabel input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+.containerInputLabel input[type="number"]::-webkit-inner-spin-button,
+.containerInputLabel input[type="number"]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin:0;
+}
+ 
+/* Opéra*/
+.containerInputLabel input[type="number"]::-o-inner-spin-button,
+.containerInputLabel input[type="number"]::-o-outer-spin-button { 
+    -o-appearance: none;
+    margin:0
+}
+/* Tableau CSS */
+.containerDatasFix table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #C5C5C5;
+}
+
+.containerDatasFix th, .containerDatasFix td {
+    border: 1px solid #C5C5C5;
+    padding: 8px;
+    text-align: center;
+}
+
+.containerDatasFix th {
+    background-color: #122331;
+}
+
+@media screen and (max-width: 600px){
+    .containerLabelChart {
+	flex-direction: column;
+    }
+}
