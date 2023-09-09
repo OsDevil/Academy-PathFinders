@@ -3,6 +3,114 @@ layout: header_base
 title: PathFinders Academy - risk management
 ---
 
+<h1>Risk Management</h1>
+<div class="traitTitle"></div>
+
+<p>Cet onglet est en cours de rédaction. En attendant, retrouvez ci-dessous deux stratégies de capital management qui peuvent compléter votre trading : SHAD et Hedging.</p>
+
+
+<div class="accordion">
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Technique du SHAD - Sell Half At Double
+    </div>
+    <div class="accordion-content">
+      <div class="containerGD">
+        <div class="image-blockGD fullscreenImage">
+          <div class="image-container">
+            <img src="https://www.academy-pathfinders.com/imgs/shad.jpg" alt="SHAD" class="fullscreenImageimg" loading="lazy">
+          </div>
+            <p class="captionGD">SHAD</p>
+        </div>
+        <div class="text-blockGD" style="flex: 1;">
+          <p>L'idée est de vendre 50% de votre position à chaque x2 sur le prix de l'actif considéré.</p>
+          <p>Cette façon de procéder vous permet de prendre des TP partiels avec une quantité prédéfinie de façon à ne pas vous prendre la tête, avoir un rendement optimal et faire abstraction des émotions.</p>
+          <p>C'est une excellente méthode lors d'un investissement Spot, mais qui peut aussi être étendu à de l'investissement en futures. Se tenir à une stratégie, c'est s'assurer de ne pas paniquer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Le Hedging, c'est quoi ?
+    </div>
+    <div class="accordion-content">
+      <p>Fréquemment, vous verrez chez nos traders que ces derniers cherchent des hedge, "au cas où". Simplement, un hedge signifie s'assurer uen couverture en cas de variation non prévue ou non prévisible afin de limiter au maximum les pertes de capitaux.</p>
+      <p>En trading, l'application est très simple : Un long ET un short (pas sur le même token, sinon on appellera cela une cover d'ordre). Mais alors, on va obligatoirement SL un des deux ?</p>
+      <p>Dans 75% des cas, OUI. Cependant, si le RR est maitrisé et bien géré sur les deux trades, le résultat global sera positif. Perdre 1 pour gagner 8, évidemment le choix est vite fait.</p>
+      <p>Attention cependant, nul besoin de chercher des longs à chaque position short et inversement, au risque de neutraliser toutes vos positions ! Simplement, lorsque vos positions sont à la hausse, certains tokens présenteront indéniablement des chart bear, malgré la tendance long. Ce sont vers ces tokens qu'il faudra vous tourner pour trouver des hedge.</p>
+      <p>Une bonne pratique est donc de tenir une petite liste de tokens qui décorrèlent BTC / ETH sur les précédentes semaines. Typiquement, un token qui surperf aura tendance à retracer plus fort. Nous pouvons donc prendre un short dessus malgré un long BTC ou ETH. Très souvent, en cas d'analyse valide sur notre long, on arrivera à prendre à minima un TP sur le short, en plus du full TP long.</p>
+    </div>
+  </div>
+  <div class="accordion-item levelUn">
+    <div class="accordion-header" onclick="toggleAccordion(this)">
+      <div class="triangle">&#9658;</div> Risk Management
+    </div>
+    <div class="accordion-content">
+      <div class="containerLabelChart">
+        <div class="titleLabel">
+            <label for="wr">WR (%)</label>
+            <div class="containerInputLabel">
+                <input type="range" id="wrRange" min="0" max="100" step="1" value="40">
+                <input type="number" id="wrNumber" value="40">
+            </div>
+        </div>
+        <div class="titleLabel">
+            <label for="rr">RR</label>
+            <div class="containerInputLabel">
+                <input type="range" id="rrRange" min="0" max="100" step="1" value="3">
+                <input type="number" id="rrNumber" value="3">
+            </div>
+        </div>
+        <div class="titleLabel">
+            <label for="risk">Risk (%)</label>
+            <div class="containerInputLabel">
+                <input type="range" id="riskRange" min="0.1" max="100" step="0.1" value="1">
+                <input type="number" id="riskNumber" value="1">
+            </div>
+        </div>
+    </div>
+    
+    <div class="containerDatasChart">
+        <div class="containerChart">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="containerDatasFix">
+            <!-- Tableau -->
+            <table>
+                <tr>
+                    <th>% Augmentation capital</th>
+                    <th>Multiplicateur du capital</th>
+                    <th>Nb trades nécessaires</th>
+                </tr>
+                <tr>
+                    <td>+100%</td>
+                    <td>x2</td>
+                    <td id="result1"></td>
+                </tr>
+                <tr>
+                    <td>+400%</td>
+                    <td>x5</td>
+                    <td id="result2"></td>
+                </tr>
+                <tr>
+                    <td>+900%</td>
+                    <td>x10</td>
+                    <td id="result3"></td>
+                </tr>
+                <tr>
+                    <td>+9900%</td>
+                    <td>x100</td>
+                    <td id="result4"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+  </div>
+  
+</div>
+
 
 <script>
   let ctx = document.getElementById("myChart").getContext('2d');
@@ -183,111 +291,3 @@ title: PathFinders Academy - risk management
   
       initializeChart();
 </script>
-
-<h1>Risk Management</h1>
-<div class="traitTitle"></div>
-
-<p>Cet onglet est en cours de rédaction. En attendant, retrouvez ci-dessous deux stratégies de capital management qui peuvent compléter votre trading : SHAD et Hedging.</p>
-
-
-<div class="accordion">
-  <div class="accordion-item levelUn">
-    <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Technique du SHAD - Sell Half At Double
-    </div>
-    <div class="accordion-content">
-      <div class="containerGD">
-        <div class="image-blockGD fullscreenImage">
-          <div class="image-container">
-            <img src="https://www.academy-pathfinders.com/imgs/shad.jpg" alt="SHAD" class="fullscreenImageimg" loading="lazy">
-          </div>
-            <p class="captionGD">SHAD</p>
-        </div>
-        <div class="text-blockGD" style="flex: 1;">
-          <p>L'idée est de vendre 50% de votre position à chaque x2 sur le prix de l'actif considéré.</p>
-          <p>Cette façon de procéder vous permet de prendre des TP partiels avec une quantité prédéfinie de façon à ne pas vous prendre la tête, avoir un rendement optimal et faire abstraction des émotions.</p>
-          <p>C'est une excellente méthode lors d'un investissement Spot, mais qui peut aussi être étendu à de l'investissement en futures. Se tenir à une stratégie, c'est s'assurer de ne pas paniquer.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item levelUn">
-    <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Le Hedging, c'est quoi ?
-    </div>
-    <div class="accordion-content">
-      <p>Fréquemment, vous verrez chez nos traders que ces derniers cherchent des hedge, "au cas où". Simplement, un hedge signifie s'assurer uen couverture en cas de variation non prévue ou non prévisible afin de limiter au maximum les pertes de capitaux.</p>
-      <p>En trading, l'application est très simple : Un long ET un short (pas sur le même token, sinon on appellera cela une cover d'ordre). Mais alors, on va obligatoirement SL un des deux ?</p>
-      <p>Dans 75% des cas, OUI. Cependant, si le RR est maitrisé et bien géré sur les deux trades, le résultat global sera positif. Perdre 1 pour gagner 8, évidemment le choix est vite fait.</p>
-      <p>Attention cependant, nul besoin de chercher des longs à chaque position short et inversement, au risque de neutraliser toutes vos positions ! Simplement, lorsque vos positions sont à la hausse, certains tokens présenteront indéniablement des chart bear, malgré la tendance long. Ce sont vers ces tokens qu'il faudra vous tourner pour trouver des hedge.</p>
-      <p>Une bonne pratique est donc de tenir une petite liste de tokens qui décorrèlent BTC / ETH sur les précédentes semaines. Typiquement, un token qui surperf aura tendance à retracer plus fort. Nous pouvons donc prendre un short dessus malgré un long BTC ou ETH. Très souvent, en cas d'analyse valide sur notre long, on arrivera à prendre à minima un TP sur le short, en plus du full TP long.</p>
-    </div>
-  </div>
-  <div class="accordion-item levelUn">
-    <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Risk Management
-    </div>
-    <div class="accordion-content">
-      <div class="containerLabelChart">
-        <div class="titleLabel">
-            <label for="wr">WR (%)</label>
-            <div class="containerInputLabel">
-                <input type="range" id="wrRange" min="0" max="100" step="1" value="40">
-                <input type="number" id="wrNumber" value="40">
-            </div>
-        </div>
-        <div class="titleLabel">
-            <label for="rr">RR</label>
-            <div class="containerInputLabel">
-                <input type="range" id="rrRange" min="0" max="100" step="1" value="3">
-                <input type="number" id="rrNumber" value="3">
-            </div>
-        </div>
-        <div class="titleLabel">
-            <label for="risk">Risk (%)</label>
-            <div class="containerInputLabel">
-                <input type="range" id="riskRange" min="0.1" max="100" step="0.1" value="1">
-                <input type="number" id="riskNumber" value="1">
-            </div>
-        </div>
-    </div>
-    
-    <div class="containerDatasChart">
-        <div class="containerChart">
-            <canvas id="myChart"></canvas>
-        </div>
-        <div class="containerDatasFix">
-            <!-- Tableau -->
-            <table>
-                <tr>
-                    <th>% Augmentation capital</th>
-                    <th>Multiplicateur du capital</th>
-                    <th>Nb trades nécessaires</th>
-                </tr>
-                <tr>
-                    <td>+100%</td>
-                    <td>x2</td>
-                    <td id="result1"></td>
-                </tr>
-                <tr>
-                    <td>+400%</td>
-                    <td>x5</td>
-                    <td id="result2"></td>
-                </tr>
-                <tr>
-                    <td>+900%</td>
-                    <td>x10</td>
-                    <td id="result3"></td>
-                </tr>
-                <tr>
-                    <td>+9900%</td>
-                    <td>x100</td>
-                    <td id="result4"></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    </div>
-  </div>
-  
-</div>
