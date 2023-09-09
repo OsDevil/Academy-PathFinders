@@ -180,10 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
         return text.replace(regex, (match) => `<span style="background-color: #000000;">${match}</span>`);
     }
 
-    //Chart
-    initializeChart();
-
-
 });
 
 function toggleAccordion(triggerAccordion) {
