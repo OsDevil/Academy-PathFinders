@@ -37,6 +37,10 @@ let ctx = document.getElementById("myChart").getContext('2d');
               pointRadius: 0,
           }]
       }
+
+      if (myChart) {
+          myChart.destroy();
+      }
   
       let myChart = new Chart(ctx, {
           type: 'line',
