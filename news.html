@@ -2,15 +2,11 @@
 layout: header_base
 title: News
 ---
-
-<div class="rss-container">
-  <h2>Flux RSS de Tradingsat</h2>
-  <div class="rss-feed">
-    <!-- Les liens du flux RSS seront affichés ici -->
-  </div>
-</div>
-
 <style>
+  .containerEcoCalendar{
+    text-align: center;
+    margin-top: 100px;
+  }
   .rss-container {
     width: 100%;
     max-width: 600px; /* Ajustez la largeur selon vos préférences */
@@ -30,6 +26,22 @@ title: News
     text-align: center;
   }
 </style>
+
+
+
+<div class="containerEcoCalendar">
+  <iframe src="https://sslecal2.investing.com?ecoDayBackground=%23c4c4c4&columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&features=datepicker,timezone&countries=110,17,25,34,32,6,37,26,5,22,39,93,14,48,10,35,105,43,38,4,56,36,12,72&calType=day&timeZone=58&lang=5" width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
+</div>
+
+
+<div class="rss-container">
+  <h2>Flux RSS de Tradingsat</h2>
+  <div class="rss-feed">
+    <!-- Les liens du flux RSS seront affichés ici -->
+  </div>
+</div>
+
+
 
 <script>
   // Charger le flux RSS
