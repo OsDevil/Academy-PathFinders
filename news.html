@@ -77,11 +77,15 @@ title: News
         const link = item.querySelector('link').textContent;
         const pubDate = new Date(item.querySelector('pubDate').textContent);
         const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
-        
+
+        // Vérifier si la date du lien est celle d'aujourd'hui
+        const isToday = isDateToday(pubDate);
+
         const linkElement = document.createElement('a');
         linkElement.textContent = `${dateText} - ${title}`;
         linkElement.href = link;
         linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
+        linkElement.style.color = isToday ? '#4694D4' : '#c5c5c5'; // Appliquer la couleur en fonction de la date
         const listItem = document.createElement('div');
         listItem.classList.add('rss-item');
         listItem.appendChild(linkElement);
@@ -94,5 +98,16 @@ title: News
   function padZero(number) {
     return number < 10 ? `0${number}` : number;
   }
+
+  // Fonction pour vérifier si une date est celle d'aujourd'hui
+  function isDateToday(date) {
+    const today = new Date();
+    return (
+      date.getDate() === today.getDate() &&
+      date.getMonth() === today.getMonth() &&
+      date.getFullYear() === today.getFullYear()
+    );
+  }
 </script>
+
 
