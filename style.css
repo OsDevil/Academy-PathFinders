@@ -1200,4 +1200,7 @@ p.customBlue {
     .containerLabelChart {
 	flex-direction: column;
     }
+	.notDispMobile{
+		display: none;
+	}
 }
