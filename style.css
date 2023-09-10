@@ -1154,12 +1154,15 @@ p.customBlue {
 .containerInputLabel input[type="number"] {
     margin-top: 20px;
     font-size: 16px;
-    width: 40px;
+    padding: 5px;
+    width: 60px;
     border: none;
     background-color: #09131b;
     color: #c5c5c5;
     outline: none;
     text-align: center;
+    box-shadow: inset 0px 0px 4px 0px #243645;
+    border-radius: 10px;
 }
 /* Firefox */
 .containerInputLabel input[type=number] {
