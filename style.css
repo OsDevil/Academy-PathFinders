@@ -687,6 +687,10 @@ footer{
 @media screen and (max-width: 970px) {
 	.encartPictoCitation{
 		width: 100%;
+		flex-diretcion: column;
+	}
+	.encartPictoCitation p{
+		padding: 15px;
 	}
 }
 
