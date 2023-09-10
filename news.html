@@ -3,31 +3,41 @@ layout: header_base
 title: News
 ---
 <style>
-  .containerEcoCalendar{
+  .containerEcoCalendar {
     text-align: center;
     margin-top: 100px;
     display: flex;
     justify-content: center;
   }
+
   .rss-container {
-    width: 100%;
-    max-width: 600px; /* Ajustez la largeur selon vos préférences */
     margin: 0 auto;
     padding: 20px;
   }
 
   .rss-feed {
-    border-radius: 10px;
     background-color: #f0f0f0;
     padding: 10px;
-    overflow-y: scroll; /* Ajoutez une barre de défilement si nécessaire */
-    max-height: 400px; /* Ajustez la hauteur selon vos préférences */
+  }
+
+  .rss-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease-in-out;
+    border-left: 1px solid #122331;
+  }
+
+  .rss-item:hover {
+    background-color: #122331;
+    border-left-color: #c5c5c5;
   }
 
   h2 {
-    text-align: center;
+    text-align: left;
   }
 </style>
+
 
 
 
