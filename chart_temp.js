@@ -94,7 +94,7 @@
                   },
                   title: {
                       display: true,
-                      text: 'Nombres de trades nécessaires à une augmentation de X% du capital',
+                      text: 'Nb trades nécessaires à une augmentation de X% du capital',
                       color: '#C5C5C5',
                       padding: {
                           top: 0,
