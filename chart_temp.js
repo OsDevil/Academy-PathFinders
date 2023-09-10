@@ -59,7 +59,7 @@
                       },
                       title: {
                           display: true,
-                          text: 'Nombre de trades',
+                          text: 'Nb trades',
                           color: '#C5C5C5',
                       },
                   },
