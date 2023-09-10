@@ -23,7 +23,7 @@
   function initializeChart() {
       let initialData = xAxisData.map(value => {
           const E = ((40 / 100) * 3 - (1 - (40 / 100))) * (1 / 100);
-          const yAxisData = (value / 100) / Math.log(1 + E);
+          const yAxisData = (value / 100) / E;
           return yAxisData;
       });
   
@@ -110,7 +110,7 @@
       function updateChart(wr, rr, risk) {
           let updatedData = xAxisData.map(value => {
               const E = ((wr / 100) * rr - (1 - (wr / 100))) * (risk / 100);
-              const yAxisData = (value / 100) / Math.log(1 + E);
+              const yAxisData = (value / 100) / E;
               return yAxisData;
           });
   
@@ -134,7 +134,7 @@
   
       function calculateResult(value, multiplier, wr, rr, risk) {
           const E = ((wr / 100) * rr - (1 - (wr / 100))) * (risk / 100);
-          const yAxisData = (value / 100) / Math.log(1 + E);
+          const yAxisData = (value / 100) / E;
           const result = (yAxisData).toFixed(0);
           return result;
       }
