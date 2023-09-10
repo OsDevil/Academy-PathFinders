@@ -67,15 +67,49 @@ title: News
 <div class="rss-container">
   <h2 style="text-align: left;">Flux RSS de Tradingsat</h2>
   <div class="rss-feed">
-    <!-- Les liens du flux RSS seront affichés ici -->
   </div>
 </div>
 
-
+<div class="rss-container">
+    <h2 style="text-align: left;">Flux RSS d'Investing.com</h2>
+    <div class="rss-feed">
+    </div>
+</div>
 
 <script>
-  // Charger le flux RSS
+  //Flux RSS Tradingsat
   fetch('https://www.tradingsat.com/rssbourse.xml')
+      .then(response => response.text())
+      .then(data => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+          const items = xmlDoc.querySelectorAll('item');
+          const rssFeed = document.querySelector('.rss-feed');
+
+          items.forEach(item => {
+              const title = item.querySelector('title').textContent;
+              const link = item.querySelector('link').textContent;
+              const pubDate = new Date(item.querySelector('pubDate').textContent);
+              const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+
+              const color = getColorBasedOnDate(pubDate);
+
+              const linkElement = document.createElement('a');
+              linkElement.textContent = `${dateText} - ${title}`;
+              linkElement.href = link;
+              linkElement.target = '_blank';
+              linkElement.style.color = color;
+              const listItem = document.createElement('div');
+              listItem.classList.add('rss-item');
+              listItem.appendChild(linkElement);
+              rssFeed.appendChild(listItem);
+          });
+      })
+      .catch(error => console.error('Erreur de récupération du flux RSS :', error));
+
+  // Charger le flux RSS d'Investing.com
+  fetch('https://fr.investing.com/rss/news_14.rss')
       .then(response => response.text())
       .then(data => {
           const parser = new DOMParser();
@@ -83,7 +117,7 @@ title: News
 
           // Récupérer les éléments du flux RSS (par exemple, les titres, les liens et les dates)
           const items = xmlDoc.querySelectorAll('item');
-          const rssFeed = document.querySelector('.rss-feed');
+          const rssFeed = document.querySelectorAll('.rss-feed')[1]; // Utilisez le deuxième élément .rss-feed
 
           items.forEach(item => {
               const title = item.querySelector('title').textContent;
@@ -105,14 +139,14 @@ title: News
               rssFeed.appendChild(listItem);
           });
       })
-      .catch(error => console.error('Erreur de récupération du flux RSS :', error));
+      .catch(error => console.error('Erreur de récupération du flux RSS d\'Investing.com :', error));
 
-  // Fonction pour ajouter un zéro devant les nombres < 10
+
+  
   function padZero(number) {
       return number < 10 ? `0${number}` : number;
   }
 
-  // Fonction pour vérifier si une date est celle d'aujourd'hui ou d'hier
   function getColorBasedOnDate(date) {
       const today = new Date();
       const yesterday = new Date(today);
