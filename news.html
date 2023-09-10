@@ -44,7 +44,7 @@ title: News
   }
   
   .rss-feed::-webkit-scrollbar-thumb:hover {
-    background-color: #122331;
+    background-color: #1f3445;
     cursor: pointer;
   }
   
@@ -121,6 +121,17 @@ title: News
       date.getFullYear() === today.getFullYear()
     );
   }
+
+  const rssFeed = document.querySelector('.rss-feed');
+
+  rssFeed.addEventListener('mouseenter', () => {
+    rssFeed.style.cursor = 'pointer';
+  });
+  
+  rssFeed.addEventListener('mouseleave', () => {
+    rssFeed.style.cursor = 'auto';
+  });
+
 </script>
 
 
