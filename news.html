@@ -76,6 +76,13 @@ title: News
     </div>
 </div>
 
+<div class="rss-container">
+    <h2 style="text-align: left;">Flux RSS des Échos</h2>
+    <div class="rss-feed">
+        <!-- Les liens du flux RSS des Échos seront affichés ici -->
+    </div>
+</div>
+
 <script>
   //Flux RSS Tradingsat
   fetch('https://www.tradingsat.com/rssbourse.xml')
@@ -108,7 +115,7 @@ title: News
       })
       .catch(error => console.error('Erreur de récupération du flux RSS :', error));
 
-  // Charger le flux RSS d'Investing.com
+  // Flux RSS d'Investing.com
   fetch('https://fr.investing.com/rss/news_14.rss')
       .then(response => response.text())
       .then(data => {
@@ -141,6 +148,38 @@ title: News
       })
       .catch(error => console.error('Erreur de récupération du flux RSS d\'Investing.com :', error));
 
+  // Flux RSS des Échos
+  fetch('https://services.lesechos.fr/rss/les-echos-finance-marches.xml')
+      .then(response => response.text())
+      .then(data => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(data, 'text/xml');
+  
+          // Récupérer les éléments du flux RSS (par exemple, les titres, les liens et les dates)
+          const items = xmlDoc.querySelectorAll('item');
+          const rssFeed = document.querySelectorAll('.rss-feed')[2]; // Utilisez le troisième élément .rss-feed
+  
+          items.forEach(item => {
+              const title = item.querySelector('title').textContent;
+              const link = item.querySelector('link').textContent;
+              const pubDate = new Date(item.querySelector('pubDate').textContent);
+              const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+  
+              // Vérifier si la date du lien est celle d'aujourd'hui ou d'hier
+              const color = getColorBasedOnDate(pubDate);
+  
+              const linkElement = document.createElement('a');
+              linkElement.textContent = `${dateText} - ${title}`;
+              linkElement.href = link;
+              linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
+              linkElement.style.color = color; // Appliquer la couleur en fonction de la date
+              const listItem = document.createElement('div');
+              listItem.classList.add('rss-item');
+              listItem.appendChild(linkElement);
+              rssFeed.appendChild(listItem);
+          });
+      })
+      .catch(error => console.error('Erreur de récupération du flux RSS des Échos :', error));
 
   
   function padZero(number) {
