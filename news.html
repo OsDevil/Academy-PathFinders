@@ -1,0 +1,34 @@
+---
+layout: header_base
+title: News
+---
+
+<div id="rss-content">
+  <!-- Le contenu RSS sera affiché ici -->
+</div>
+
+<script>
+fetch('https://www.tradingsat.com/rssbourse.xml')
+  .then(response => response.text())
+  .then(data => {
+    // Traitez les données XML du flux RSS ici
+    const parser = new DOMParser();
+    const xmlDoc = parser.parseFromString(data, 'text/xml');
+    
+    // Récupérez les éléments du flux RSS (par exemple, les titres et les liens)
+    const items = xmlDoc.querySelectorAll('item');
+    let rssContent = '<ul>';
+
+    items.forEach(item => {
+      const title = item.querySelector('title').textContent;
+      const link = item.querySelector('link').textContent;
+      rssContent += `<li><a href="${link}">${title}</a></li>`;
+    });
+
+    rssContent += '</ul>';
+
+    // Affichez le contenu sur la page
+    document.getElementById('rss-content').innerHTML = rssContent;
+  })
+  .catch(error => console.error('Erreur de récupération du flux RSS :', error));
+</script>
