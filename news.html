@@ -9,25 +9,23 @@ title: News
     display: flex;
     justify-content: center;
   }
-
   .rss-container {
     margin: 0 auto;
     padding: 20px;
   }
-
   .rss-feed {
     padding: 10px;
-    max-height: 500px;
+    max-height: 300px;
     overflow: auto;
+    box-shadow: 0px 3px 5px #000000;
+    border-radius: 15px;
   }
-
   .rss-item {
     margin-bottom: 10px;
     padding: 10px;
     transition: background-color 0.2s ease-in-out;
     border-left: 1px solid #122331;
   }
-
   .rss-item:hover {
     background-color: #122331;
     border-left-color: #c5c5c5;
@@ -36,9 +34,22 @@ title: News
     text-decoration: none;
     color: #4694D4;
   }
-
-  h2 {
-    text-align: left;
+  .rss-feed::-webkit-scrollbar {
+    width: 12px; /* Largeur de la barre de défilement */
+  }
+  
+  .rss-feed::-webkit-scrollbar-thumb {
+    background-color: #4694D4; /* Couleur du pouce (la partie déplaçable de la barre de défilement) */
+    border-radius: 6px; /* Coins arrondis du pouce */
+  }
+  
+  .rss-feed::-webkit-scrollbar-thumb:hover {
+    background-color: #0074D9; /* Couleur du pouce au survol */
+  }
+  
+  .rss-feed::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Couleur de la piste (la partie non déplaçable de la barre de défilement) */
+    border-radius: 6px; /* Coins arrondis de la piste */
   }
 </style>
 
@@ -52,7 +63,7 @@ title: News
 
 
 <div class="rss-container">
-  <h2>Flux RSS de Tradingsat</h2>
+  <h2 style="text-align: left;">Flux RSS de Tradingsat</h2>
   <div class="rss-feed">
     <!-- Les liens du flux RSS seront affichés ici -->
   </div>
