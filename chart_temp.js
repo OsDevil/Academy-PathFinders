@@ -123,8 +123,7 @@
               { value: 100, multiplier: 2 },
               { value: 400, multiplier: 5 },
               { value: 900, multiplier: 10 },
-              { value: 9900, multiplier: 100 },
-              { value: 99900, multiplier: 1000 }
+              { value: 9900, multiplier: 100 }
           ];
   
           for (let i = 0; i < tableData.length; i++) {
