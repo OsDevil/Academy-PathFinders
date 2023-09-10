@@ -134,7 +134,7 @@
   
       function calculateResult(value, multiplier, wr, rr, risk) {
           const E = ((wr / 100) * rr - (1 - (wr / 100))) * (risk / 100);
-          const yAxisData = (value / 100) / E;
+          const yAxisData = Math.ceil((value / 100) / E);
           const result = (yAxisData).toFixed(0);
           return result;
       }
