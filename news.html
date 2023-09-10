@@ -16,14 +16,14 @@ title: News
   }
 
   .rss-feed {
-    background-color: #f0f0f0;
     padding: 10px;
+    max-height: 500px;
+    overflow: auto;
   }
 
   .rss-item {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #f0f0f0;
     transition: background-color 0.2s ease-in-out;
     border-left: 1px solid #122331;
   }
@@ -31,6 +31,10 @@ title: News
   .rss-item:hover {
     background-color: #122331;
     border-left-color: #c5c5c5;
+  }
+  .rss-item a{
+    text-decoration: none;
+    color: #4694D4;
   }
 
   h2 {
@@ -64,15 +68,18 @@ title: News
       const parser = new DOMParser();
       const xmlDoc = parser.parseFromString(data, 'text/xml');
 
-      // Récupérer les éléments du flux RSS (par exemple, les titres et les liens)
+      // Récupérer les éléments du flux RSS (par exemple, les titres, les liens et les dates)
       const items = xmlDoc.querySelectorAll('item');
       const rssFeed = document.querySelector('.rss-feed');
 
       items.forEach(item => {
         const title = item.querySelector('title').textContent;
         const link = item.querySelector('link').textContent;
+        const pubDate = new Date(item.querySelector('pubDate').textContent);
+        const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+        
         const linkElement = document.createElement('a');
-        linkElement.textContent = title;
+        linkElement.textContent = `${dateText} - ${title}`;
         linkElement.href = link;
         linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
         const listItem = document.createElement('div');
@@ -82,4 +89,10 @@ title: News
       });
     })
     .catch(error => console.error('Erreur de récupération du flux RSS :', error));
+
+  // Fonction pour ajouter un zéro devant les nombres < 10
+  function padZero(number) {
+    return number < 10 ? `0${number}` : number;
+  }
 </script>
+
