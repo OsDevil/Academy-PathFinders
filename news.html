@@ -3,184 +3,58 @@ layout: header_base
 title: News
 ---
 
-<div class="rss-categories">
-  <!-- Catégorie : Tradingsat -->
-  <div class="rss-category" id="tradingsat">
-    <h2>Tradingsat</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Tradingsat sera affiché ici -->
-    </div>
-  </div>
-
-  <!-- Catégorie : Investing -->
-  <div class="rss-category" id="investing">
-    <h2>Investing</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Investing sera affiché ici -->
-    </div>
-  </div>
-
-  <!-- Catégorie : Les Echos -->
-  <div class="rss-category" id="lesechos">
-    <h2>Les Echos</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Les Echos sera affiché ici -->
-    </div>
-  </div>
-
-  <!-- Catégorie : Bloomberg - Markets -->
-  <div class="rss-category" id="bloomberg-markets">
-    <h2>Bloomberg - Markets</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Bloomberg - Markets sera affiché ici -->
-    </div>
-  </div>
-
-  <!-- Catégorie : Bloomberg - Politics -->
-  <div class="rss-category" id="bloomberg-politics">
-    <h2>Bloomberg - Politics</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Bloomberg - Politics sera affiché ici -->
-    </div>
-  </div>
-
-  <!-- Catégorie : Bloomberg - Technology -->
-  <div class="rss-category" id="bloomberg-technology">
-    <h2>Bloomberg - Technology</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Bloomberg - Technology sera affiché ici -->
-    </div>
-  </div>
-
-  <!-- Catégorie : Bloomberg - Wealth -->
-  <div class="rss-category" id="bloomberg-wealth">
-    <h2>Bloomberg - Wealth</h2>
-    <div class="rss-slider">
-      <!-- Le contenu RSS de Bloomberg - Wealth sera affiché ici -->
-    </div>
+<div class="rss-container">
+  <h2>Flux RSS de Tradingsat</h2>
+  <div class="rss-feed">
+    <!-- Les liens du flux RSS seront affichés ici -->
   </div>
 </div>
 
 <style>
-  .rss-categories {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: hidden;
-  }
-
-  .rss-category {
-    flex: 0 0 auto;
+  .rss-container {
     width: 100%;
-    max-width: 100%;
-    padding: 10px;
+    max-width: 600px; /* Ajustez la largeur selon vos préférences */
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .rss-slider {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-  }
-
-  .rss-slider > div {
-    flex: 0 0 auto;
-    width: 300px; /* Ajustez la largeur de chaque article selon vos besoins */
-    margin-right: 10px; /* Espace entre les articles */
-    scroll-snap-align: start;
-    background-color: #f0f0f0;
+  .rss-feed {
     border-radius: 10px;
+    background-color: #f0f0f0;
     padding: 10px;
+    overflow-y: scroll; /* Ajoutez une barre de défilement si nécessaire */
+    max-height: 400px; /* Ajustez la hauteur selon vos préférences */
   }
 
   h2 {
     text-align: center;
   }
-
-  /* Styles pour les flèches de navigation */
-  .rss-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-  }
-
-  .rss-navigation button {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .rss-navigation button:hover {
-    background-color: #0056b3;
-  }
 </style>
 
 <script>
-  // Fonction pour charger et afficher le flux RSS
-  function loadAndDisplayRSS(url, containerId) {
-    fetch(url)
-      .then(response => response.text())
-      .then(data => {
-        const parser = new DOMParser();
-        const xmlDoc = parser.parseFromString(data, 'text/xml');
-        
-        // Récupérez les éléments du flux RSS (par exemple, les titres et les liens)
-        const items = xmlDoc.querySelectorAll('item');
-        let rssContent = '<ul>';
+  // Charger le flux RSS
+  fetch('https://www.tradingsat.com/rssbourse.xml')
+    .then(response => response.text())
+    .then(data => {
+      const parser = new DOMParser();
+      const xmlDoc = parser.parseFromString(data, 'text/xml');
 
-        items.forEach(item => {
-          const title = item.querySelector('title').textContent;
-          const link = item.querySelector('link').textContent;
-          rssContent += `<li><a href="${link}" target="_blank">${title}</a></li>`;
-        });
+      // Récupérer les éléments du flux RSS (par exemple, les titres et les liens)
+      const items = xmlDoc.querySelectorAll('item');
+      const rssFeed = document.querySelector('.rss-feed');
 
-        rssContent += '</ul>';
-
-        // Affichez le contenu sur la page
-        document.getElementById(containerId).innerHTML = rssContent;
-      })
-      .catch(error => console.error('Erreur de récupération du flux RSS :', error));
-  }
-
-  // Charger et afficher les flux RSS pour chaque catégorie
-  loadAndDisplayRSS('https://www.tradingsat.com/rssbourse.xml', 'tradingsat');
-  loadAndDisplayRSS('https://fr.investing.com/rss/news_14.rss', 'investing');
-  loadAndDisplayRSS('https://services.lesechos.fr/rss/les-echos-finance-marches.xml', 'lesechos');
-  loadAndDisplayRSS('https://feeds.bloomberg.com/markets/news.rss', 'bloomberg-markets');
-  loadAndDisplayRSS('https://feeds.bloomberg.com/politics/news.rss', 'bloomberg-politics');
-  loadAndDisplayRSS('https://feeds.bloomberg.com/technology/news.rss', 'bloomberg-technology');
-  loadAndDisplayRSS('https://feeds.bloomberg.com/wealth/news.rss', 'bloomberg-wealth');
-
-  // Gestion de la navigation
-  const categories = document.querySelectorAll('.rss-category');
-  categories.forEach(category => {
-    const slider = category.querySelector('.rss-slider');
-    const leftButton = document.createElement('button');
-    leftButton.textContent = '<';
-    leftButton.classList.add('rss-nav-button');
-    const rightButton = document.createElement('button');
-    rightButton.textContent = '>';
-    rightButton.classList.add('rss-nav-button');
-
-    leftButton.addEventListener('click', () => {
-      slider.scrollBy({
-        left: -300, // Ajustez la valeur selon la largeur de vos articles
-        behavior: 'smooth',
+      items.forEach(item => {
+        const title = item.querySelector('title').textContent;
+        const link = item.querySelector('link').textContent;
+        const linkElement = document.createElement('a');
+        linkElement.textContent = title;
+        linkElement.href = link;
+        linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
+        const listItem = document.createElement('div');
+        listItem.classList.add('rss-item');
+        listItem.appendChild(linkElement);
+        rssFeed.appendChild(listItem);
       });
-    });
-
-    rightButton.addEventListener('click', () => {
-      slider.scrollBy({
-        left: 300, // Ajustez la valeur selon la largeur de vos articles
-        behavior: 'smooth',
-      });
-    });
-
-    category.insertBefore(leftButton, slider);
-    category.appendChild(rightButton);
-  });
+    })
+    .catch(error => console.error('Erreur de récupération du flux RSS :', error));
 </script>
