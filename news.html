@@ -76,52 +76,64 @@ title: News
 <script>
   // Charger le flux RSS
   fetch('https://www.tradingsat.com/rssbourse.xml')
-    .then(response => response.text())
-    .then(data => {
-      const parser = new DOMParser();
-      const xmlDoc = parser.parseFromString(data, 'text/xml');
+      .then(response => response.text())
+      .then(data => {
+          const parser = new DOMParser();
+          const xmlDoc = parser.parseFromString(data, 'text/xml');
 
-      // Récupérer les éléments du flux RSS (par exemple, les titres, les liens et les dates)
-      const items = xmlDoc.querySelectorAll('item');
-      const rssFeed = document.querySelector('.rss-feed');
+          // Récupérer les éléments du flux RSS (par exemple, les titres, les liens et les dates)
+          const items = xmlDoc.querySelectorAll('item');
+          const rssFeed = document.querySelector('.rss-feed');
 
-      items.forEach(item => {
-        const title = item.querySelector('title').textContent;
-        const link = item.querySelector('link').textContent;
-        const pubDate = new Date(item.querySelector('pubDate').textContent);
-        const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+          items.forEach(item => {
+              const title = item.querySelector('title').textContent;
+              const link = item.querySelector('link').textContent;
+              const pubDate = new Date(item.querySelector('pubDate').textContent);
+              const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
 
-        // Vérifier si la date du lien est celle d'aujourd'hui
-        const isToday = isDateToday(pubDate);
+              // Vérifier si la date du lien est celle d'aujourd'hui ou d'hier
+              const color = getColorBasedOnDate(pubDate);
 
-        const linkElement = document.createElement('a');
-        linkElement.textContent = `${dateText} - ${title}`;
-        linkElement.href = link;
-        linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
-        linkElement.style.color = isToday ? '#4694D4' : '#c5c5c5'; // Appliquer la couleur en fonction de la date
-        const listItem = document.createElement('div');
-        listItem.classList.add('rss-item');
-        listItem.appendChild(linkElement);
-        rssFeed.appendChild(listItem);
-      });
-    })
-    .catch(error => console.error('Erreur de récupération du flux RSS :', error));
+              const linkElement = document.createElement('a');
+              linkElement.textContent = `${dateText} - ${title}`;
+              linkElement.href = link;
+              linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
+              linkElement.style.color = color; // Appliquer la couleur en fonction de la date
+              const listItem = document.createElement('div');
+              listItem.classList.add('rss-item');
+              listItem.appendChild(linkElement);
+              rssFeed.appendChild(listItem);
+          });
+      })
+      .catch(error => console.error('Erreur de récupération du flux RSS :', error));
 
   // Fonction pour ajouter un zéro devant les nombres < 10
   function padZero(number) {
-    return number < 10 ? `0${number}` : number;
+      return number < 10 ? `0${number}` : number;
   }
 
-  // Fonction pour vérifier si une date est celle d'aujourd'hui
-  function isDateToday(date) {
-    const today = new Date();
-    return (
-      date.getDate() === today.getDate() &&
-      date.getMonth() === today.getMonth() &&
-      date.getFullYear() === today.getFullYear()
-    );
-  }
+  // Fonction pour vérifier si une date est celle d'aujourd'hui ou d'hier
+  function getColorBasedOnDate(date) {
+      const today = new Date();
+      const yesterday = new Date(today);
+      yesterday.setDate(today.getDate() - 1);
 
+      if (
+          date.getDate() === today.getDate() &&
+          date.getMonth() === today.getMonth() &&
+          date.getFullYear() === today.getFullYear()
+      ) {
+          return '#4694D4'; // Aujourd'hui
+      } else if (
+          date.getDate() === yesterday.getDate() &&
+          date.getMonth() === yesterday.getMonth() &&
+          date.getFullYear() === yesterday.getFullYear()
+      ) {
+          return '#ED9266'; // Hier
+      } else {
+          return '#c5c5c5'; // Autre date
+      }
+  }
 </script>
 
 
