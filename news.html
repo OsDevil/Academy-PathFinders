@@ -2,227 +2,86 @@
 layout: header_base
 title: News
 ---
-<style>
-  .containerEcoCalendar {
-    text-align: center;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-  }
-  .rss-container {
-    margin: 0 auto;
-    padding: 20px;
-  }
-  .rss-feed {
-    padding: 10px;
-    max-height: 300px;
-    overflow: auto;
-    box-shadow: 0px 3px 5px #000000;
-    border-radius: 15px;
-  }
-  .rss-item {
-    margin-bottom: 10px;
-    padding: 10px;
-    transition: background-color 0.2s ease-in-out;
-    border-left: 1px solid #122331;
-  }
-  .rss-item:hover {
-    background-color: #122331;
-    border-left-color: #c5c5c5;
-  }
-  .rss-item a{
-    text-decoration: none;
-    color: #4694D4;
-  }
-  .rss-feed::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  .rss-feed::-webkit-scrollbar-thumb {
-    background-color: #122331;
-    border-radius: 6px;
-  }
-  
-  .rss-feed::-webkit-scrollbar-thumb:hover {
-    background-color: #1f3445;
-    cursor: pointer;
-  }
-  
-  .rss-feed::-webkit-scrollbar-track {
-    background-color: #09131b00;
-    border-radius: 6px;
-    margin: 10px;
-  }
-</style>
-
-<div class="slider-container">
-    <div class="slider">
-        <div><img src="image1.jpg" alt="Image 1"></div>
-        <div><img src="image2.jpg" alt="Image 2"></div>
-        <div><img src="image3.jpg" alt="Image 3"></div>
-    </div>
-</div>
-
-
-
-
 <div class="containerEcoCalendar">
   <iframe src="https://sslecal2.investing.com?ecoDayBackground=%23c4c4c4&amp;columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&features=datepicker,timezone,timeselector,filters&countries=110,17,25,34,32,6,37,26,5,22,39,93,14,48,10,35,105,43,38,4,36,12,72&calType=week&timeZone=58&lang=5" width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0" style="border-radius: 25px; background-color: #ffffff; box-shadow: inset 0px 0px 40px #09131b; padding: 40px; contain: size;"></iframe>
 </div>
 
+<div class="filter-buttons">
+  <button id="btnBFM">BFM</button>
+  <button id="btnTradingsat">Tradingsat</button>
+  <button id="btnInvesting">Investing</button>
+  <button id="btnLesEchos">Les Échos</button>
+</div>
 
-<div class="rss-container">
-  <h2 style="text-align: left;">Flux RSS de Tradingsat</h2>
-  <div class="rss-feed">
+<div class="sectionNews sectionNews1 activeSection">
+  <div class="slider-container">
+    <h2>BFM Business - Economie</h2>
+    <div class="slider">
+    </div>
   </div>
 </div>
 
-<div class="rss-container">
-    <h2 style="text-align: left;">Flux RSS d'Investing.com</h2>
-    <div class="rss-feed">
+<div class="sectionNews sectionNews2 activeSection">
+  <div class="slider-container">
+    <h2>Tradingsat</h2>
+    <div class="slider2">
     </div>
+  </div>
 </div>
 
-<div class="rss-container">
-    <h2 style="text-align: left;">Flux RSS de BFM Business</h2>
-    <div class="rss-feed">
-        <!-- Les liens du flux RSS des Échos seront affichés ici -->
+<div class="sectionNews sectionNews3 activeSection">
+  <div class="slider-container">
+    <h2>Investing.com</h2>
+    <div class="slider3">
     </div>
+  </div>
 </div>
 
-<div class="rss-container">
-    <h2 style="text-align: left;">Flux RSS des Échos</h2>
-    <div class="rss-feed">
-        <!-- Les liens du flux RSS des Échos seront affichés ici -->
+<div class="sectionNews sectionNews4 activeSection">
+  <div class="slider-container">
+    <h2>Les Échos</h2>
+    <div class="slider4">
     </div>
+  </div>
 </div>
 
 <script>
-    // Initialisation du slider
-    $(document).ready(function(){
-        $('.slider').slick({
-          infinite: true,
-          speed: 500,
-          autoplay: true,
-          autoplaySpeed: 4000,
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          responsive: [
-            {
-              breakpoint: 1024,
-              settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true
-              }
-            },
-            {
-              breakpoint: 600,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-              }
-            },
-            {
-              breakpoint: 480,
-              settings: {
-                autoplay: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true
-              }
-            }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
-          ]
-        });
-    });
-</script>
 
-<script>
-  //Flux RSS Tradingsat
-  fetch('https://www.tradingsat.com/rssbourse.xml')
-      .then(response => response.text())
-      .then(data => {
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(data, 'text/xml');
+  const btnBFM = document.getElementById('btnBFM');
+  const btnTradingsat = document.getElementById('btnTradingsat');
+  const btnInvesting = document.getElementById('btnInvesting');
+  const btnLesEchos = document.getElementById('btnLesEchos');
 
-          const items = xmlDoc.querySelectorAll('item');
-          const rssFeed = document.querySelector('.rss-feed');
+  const sectionBFM = document.querySelector('.sectionNews1');
+  const sectionTradingsat = document.querySelector('.sectionNews2');
+  const sectionInvesting = document.querySelector('.sectionNews3');
+  const sectionLesEchos = document.querySelector('.sectionNews4');
 
-          items.forEach(item => {
-              const title = item.querySelector('title').textContent;
-              const link = item.querySelector('link').textContent;
-              const pubDate = new Date(item.querySelector('pubDate').textContent);
-              const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+  btnBFM.addEventListener('click', () => toggleSection(sectionBFM, btnBFM));
+  btnTradingsat.addEventListener('click', () => toggleSection(sectionTradingsat, btnTradingsat));
+  btnInvesting.addEventListener('click', () => toggleSection(sectionInvesting, btnInvesting));
+  btnLesEchos.addEventListener('click', () => toggleSection(sectionLesEchos, btnLesEchos));
 
-              const color = getColorBasedOnDate(pubDate);
-
-              const linkElement = document.createElement('a');
-              linkElement.textContent = `${dateText} - ${title}`;
-              linkElement.href = link;
-              linkElement.target = '_blank';
-              linkElement.style.color = color;
-              const listItem = document.createElement('div');
-              listItem.classList.add('rss-item');
-              listItem.appendChild(linkElement);
-              rssFeed.appendChild(listItem);
-          });
-      })
-      .catch(error => console.error('Erreur de récupération du flux RSS :', error));
-
-  // Flux RSS d'Investing.com
-fetch('https://corsproxy.io/?https%3A%2F%2Ffr.investing.com%2Frss%2Fnews_14.rss')
-  .then(response => response.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(data, 'text/xml');
-    const items = xmlDoc.querySelectorAll('item');
-    const rssFeed = document.querySelectorAll('.rss-feed')[1];
-
-    items.forEach(item => {
-      const title = item.querySelector('title').textContent;
-      const link = item.querySelector('link').textContent;
-      const pubDate = new Date(item.querySelector('pubDate').textContent);
-      const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
-      const color = getColorBasedOnDate(pubDate);
-
-      const linkElement = document.createElement('a');
-      linkElement.textContent = `${dateText} - ${title}`;
-      linkElement.href = link;
-      linkElement.target = '_blank';
-      linkElement.style.color = color;
-
-      // Récupérer l'image s'il y en a une
-      const mediaContent = item.querySelector('media\\:content');
-      if (mediaContent) {
-        const imageUrl = mediaContent.getAttribute('url');
-        if (imageUrl) {
-          const imageElement = document.createElement('img');
-          imageElement.src = imageUrl;
-          linkElement.appendChild(imageElement);
-        }
-      }
-
-      const listItem = document.createElement('div');
-      listItem.classList.add('rss-item');
-      listItem.appendChild(linkElement);
-      rssFeed.appendChild(listItem);
-    });
-  })
-  .catch(error => console.error('Erreur de récupération du flux RSS d\'Investing.com :', error));
+  function toggleSection(section, button) {
+    if (section.classList.contains('activeSection')) {
+      section.classList.remove('activeSection');
+      button.classList.add('disabled');
+    } else {
+      section.classList.add('activeSection');
+      button.classList.remove('disabled');
+    }
+  }
 
 
   // Flux RSS de BFM
-fetch('https://corsproxy.io/?https%3A%2F%2Fwww.bfmtv.com%2Frss%2Feconomie%2F')
+  fetch('https://corsproxy.io/?https%3A%2F%2Fwww.bfmtv.com%2Frss%2Feconomie%2F')
     .then(response => response.text())
     .then(data => {
         const parser = new DOMParser();
         const xmlDoc = parser.parseFromString(data, 'text/xml');
 
         const items = xmlDoc.querySelectorAll('item');
-        const rssFeed = document.querySelectorAll('.rss-feed')[2]; // Utilisez le troisième élément .rss-feed
+        const slider = document.querySelector('.slider');
 
         items.forEach(item => {
             const title = item.querySelector('title').textContent;
@@ -232,75 +91,365 @@ fetch('https://corsproxy.io/?https%3A%2F%2Fwww.bfmtv.com%2Frss%2Feconomie%2F')
 
             const color = getColorBasedOnDate(pubDate);
 
+            const card = document.createElement('div');
+            card.classList.add('card');
+
             const linkElement = document.createElement('a');
-            linkElement.textContent = `${dateText} - ${title}`;
             linkElement.href = link;
             linkElement.target = '_blank';
-            linkElement.style.color = color;
+            linkElement.classList.add('cardLink');
+            card.appendChild(linkElement);
 
-            // Récupérer l'image s'il y en a une
             const enclosure = item.querySelector('enclosure');
             if (enclosure) {
                 const imageUrl = enclosure.getAttribute('url');
                 if (imageUrl) {
                     const imageElement = document.createElement('img');
+                    imageElement.classList.add('cardImg');
                     imageElement.src = imageUrl;
                     linkElement.appendChild(imageElement);
                 }
             }
 
-            const listItem = document.createElement('div');
-            listItem.classList.add('rss-item');
-            listItem.appendChild(linkElement);
-            rssFeed.appendChild(listItem);
+            const dateElement = document.createElement('p');
+            dateElement.textContent = dateText;
+            dateElement.style.color = color;
+            dateElement.classList.add('cardDate');
+            linkElement.appendChild(dateElement);
+
+            const titleElement = document.createElement('p');
+            titleElement.textContent = title;
+            titleElement.href = link;
+            titleElement.target = '_blank';
+            titleElement.classList.add('cardTitle');
+            linkElement.appendChild(titleElement);
+
+            slider.appendChild(card);
+        });
+
+        $('.slider').slick({
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true
+                    }
+                }
+            ]
         });
     })
     .catch(error => console.error('Erreur de récupération du flux RSS de BFM :', error));
 
+  // Flux RSS de Tradingsat
+  fetch('https://www.tradingsat.com/rssbourse.xml')
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+        const items = xmlDoc.querySelectorAll('item');
+        const slider2 = document.querySelector('.slider2');
+
+        items.forEach(item => {
+            const title = item.querySelector('title').textContent;
+            const link = item.querySelector('link').textContent;
+            const pubDate = new Date(item.querySelector('pubDate').textContent);
+            const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+
+            const color = getColorBasedOnDate(pubDate);
+
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const linkElement = document.createElement('a');
+            linkElement.href = link;
+            linkElement.target = '_blank';
+            linkElement.classList.add('cardLink');
+            card.appendChild(linkElement);
+
+            const enclosure = item.querySelector('enclosure');
+            if (enclosure) {
+                const imageUrl = enclosure.getAttribute('url');
+                if (imageUrl) {
+                    const imageElement = document.createElement('img');
+                    imageElement.classList.add('cardImg');
+                    imageElement.src = imageUrl;
+                    linkElement.appendChild(imageElement);
+                }
+            }
+
+            const dateElement = document.createElement('p');
+            dateElement.textContent = dateText;
+            dateElement.style.color = color;
+            dateElement.classList.add('cardDate');
+            linkElement.appendChild(dateElement);
+
+            const titleElement = document.createElement('p');
+            titleElement.textContent = title;
+            titleElement.href = link;
+            titleElement.target = '_blank';
+            titleElement.classList.add('cardTitle');
+            linkElement.appendChild(titleElement);
+
+            slider2.appendChild(card);
+        });
+
+        $('.slider2').slick({
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true
+                    }
+                }
+            ]
+        });
+    })
+    .catch(error => console.error('Erreur de récupération du flux RSS de Tradingsat :', error));
+
+
+  // Flux RSS de Investing.com
+  fetch('https://corsproxy.io/?https%3A%2F%2Ffr.investing.com%2Frss%2Fnews_14.rss')
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+        const items = xmlDoc.querySelectorAll('item');
+        const slider3 = document.querySelector('.slider3');
+
+        items.forEach(item => {
+            const title = item.querySelector('title').textContent;
+            const link = item.querySelector('link').textContent;
+            const pubDate = new Date(item.querySelector('pubDate').textContent);
+            const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+
+            const color = getColorBasedOnDate(pubDate);
+
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const linkElement = document.createElement('a');
+            linkElement.href = link;
+            linkElement.target = '_blank';
+            linkElement.classList.add('cardLink');
+            card.appendChild(linkElement);
+
+            const enclosure = item.querySelector('enclosure');
+            if (enclosure) {
+                const imageUrl = enclosure.getAttribute('url');
+                if (imageUrl) {
+                    const imageElement = document.createElement('img');
+                    imageElement.classList.add('cardImg');
+                    imageElement.src = imageUrl;
+                    linkElement.appendChild(imageElement);
+                }
+            }
+
+            const dateElement = document.createElement('p');
+            dateElement.textContent = dateText;
+            dateElement.style.color = color;
+            dateElement.classList.add('cardDate');
+            linkElement.appendChild(dateElement);
+
+            const titleElement = document.createElement('p');
+            titleElement.textContent = title;
+            titleElement.href = link;
+            titleElement.target = '_blank';
+            titleElement.classList.add('cardTitle');
+            linkElement.appendChild(titleElement);
+
+            slider3.appendChild(card);
+        });
+
+        $('.slider3').slick({
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true
+                    }
+                }
+            ]
+        });
+
+    })
+    .catch(error => console.error('Erreur de récupération du flux RSS de Investing.com :', error));
+
+
 
   // Flux RSS des Échos
-fetch('https://corsproxy.io/?https%3A%2F%2Fservices.lesechos.fr%2Frss%2Fles-echos-finance-marches.xml')
-  .then(response => response.text())
-  .then(data => {
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(data, 'text/xml');
-    const items = xmlDoc.querySelectorAll('item');
-    const rssFeed = document.querySelectorAll('.rss-feed')[3];
+  fetch('https://corsproxy.io/?https%3A%2F%2Fservices.lesechos.fr%2Frss%2Fles-echos-finance-marches.xml')
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
 
-    items.forEach(item => {
-      const title = item.querySelector('title').textContent;
-      const link = item.querySelector('link').textContent;
-      const pubDate = new Date(item.querySelector('pubDate').textContent);
-      const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
-      const color = getColorBasedOnDate(pubDate);
+        const items = xmlDoc.querySelectorAll('item');
+        const slider4 = document.querySelector('.slider4');
 
-      const linkElement = document.createElement('a');
-      linkElement.textContent = `${dateText} - ${title}`;
-      linkElement.href = link;
-      linkElement.target = '_blank';
-      linkElement.style.color = color;
+        items.forEach(item => {
+            const title = item.querySelector('title').textContent;
+            const link = item.querySelector('link').textContent;
+            const pubDate = new Date(item.querySelector('pubDate').textContent);
+            const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
 
-      // Récupérer l'image s'il y en a une
-      const enclosure = item.querySelector('enclosure');
-      if (enclosure) {
-        const imageUrl = enclosure.getAttribute('url');
-        if (imageUrl) {
-          const imageElement = document.createElement('img');
-          imageElement.src = imageUrl;
-          linkElement.appendChild(imageElement);
-        }
-      }
+            const color = getColorBasedOnDate(pubDate);
 
-      const listItem = document.createElement('div');
-      listItem.classList.add('rss-item');
-      listItem.appendChild(linkElement);
-      rssFeed.appendChild(listItem);
-    });
-  })
-  .catch(error => console.error('Erreur de récupération du flux RSS des Échos :', error));
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const linkElement = document.createElement('a');
+            linkElement.href = link;
+            linkElement.target = '_blank';
+            linkElement.classList.add('cardLink');
+            card.appendChild(linkElement);
+
+            const enclosure = item.querySelector('enclosure');
+            if (enclosure) {
+                const imageUrl = enclosure.getAttribute('url');
+                if (imageUrl) {
+                    const imageElement = document.createElement('img');
+                    imageElement.classList.add('cardImg');
+                    imageElement.src = imageUrl;
+                    linkElement.appendChild(imageElement);
+                }
+            }
+
+            const dateElement = document.createElement('p');
+            dateElement.textContent = dateText;
+            dateElement.style.color = color;
+            dateElement.classList.add('cardDate');
+            linkElement.appendChild(dateElement);
+
+            const titleElement = document.createElement('p');
+            titleElement.textContent = title;
+            titleElement.href = link;
+            titleElement.target = '_blank';
+            titleElement.classList.add('cardTitle');
+            linkElement.appendChild(titleElement);
+
+            slider4.appendChild(card);
+        });
+
+        $('.slider4').slick({
+            infinite: true,
+            speed: 500,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        infinite: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true
+                    }
+                }
+            ]
+        });
+
+    })
+    .catch(error => console.error('Erreur de récupération du flux RSS des Échos :', error));
 
 
-  
+
+
+
   function padZero(number) {
       return number < 10 ? `0${number}` : number;
   }
