@@ -1212,3 +1212,145 @@ p.customBlue {
 		display: none;
 	}
 }
+
+
+/** -------------------------------------------------- SECTION NEWS -------------------------------------------------- **/
+
+  .containerEcoCalendar {
+    text-align: center;
+    margin: 100px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .filter-buttons {
+    text-align: center;
+    margin: 20px 0 100px 0;
+  }
+  .filter-buttons button {
+    background-color: #122331;
+    color: #C5C5C5;
+    border: 1px solid #000000;
+    box-shadow: 5px 5px 5px #000000;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 20px;
+  }
+  .filter-buttons button:hover{
+    opacity: 0.5;
+  }
+  .filter-buttons button.disabled {
+    background-color: #09131b;
+    border-color: #122331;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  .sectionNews{
+    display: none;
+  }
+  .activeSection{
+    display: block;
+  }
+  .slider-container{
+    width: 80%;
+    margin: auto;
+  }
+  .slider-container h2{
+    text-align: left;
+    border-bottom: 1px solid #122331;
+  }
+  .slick-track{
+    display: flex;
+  }
+  .card{
+    margin: 20px;
+    box-shadow: 5px 5px 5px #000000;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+  }
+  .card:hover{
+    transform: scale(1.05);
+  }
+  .cardLink{
+    text-decoration: none;
+  }
+  .cardImg{
+    max-width: 100%;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .cardDate{
+    margin: 20px auto;
+    text-align: center;
+    width: 60%;
+    border-bottom: 1px solid #122331;
+  }
+  .cardTitle{
+    margin: 20px;
+    text-decoration: none;
+    overflow: hidden;
+    text-align: center;
+  }
+  .slick-prev, .slick-next {
+    z-index: 4;
+    background: #00000000;
+    color: #00000000;
+    width: 50px;
+    height: 100%;
+    border-radius: 54px;
+    border: none;
+  }
+  .slick-prev {
+    left: -10%;
+    top: 0;
+    position: absolute;
+  }
+  .slick-next {
+    right: -10%;
+    top: 0;
+    position: absolute;
+  }
+  .slick-prev:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #fff;
+    display: inline-block;
+    border-top: 3px solid #fff;
+    transform: rotate(-45deg);
+    top: calc(50% - 10px);
+    left: 18px;
+    color: white;
+  }
+  .slick-next:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-right: 3px solid #fff;
+    display: inline-block;
+    border-top: 3px solid #fff;
+    transform: rotate(45deg);
+    top: calc(50% - 10px);
+    right: 18px;
+  }
+  .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    transition: .2s ease-in-out;
+    background: #00000059;
+    color: #ffffff00;
+    cursor: pointer;
+  }
+  .slick-slide img{
+    width: 100%;
+  }
+  @media screen and (max-width: 600px){
+    .filter-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
