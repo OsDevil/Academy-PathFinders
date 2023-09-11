@@ -1295,7 +1295,7 @@ p.customBlue {
     text-align: center;
   }
   .slick-prev, .slick-next {
-    z-index: 4;
+    z-index: 0;
     background: #00000000;
     color: #00000000;
     width: 50px;
