@@ -149,7 +149,7 @@ title: News
       .catch(error => console.error('Erreur de récupération du flux RSS d\'Investing.com :', error));
 
   // Flux RSS des Échos
-  fetch('https://services.lesechos.fr/rss/les-echos-finance-marches.xml')
+  fetch('https://www.bfmtv.com/rss/economie/')
       .then(response => response.text())
       .then(data => {
           const parser = new DOMParser();
