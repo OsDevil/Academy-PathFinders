@@ -55,6 +55,14 @@ title: News
   }
 </style>
 
+<div class="slider-container">
+    <div class="slider">
+        <div><img src="image1.jpg" alt="Image 1"></div>
+        <div><img src="image2.jpg" alt="Image 2"></div>
+        <div><img src="image3.jpg" alt="Image 3"></div>
+    </div>
+</div>
+
 
 
 
@@ -88,6 +96,18 @@ title: News
         <!-- Les liens du flux RSS des Échos seront affichés ici -->
     </div>
 </div>
+
+<script>
+    // Initialisation du slider
+    $(document).ready(function(){
+        $('.slider').slick({
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            dots: true
+        });
+    });
+</script>
 
 <script>
   //Flux RSS Tradingsat
