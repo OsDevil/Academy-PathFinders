@@ -156,37 +156,48 @@ title: News
       .catch(error => console.error('Erreur de récupération du flux RSS d\'Investing.com :', error));
 
   // Flux RSS de BFM
-  fetch('https://corsproxy.io/?https%3A%2F%2Fwww.bfmtv.com%2Frss%2Feconomie%2F')
-      .then(response => response.text())
-      .then(data => {
-          const parser = new DOMParser();
-          const xmlDoc = parser.parseFromString(data, 'text/xml');
-  
-          // Récupérer les éléments du flux RSS (par exemple, les titres, les liens et les dates)
-          const items = xmlDoc.querySelectorAll('item');
-          const rssFeed = document.querySelectorAll('.rss-feed')[2]; // Utilisez le troisième élément .rss-feed
-  
-          items.forEach(item => {
-              const title = item.querySelector('title').textContent;
-              const link = item.querySelector('link').textContent;
-              const pubDate = new Date(item.querySelector('pubDate').textContent);
-              const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
-  
-              // Vérifier si la date du lien est celle d'aujourd'hui ou d'hier
-              const color = getColorBasedOnDate(pubDate);
-  
-              const linkElement = document.createElement('a');
-              linkElement.textContent = `${dateText} - ${title}`;
-              linkElement.href = link;
-              linkElement.target = '_blank'; // Pour ouvrir les liens dans une nouvelle fenêtre/onglet
-              linkElement.style.color = color; // Appliquer la couleur en fonction de la date
-              const listItem = document.createElement('div');
-              listItem.classList.add('rss-item');
-              listItem.appendChild(linkElement);
-              rssFeed.appendChild(listItem);
-          });
-      })
-      .catch(error => console.error('Erreur de récupération du flux RSS de BFM :', error));
+fetch('https://corsproxy.io/?https%3A%2F%2Fwww.bfmtv.com%2Frss%2Feconomie%2F')
+    .then(response => response.text())
+    .then(data => {
+        const parser = new DOMParser();
+        const xmlDoc = parser.parseFromString(data, 'text/xml');
+
+        const items = xmlDoc.querySelectorAll('item');
+        const rssFeed = document.querySelectorAll('.rss-feed')[2]; // Utilisez le troisième élément .rss-feed
+
+        items.forEach(item => {
+            const title = item.querySelector('title').textContent;
+            const link = item.querySelector('link').textContent;
+            const pubDate = new Date(item.querySelector('pubDate').textContent);
+            const dateText = `${padZero(pubDate.getDate())}/${padZero(pubDate.getMonth() + 1)} - ${padZero(pubDate.getHours())}:${padZero(pubDate.getMinutes())}`;
+
+            const color = getColorBasedOnDate(pubDate);
+
+            const linkElement = document.createElement('a');
+            linkElement.textContent = `${dateText} - ${title}`;
+            linkElement.href = link;
+            linkElement.target = '_blank';
+            linkElement.style.color = color;
+
+            // Récupérer l'image s'il y en a une
+            const enclosure = item.querySelector('enclosure');
+            if (enclosure) {
+                const imageUrl = enclosure.getAttribute('url');
+                if (imageUrl) {
+                    const imageElement = document.createElement('img');
+                    imageElement.src = imageUrl;
+                    linkElement.appendChild(imageElement);
+                }
+            }
+
+            const listItem = document.createElement('div');
+            listItem.classList.add('rss-item');
+            listItem.appendChild(linkElement);
+            rssFeed.appendChild(listItem);
+        });
+    })
+    .catch(error => console.error('Erreur de récupération du flux RSS de BFM :', error));
+
 
   // Flux RSS des Échos
   fetch('https://corsproxy.io/?https%3A%2F%2Fservices.lesechos.fr%2Frss%2Fles-echos-finance-marches.xml')
