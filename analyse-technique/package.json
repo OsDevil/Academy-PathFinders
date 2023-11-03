@@ -1,0 +1,34 @@
+{
+  "name": "longshorts",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "homepage": "https://celliottiste.github.io/CryptoRatioInsights/",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.3.5",
+    "semantic-ui-react": "^2.1.4",
+    "semantic-ui-css": "^2.5.0",
+    "recharts": "^2.5.0",
+    "html-to-image" : "^1.11.11",
+    "@types/file-saver": "^2.0.5",
+    "@types/react-window": "^1.8.5",
+    "react-window":"^1.8.5",
+    "gh-pages": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}
