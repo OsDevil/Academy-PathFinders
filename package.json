@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://celliottiste.github.io/CryptoRatioInsights/",
+  "homepage": "https://www.academy-pathfinders.com/analyse-technique/long-short/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
