@@ -548,8 +548,8 @@ $(document).ready(function() {
       }
 
       // Les lignes de 28 à 31
-      if (index >= 28 && index <= 31 && !isChecked) {
-        sumRows28To31 -= value;
+      if (index >= 28 && index <= 31 && isChecked) {
+        sumRows28To31 += value;
       }
 
       // Calculs supplémentaires
@@ -577,13 +577,13 @@ $(document).ready(function() {
         additionalValue += value;
       } else if (index === 27) {
         additionalValue += value;
-      } else if (index === 28) {
+      } else if (index === 28 && isChecked) {
         additionalValue -= value;
-      } else if (index === 29) {
+      } else if (index === 29 && isChecked) {
         additionalValue -= value;
-      } else if (index === 30) {
+      } else if (index === 30 && isChecked) {
         additionalValue -= value;
-      } else if (index === 31) {
+      } else if (index === 31 && isChecked) {
         additionalValue -= value;
       } else if (index === 3) {
         if(isChecked){
@@ -698,9 +698,11 @@ $(document).ready(function() {
     });
 
     // Affichage des résultats dans la console
-    console.log(sumRows1To27 + " / " + sumRows28To31 + " / " + additionalValue);
     var totalSum = sumRows1To27 + sumRows28To31;
     var weightedPercentage = totalSum / additionalValue *100;
+    if(weightedPercentage < 0) {
+      weightedPercentage = 0;
+    }
     var setupResult = "No Trade";
     if(weightedPercentage<25){
       setupResult = "No Trade";
