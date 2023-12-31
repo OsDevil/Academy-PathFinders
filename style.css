@@ -1369,9 +1369,6 @@ h3.sliderSafepalState {
     width: 30%;
     text-align: center;
     margin: auto;
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
 }
 .traitSafepalState {
     height: 2px;
