@@ -1402,8 +1402,8 @@ ul.sliderSafepalExplain {
     background: #09131bcc;
     cursor: pointer;
 }
-.arrowHide {
-    display: none!important;
+.sliderSafepal .slick-prev.slick-arrow.slick-disabled, .sliderSafepal .slick-next.slick-arrow.slick-disabled{
+    display: none;
 }
 
 @media screen and (min-width: 600px){
