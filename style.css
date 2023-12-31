@@ -1403,7 +1403,7 @@ ul.sliderSafepalExplain {
     cursor: pointer;
 }
 .sliderSafepal .slick-prev.slick-arrow.slick-disabled, .sliderSafepal .slick-next.slick-arrow.slick-disabled{
-    display: none;
+    display: none!important;
 }
 
 @media screen and (min-width: 600px){
