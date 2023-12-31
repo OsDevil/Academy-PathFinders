@@ -1363,25 +1363,36 @@ p.customBlue {
 .sliderSafepalCard {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 30px 20px;
 }
 h3.sliderSafepalState {
-    width: 30%;
-    text-align: center;
     margin: auto;
 }
 .traitSafepalState {
     height: 2px;
     background: linear-gradient(to right, #09131B 0%, #C5C5C5 50%, #09131B 100%);
-    width: 40%;
+    width: 80%;
     margin: 15px auto 50px auto;
 }
 .containerImgSafePal img {
-    width: 50%;
+    width: 100%;
     margin: auto;
     border-radius: 15px;
 }
 ul.sliderSafepalExplain {
+    width: 100%;
     margin: 30px auto;
     word-wrap: break-word;
+}
+
+@media screen and (min-width: 600px){
+	.sliderSafepalCard {
+	    padding: 30px;
+	}
+	.traitSafepalState {
+	    width: 40%;
+	}
+	.containerImgSafePal img {
+	    width: 50%;
+	}
 }
