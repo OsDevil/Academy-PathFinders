@@ -194,6 +194,8 @@ title: PathFinders Academy - DeFi
 $('.sliderSafepal').slick({
     infinite: false,
     speed: 500,
+    prevArrow: $('.slick-prev'),
+    nextArrow: $('.slick-next'),
     autoplay: false,
     autoplaySpeed: 4000,
     slidesToShow: 2,
@@ -209,6 +211,14 @@ $('.sliderSafepal').slick({
             }
         }
     ]
+});
+
+$('.sliderSafepal').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+  // Cache ou affiche la flèche précédente en fonction de la première diapositive
+  $('.slick-prev').toggle(currentSlide !== 0);
+
+  // Cache ou affiche la flèche suivante en fonction de la dernière diapositive
+  $('.slick-next').toggle(nextSlide !== slick.slideCount - 1);
 });
   
 </script>
