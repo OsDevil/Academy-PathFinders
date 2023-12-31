@@ -1384,6 +1384,20 @@ ul.sliderSafepalExplain {
     margin: 30px auto;
     word-wrap: break-word;
 }
+.sliderSafepal .slick-prev, .sliderSafepal .slick-next {
+    background: #09131bcc;
+    z-index: 1;
+}
+.sliderSafepal .slick-next {
+    right: 0;
+}
+.sliderSafepal .slick-prev {
+    left: 0;
+}
+.sliderSafepal .slick-prev:hover, .sliderSafepal .slick-prev:focus, .sliderSafepal .slick-next:hover, .sliderSafepal .slick-next:focus {
+    background: #09131bcc;
+    cursor: pointer;
+}
 
 @media screen and (min-width: 600px){
 	.sliderSafepalCard {
