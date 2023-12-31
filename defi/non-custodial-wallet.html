@@ -191,34 +191,35 @@ title: PathFinders Academy - DeFi
 
 <script>
 
-$('.sliderSafepal').slick({
-    infinite: false,
-    speed: 500,
-    prevArrow: $('.slick-prev'),
-    nextArrow: $('.slick-next'),
-    autoplay: false,
-    autoplaySpeed: 4000,
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    responsive: [
-        {
-            breakpoint: 480,
-            settings: {
-                autoplay: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: true
-            }
-        }
-    ]
-});
-
-$('.sliderSafepal').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-  // Cache ou affiche la flèche précédente en fonction de la première diapositive
-  $('.slick-prev').toggle(currentSlide !== 0);
-
-  // Cache ou affiche la flèche suivante en fonction de la dernière diapositive
-  $('.slick-next').toggle(nextSlide !== slick.slideCount - 1);
+$(document).ready(function(){
+  $('.sliderSafepal').slick({
+      infinite: false,
+      speed: 500,
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+          {
+              breakpoint: 480,
+              settings: {
+                  autoplay: false,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: true
+              }
+          }
+      ]
+  });
+  
+  $('.sliderSafepal').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    // Ajoute ou enlève la classe arrowHide en fonction de la première diapositive
+    $('.slider-container .slick-prev').toggleClass('arrowHide', currentSlide === 0);
+  
+    // Ajoute ou enlève la classe arrowHide en fonction de la dernière diapositive
+    $('.slider-container .slick-next').toggleClass('arrowHide', nextSlide === slick.slideCount - 1);
+  });
 });
   
 </script>
