@@ -1389,7 +1389,7 @@ ul.sliderSafepalExplain {
     z-index: 1;
     top: 50%!important;
     transform: translateY(-50%);
-    height: 60px!important;
+    height: 70%!important;
     border-radius: 0!important;
 }
 .sliderSafepal .slick-next {
