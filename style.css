@@ -1402,6 +1402,9 @@ ul.sliderSafepalExplain {
     background: #09131bcc;
     cursor: pointer;
 }
+.arrowHide {
+    display: none!important;
+}
 
 @media screen and (min-width: 600px){
 	.sliderSafepalCard {
