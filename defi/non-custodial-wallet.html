@@ -191,35 +191,27 @@ title: PathFinders Academy - DeFi
 
 <script>
 
-$(document).ready(function(){
-  $('.sliderSafepal').slick({
-      infinite: false,
-      speed: 500,
-      arrows: true,
-      autoplay: false,
-      autoplaySpeed: 4000,
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      responsive: [
-          {
-              breakpoint: 480,
-              settings: {
-                  autoplay: false,
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                  centerMode: true
-              }
-          }
-      ]
-  });
-  
-  $('.sliderSafepal').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    // Ajoute ou enlève la classe arrowHide en fonction de la première diapositive
-    $('.slider-container .slick-prev').toggleClass('arrowHide', currentSlide === 0);
-  
-    // Ajoute ou enlève la classe arrowHide en fonction de la dernière diapositive
-    $('.slider-container .slick-next').toggleClass('arrowHide', nextSlide === slick.slideCount - 1);
-  });
+
+$('.sliderSafepal').slick({
+    infinite: false,
+    speed: 500,
+    arrows: true,
+    autoplay: false,
+    autoplaySpeed: 4000,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 480,
+            settings: {
+                autoplay: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true
+            }
+        }
+    ]
 });
+
   
 </script>
