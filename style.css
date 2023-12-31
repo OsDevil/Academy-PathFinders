@@ -1387,6 +1387,10 @@ ul.sliderSafepalExplain {
 .sliderSafepal .slick-prev, .sliderSafepal .slick-next {
     background: #09131bcc;
     z-index: 1;
+    top: 50%!important;
+    transform: translateY(-50%);
+    height: 60px!important;
+    border-radius: 0!important;
 }
 .sliderSafepal .slick-next {
     right: 0;
