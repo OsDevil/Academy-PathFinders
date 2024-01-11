@@ -87,3 +87,50 @@ tr:nth-child(even) {
       </tr>
     </tbody>
   </table>
+
+
+<script>
+  // Fonction pour mettre à jour le tableau avec les nouvelles données
+  function updateTableWithData(newData) {
+    const tableBody = document.querySelector('#projectTable tbody');
+
+    // Effacer les anciennes lignes du tableau
+    while (tableBody.firstChild) {
+      tableBody.removeChild(tableBody.firstChild);
+    }
+
+    // Ajouter les nouvelles lignes avec les données de l'API
+    newData.forEach((project, index) => {
+      const row = document.createElement('tr');
+
+      // Ignore la colonne "PP"
+      row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${project.projectName}</td>
+        <td>${project.supply}</td>
+        <td>${project.price}</td>
+        <td>${project.date}</td>
+        <td>${project.followersCount}</td>
+        <td>${project.newFollowersCount}</td>
+        <td>${project.xIndicator}</td>
+      `;
+
+      tableBody.appendChild(row);
+    });
+  }
+
+  // Fonction pour récupérer les données de l'API et mettre à jour le tableau
+  async function fetchDataAndUpdateTable() {
+    try {
+      // Utilisez l'URL de votre API
+      const response = await fetch('http://localhost:3000/projects');
+      const newData = await response.json();
+      updateTableWithData(newData);
+    } catch (error) {
+      console.error(`Erreur lors de la récupération des données depuis l'API : ${error.message}`);
+    }
+  }
+
+  // Appeler la fonction au chargement de la page pour afficher les données initiales
+  fetchDataAndUpdateTable();
+</script>
