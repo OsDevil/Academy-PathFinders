@@ -123,7 +123,8 @@ tr:nth-child(even) {
   async function fetchDataAndUpdateTable() {
     try {
       // Utilisez l'URL de votre API
-      const response = await fetch('http://localhost:3000/projects');
+      const response = await fetch('http://localhost:8080/http://localhost:3000/projects');
+
       const newData = await response.json();
       updateTableWithData(newData);
     } catch (error) {
