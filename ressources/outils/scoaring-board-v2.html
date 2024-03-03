@@ -39,7 +39,7 @@ title: PathFinders Academy - Scoaring Board V2
       display: flex;
       flex-direction: column-reverse;
       width: 100%;
-      margin-top: 100px;
+      margin-top: 50px;
     }
     .resultSetup {
         text-align: center;
@@ -123,6 +123,7 @@ title: PathFinders Academy - Scoaring Board V2
     color: #3ea75a;
     text-align: center;
     font-weight: 600;
+    margin-bottom: 50px;
   }
 
   </style>
@@ -429,11 +430,6 @@ title: PathFinders Academy - Scoaring Board V2
               <td><input type="checkbox" class="checkbox" data-pond="12"></td>
               <td><input type="number" class="pond-input" min="-25" max="0" value="-15" style="color: #ec7e7e;"></td>
             </tr>
-            <tr style="border-bottom: 1px solid #27394d;">
-              <td>Hors Session</td>
-              <td><input type="checkbox" class="checkbox" data-pond="12"></td>
-              <td><input type="number" class="pond-input" min="-25" max="0" value="-10" style="color: #ec7e7e;"></td>
-            </tr>
           </table>
         </div>
       
@@ -559,7 +555,7 @@ $(document).ready(function() {
       }
 
       // Les lignes de 28 à 31
-      if (index >= 28 && index <= 31 && isChecked) {
+      if (index >= 28 && index <= 30 && isChecked) {
         sumRows28To31 += value;
       }
 
@@ -593,8 +589,6 @@ $(document).ready(function() {
       } else if (index === 29 && isChecked) {
         additionalValue -= value;
       } else if (index === 30 && isChecked) {
-        additionalValue -= value;
-      } else if (index === 31 && isChecked) {
         additionalValue -= value;
       } else if (index === 3) {
         if(isChecked){
