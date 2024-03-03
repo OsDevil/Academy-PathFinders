@@ -486,10 +486,11 @@ title: PathFinders Academy - Scoaring Board V2
   <button class="button inactive" id="button4">4</button>
 </div>
 
-<div id="info"></div>
+<div id="hour"></div>
+<div id="coefcalc"></div>
 
 
-  <script>
+<script>
 $(document).ready(function() {
 
   let coefficients = [0.8, 1.2, 0.7, 1.1];
@@ -499,13 +500,26 @@ $(document).ready(function() {
     "12h - 18h (UTC+1)",
     "18h - 00h (UTC+1)"
   ];
-  var weightedPercentage
-  let coef = 0.8
+  let weightedPercentage;
+  let coef;
+
+  // Initialisation du coefficient et du bouton cliqué en fonction de l'heure actuelle
+  const currentHour = new Date().getUTCHours() + 1; // Heure actuelle en UTC+1
+  if (currentHour >= 0 && currentHour < 6) {
+    handleClick(0);
+  } else if (currentHour >= 6 && currentHour < 12) {
+    handleClick(1);
+  } else if (currentHour >= 12 && currentHour < 18) {
+    handleClick(2);
+  } else {
+    handleClick(3);
+  }
 
   function handleClick(index) {
     coef = coefficients[index];
     calculateSums();
-    document.getElementById("info").innerText = `Coefficient : ${coefficients[index]} | Plage horaire : ${timeRanges[index]}`;
+    $("#hour").text(`${timeRanges[index]}`);
+    $("#coefcalc").text(`Coefficient appliqué : ${coefficients[index]}`);
     updateButtons(index);
   }
  
@@ -735,24 +749,18 @@ $(document).ready(function() {
     calculateSums();
   });
 
-
+  // Mise à jour des boutons
   function updateButtons(clickedIndex) {
-    for (let i = 0; i < coefficients.length; i++) {
-      const button = document.getElementById(`button${i + 1}`);
-      if (i === clickedIndex) {
-        button.classList.add("active");
-      } else {
-        button.classList.remove("active");
-        button.classList.add("inactive");
-      }
-    }
+    $(".button").removeClass("active inactive");
+    $(".button").addClass("inactive");
+    $(`.button:eq(${clickedIndex})`).removeClass("inactive").addClass("active");
   }
 
-  document.getElementById("button1").addEventListener("click", () => handleClick(0));
-  document.getElementById("button2").addEventListener("click", () => handleClick(1));
-  document.getElementById("button3").addEventListener("click", () => handleClick(2));
-  document.getElementById("button4").addEventListener("click", () => handleClick(3));
-
+  // Gestion des clics sur les boutons
+  $(".button").click(function() {
+    const index = $(this).index();
+    handleClick(index);
+  });
 
 });
 </script>
