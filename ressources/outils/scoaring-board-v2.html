@@ -500,10 +500,11 @@ $(document).ready(function() {
     "18h - 00h (UTC+1)"
   ];
   var weightedPercentage
+  let coef = 0.8
 
   function handleClick(index) {
+    coef = coefficients[index];
     calculateSums();
-    weightedPercentage *= coefficients[index];
     document.getElementById("info").innerText = `Coefficient : ${coefficients[index]} | Plage horaire : ${timeRanges[index]}`;
     updateButtons(index);
   }
@@ -684,7 +685,7 @@ $(document).ready(function() {
     });
 
     // Affichage des résultats dans la console
-    var totalSum = sumRows1To27 + sumRows28To31;
+    var totalSum = (sumRows1To27 + sumRows28To31)*coef;
     weightedPercentage = totalSum / additionalValue *100;
     if(weightedPercentage < 0) {
       weightedPercentage = 0;
