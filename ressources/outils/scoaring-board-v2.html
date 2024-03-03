@@ -96,25 +96,33 @@ title: PathFinders Academy - Scoaring Board V2
     }
    .button-container {
     display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+    justify-content: center;
+    width: 100%;
+    margin: 20px auto;
   }
   .button {
-    padding: 10px 20px;
+    padding: 10px 40px;
     border: none;
     cursor: pointer;
     font-size: 16px;
+    border-bottom: 1px solid #27394d;
+    color: #ffffff;
   }
   .active {
-    background-color: #3498db;
+    background-color: #17324e;
+    border-bottom: 1px solid #17324e;
     color: #fff;
   }
   .inactive {
-    background-color: #ecf0f1;
-    color: #555;
+    background-color: #09131b;
   }
-  #info {
-    margin-top: 20px;
+  div#hour {
+    text-align: center;
+  }
+  div#coefcalc {
+    color: #3ea75a;
+    text-align: center;
+    font-weight: 600;
   }
 
   </style>
@@ -430,6 +438,16 @@ title: PathFinders Academy - Scoaring Board V2
         </div>
       
         <div class="containerResultBox">
+         <div class="button-container">
+          <button class="button" id="button1">C1</button>
+          <button class="button" id="button2">C2</button>
+          <button class="button" id="button3">C3</button>
+          <button class="button" id="button4">C4</button>
+        </div>
+        
+        <div id="hour"></div>
+        <div id="coefcalc"></div>
+         
           <div class="resultGrid">
             <table style="width: 80%;">
               <tr>
@@ -478,18 +496,6 @@ title: PathFinders Academy - Scoaring Board V2
         </div>
       </div>
 
-
-<div class="button-container">
-  <button class="button active" id="button1">1</button>
-  <button class="button inactive" id="button2">2</button>
-  <button class="button inactive" id="button3">3</button>
-  <button class="button inactive" id="button4">4</button>
-</div>
-
-<div id="hour"></div>
-<div id="coefcalc"></div>
-
-
 <script>
 $(document).ready(function() {
 
@@ -517,9 +523,14 @@ $(document).ready(function() {
 
   function handleClick(index) {
     coef = coefficients[index];
+    if (coef<1){
+     $("#coefcalc").css("color", "#d55050");
+    }else{
+     $("#coefcalc").css("color", "#3ea75a");
+    }
     calculateSums();
     $("#hour").text(`${timeRanges[index]}`);
-    $("#coefcalc").text(`Coefficient appliqué : ${coefficients[index]}`);
+    $("#coefcalc").text(`x${coefficients[index]}`);
     updateButtons(index);
   }
  
@@ -536,7 +547,6 @@ $(document).ready(function() {
     var batch2 = false;
     var batch3 = false;
     var batch4 = false;
-
 
     // Parcours de chaque ligne du tableau
     $(".calcScore tr").each(function(index) {
