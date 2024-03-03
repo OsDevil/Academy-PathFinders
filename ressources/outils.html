@@ -94,6 +94,29 @@ title: PathFinders Academy - outils
       }
     }
 
+  .button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  .button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .active {
+    background-color: #3498db;
+    color: #fff;
+  }
+  .inactive {
+    background-color: #ecf0f1;
+    color: #555;
+  }
+  #info {
+    margin-top: 20px;
+  }
+
   </style>
 
 <h1>Outils supplémentaires</h1>
@@ -459,11 +482,6 @@ title: PathFinders Academy - outils
               <td><input type="checkbox" class="checkbox" data-pond="12"></td>
               <td><input type="number" class="pond-input" min="-25" max="0" value="-15" style="color: #ec7e7e;"></td>
             </tr>
-            <tr style="border-bottom: 1px solid #27394d;">
-              <td>Hors Session</td>
-              <td><input type="checkbox" class="checkbox" data-pond="12"></td>
-              <td><input type="number" class="pond-input" min="-25" max="0" value="-10" style="color: #ec7e7e;"></td>
-            </tr>
           </table>
         </div>
       
@@ -518,6 +536,13 @@ title: PathFinders Academy - outils
       <!-- -->
     </div>
   </div>
+</div>
+
+<div class="button-container">
+  <button class="button active" id="button1">1</button>
+  <button class="button inactive" id="button2">2</button>
+  <button class="button inactive" id="button3">3</button>
+  <button class="button inactive" id="button4">4</button>
 </div>
 
 <script>
@@ -582,8 +607,6 @@ $(document).ready(function() {
       } else if (index === 29 && isChecked) {
         additionalValue -= value;
       } else if (index === 30 && isChecked) {
-        additionalValue -= value;
-      } else if (index === 31 && isChecked) {
         additionalValue -= value;
       } else if (index === 3) {
         if(isChecked){
@@ -747,5 +770,40 @@ $(document).ready(function() {
     // Appel de la fonction pour recalculer et afficher les résultats
     calculateSums();
   });
+
+  let coefficients = [0.8, 1.2, 0.7, 1.1];
+  let timeRanges = [
+    "00h - 06h (UTC+1)",
+    "06h - 12h (UTC+1)",
+    "12h - 18h (UTC+1)",
+    "18h - 00h (UTC+1)"
+  ];
+
+  function handleClick(index) {
+    weightedPercentage *= coefficients[index];
+    document.getElementById("info").innerText = `Coefficient : ${coefficients[index]} | Plage horaire : ${timeRanges[index]}`;
+    updateButtons(index);
+  }
+
+  function updateButtons(clickedIndex) {
+    for (let i = 0; i < coefficients.length; i++) {
+      const button = document.getElementById(`button${i + 1}`);
+      if (i === clickedIndex) {
+        button.classList.add("active");
+      } else {
+        button.classList.remove("active");
+        button.classList.add("inactive");
+      }
+    }
+  }
+
+  document.getElementById("button1").addEventListener("click", () => handleClick(0));
+  document.getElementById("button2").addEventListener("click", () => handleClick(1));
+  document.getElementById("button3").addEventListener("click", () => handleClick(2));
+  document.getElementById("button4").addEventListener("click", () => handleClick(3));
+
+
+
+  
 });
 </script>
