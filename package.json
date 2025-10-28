@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "homepage": "https://www.academy-pathfinders.com/analyse-technique/long-short/",
+  "homepage": "https://osdevil.github.io/Academy-PathFinders/analyse-technique/long-short/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -18,10 +18,10 @@
     "semantic-ui-react": "^2.1.4",
     "semantic-ui-css": "^2.5.0",
     "recharts": "^2.5.0",
-    "html-to-image" : "^1.11.11",
+    "html-to-image": "^1.11.11",
     "@types/file-saver": "^2.0.5",
     "@types/react-window": "^1.8.5",
-    "react-window":"^1.8.5",
+    "react-window": "^1.8.5",
     "gh-pages": "^5.0.0"
   },
   "devDependencies": {

@@ -7,287 +7,682 @@ title: PathFinders Academy - Terminologie et Concepts de Base
 <div class="traitTitle"></div>
 
 <h2 class="customBlue">Market makers - Comment est géré le marché ?</h2>
-<p>Avant d'entrer dans quelque concept que ce soit, il parait opportun d'aborder rapidement la façon dont sont tenus les marchés financiers et donc le rôle que jouent les market makers, essentiels dans la dynamique des marchés financiers en créant des conditions de négociation fluides et en assurant une liquidité constante pour les actifs.</p>
+<p>
+  Avant d'entrer dans quelque concept que ce soit, il parait opportun d'aborder
+  rapidement la façon dont sont tenus les marchés financiers et donc le rôle que
+  jouent les market makers, essentiels dans la dynamique des marchés financiers
+  en créant des conditions de négociation fluides et en assurant une liquidité
+  constante pour les actifs.
+</p>
 <div class="accordion">
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Création de Liquidité
+      <div class="triangle">&#9658;</div>
+      Création de Liquidité
     </div>
     <div class="accordion-content">
-      <p>Les market makers sont des entités ou des institutions financières qui sont prêtes à acheter et à vendre des actifs à tout moment, créant ainsi un marché constant pour ces actifs. Ils maintiennent une liste de prix d'achat (bid) et de vente (ask) en fonction de leur perception de la demande et de l'offre du marché. Cette création de liquidité permet aux investisseurs de vendre ou d'acheter des actifs rapidement et à des prix relativement stables.</p>
+      <p>
+        Les market makers sont des entités ou des institutions financières qui
+        sont prêtes à acheter et à vendre des actifs à tout moment, créant ainsi
+        un marché constant pour ces actifs. Ils maintiennent une liste de prix
+        d'achat (bid) et de vente (ask) en fonction de leur perception de la
+        demande et de l'offre du marché. Cette création de liquidité permet aux
+        investisseurs de vendre ou d'acheter des actifs rapidement et à des prix
+        relativement stables.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Réduction des Écarts de Prix
+      <div class="triangle">&#9658;</div>
+      Réduction des Écarts de Prix
     </div>
     <div class="accordion-content">
-      <p>Un aspect clé du rôle des market makers est la réduction des écarts de prix entre l'offre et la demande. L'écart entre le prix d'achat et le prix de vente peut varier en fonction de la liquidité du marché. Les market makers s'efforcent de maintenir ces écarts aussi étroits que possible, ce qui est bénéfique pour les traders car cela signifie qu'ils peuvent exécuter des transactions à des prix plus compétitifs.</p>
+      <p>
+        Un aspect clé du rôle des market makers est la réduction des écarts de
+        prix entre l'offre et la demande. L'écart entre le prix d'achat et le
+        prix de vente peut varier en fonction de la liquidité du marché. Les
+        market makers s'efforcent de maintenir ces écarts aussi étroits que
+        possible, ce qui est bénéfique pour les traders car cela signifie qu'ils
+        peuvent exécuter des transactions à des prix plus compétitifs.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Gestion des Carnets d'Ordres
+      <div class="triangle">&#9658;</div>
+      Gestion des Carnets d'Ordres
     </div>
     <div class="accordion-content">
-      <p>Les market makers surveillent en permanence les carnets d'ordres, qui contiennent les ordres d'achat et de vente des différents participants au marché. En identifiant les déséquilibres entre l'offre et la demande, ils ajustent leurs prix d'achat et de vente pour refléter les conditions actuelles du marché. Cette activité maintient un équilibre entre les transactions et évite des mouvements de prix brusques.</p>
+      <p>
+        Les market makers surveillent en permanence les carnets d'ordres, qui
+        contiennent les ordres d'achat et de vente des différents participants
+        au marché. En identifiant les déséquilibres entre l'offre et la demande,
+        ils ajustent leurs prix d'achat et de vente pour refléter les conditions
+        actuelles du marché. Cette activité maintient un équilibre entre les
+        transactions et évite des mouvements de prix brusques.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Facilitation des Marchés Volatils
+      <div class="triangle">&#9658;</div>
+      Facilitation des Marchés Volatils
     </div>
     <div class="accordion-content">
-      <p>Les market makers jouent un rôle crucial dans les marchés volatils où les prix peuvent fluctuer rapidement. Leur présence stabilise le marché en fournissant des opportunités de trading même lorsque la volatilité est élevée. Les traders peuvent ainsi exécuter des transactions sans être contraints par des spreads excessivement larges.</p>
+      <p>
+        Les market makers jouent un rôle crucial dans les marchés volatils où
+        les prix peuvent fluctuer rapidement. Leur présence stabilise le marché
+        en fournissant des opportunités de trading même lorsque la volatilité
+        est élevée. Les traders peuvent ainsi exécuter des transactions sans
+        être contraints par des spreads excessivement larges.
+      </p>
     </div>
   </div>
 </div>
-<p>En résumé, les market makers sont des acteurs cruciaux des marchés financiers qui fournissent de la liquidité, réduisent les écarts de prix et facilitent les échanges entre les acteurs. Leur rôle de création d'un environnement de négociation fluide contribue à maintenir l'intégrité et l'efficacité des marchés financiers.</p>
-
-
+<p>
+  En résumé, les market makers sont des acteurs cruciaux des marchés financiers
+  qui fournissent de la liquidité, réduisent les écarts de prix et facilitent
+  les échanges entre les acteurs. Leur rôle de création d'un environnement de
+  négociation fluide contribue à maintenir l'intégrité et l'efficacité des
+  marchés financiers.
+</p>
 
 <h2 class="customBlue">Types d'ordres</h2>
-<p>Plusieurs types d'ordres existent sur les marchés pour entrer et sortir de position de manière efficace et correspondant à votre stratégie de trading.</p>
+<p>
+  Plusieurs types d'ordres existent sur les marchés pour entrer et sortir de
+  position de manière efficace et correspondant à votre stratégie de trading.
+</p>
 <div class="accordion">
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Ordre au marché (market)
+      <div class="triangle">&#9658;</div>
+      Ordre au marché (market)
     </div>
     <div class="accordion-content">
-      <p>L'ordre au marché est l'un des types d'ordres les plus simples et couramment utilisés sur les marchés financiers. Lorsque vous placez un ordre au marché, vous demandez à votre courtier d'exécuter l'ordre immédiatement au meilleur prix disponible sur le marché. Cela signifie que l'ordre sera exécuté instantanément, quelle que soit la cotation actuelle de l'actif.</p>
-      <div class="encartPictoCitation" style="width: 100%; margin: 50px auto;">
-          <img src="https://www.academy-pathfinders.com/imgs/danger.png" alt="danger">
-          <p>L'ordre sera exécuté au meilleur prix offert par les vendeurs ou demandé par les acheteurs au moment de la soumission de l'ordre. Cela implique qu'un marché très volatile ou un marché avec peu de volume vous fera souvent exécuter votre ordre marché à un prix légèrement différent de celui attendu.</p>
+      <p>
+        L'ordre au marché est l'un des types d'ordres les plus simples et
+        couramment utilisés sur les marchés financiers. Lorsque vous placez un
+        ordre au marché, vous demandez à votre courtier d'exécuter l'ordre
+        immédiatement au meilleur prix disponible sur le marché. Cela signifie
+        que l'ordre sera exécuté instantanément, quelle que soit la cotation
+        actuelle de l'actif.
+      </p>
+      <div class="encartPictoCitation" style="width: 100%; margin: 50px auto">
+        <img
+          src="https://osdevil.github.io/Academy-PathFinders/imgs/danger.png"
+          alt="danger"
+        />
+        <p>
+          L'ordre sera exécuté au meilleur prix offert par les vendeurs ou
+          demandé par les acheteurs au moment de la soumission de l'ordre. Cela
+          implique qu'un marché très volatile ou un marché avec peu de volume
+          vous fera souvent exécuter votre ordre marché à un prix légèrement
+          différent de celui attendu.
+        </p>
       </div>
-      <p>L'ordre au marché est donc un bon moyen de rentrer instantanément en position, mais n'est pas celui que nous recommandons dans la plupart des cas. Il est également à noter que sur certains broker et en particulier sur les exchanges de crypto, un ordre au marché engendrera plus de frais qu'un autre type d'ordre.</p>
+      <p>
+        L'ordre au marché est donc un bon moyen de rentrer instantanément en
+        position, mais n'est pas celui que nous recommandons dans la plupart des
+        cas. Il est également à noter que sur certains broker et en particulier
+        sur les exchanges de crypto, un ordre au marché engendrera plus de frais
+        qu'un autre type d'ordre.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Ordre limite
+      <div class="triangle">&#9658;</div>
+      Ordre limite
     </div>
     <div class="accordion-content">
-      <p>Bien plus fréquent et recommandé dans un plan de trading, l'ordre limite est un type d'ordre qui permet aux traders de spécifier un prix précis auquel ils souhaitent acheter ou vendre un actif. Contrairement à l'ordre au marché, qui est exécuté immédiatement au meilleur prix disponible, l'ordre limite ne sera exécuté que si le marché atteint ou dépasse le prix que vous avez défini.</p>
-      <p>Cela vous permet donc d'avoir un contrôle plus précis sur le prix d'exécution de votre transaction et de ne rentrer en position que lorsque le prix atteint le niveau attendu qui découle de votre analyse.</p>
+      <p>
+        Bien plus fréquent et recommandé dans un plan de trading, l'ordre limite
+        est un type d'ordre qui permet aux traders de spécifier un prix précis
+        auquel ils souhaitent acheter ou vendre un actif. Contrairement à
+        l'ordre au marché, qui est exécuté immédiatement au meilleur prix
+        disponible, l'ordre limite ne sera exécuté que si le marché atteint ou
+        dépasse le prix que vous avez défini.
+      </p>
+      <p>
+        Cela vous permet donc d'avoir un contrôle plus précis sur le prix
+        d'exécution de votre transaction et de ne rentrer en position que
+        lorsque le prix atteint le niveau attendu qui découle de votre analyse.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Ordre conditionnel
+      <div class="triangle">&#9658;</div>
+      Ordre conditionnel
     </div>
     <div class="accordion-content">
-      <p>Moins fréquent mais permettant encore plus de contrôle, l'ordre conditionnel vise à exécuter une transaction à un prix spécifié après que le marché a atteint un niveau prédéfini.</p>
-      <p>On attend donc ici deux niveaux de validation avant l'exécution de l'ordre. D'abord on attend que le prix atteigne le niveau 1, puis un ordre limite est placé sur le marché au prix du second niveau, lequel s'exécute lorsque ce niveau est atteint.</p>
+      <p>
+        Moins fréquent mais permettant encore plus de contrôle, l'ordre
+        conditionnel vise à exécuter une transaction à un prix spécifié après
+        que le marché a atteint un niveau prédéfini.
+      </p>
+      <p>
+        On attend donc ici deux niveaux de validation avant l'exécution de
+        l'ordre. D'abord on attend que le prix atteigne le niveau 1, puis un
+        ordre limite est placé sur le marché au prix du second niveau, lequel
+        s'exécute lorsque ce niveau est atteint.
+      </p>
     </div>
   </div>
 </div>
 
 <h2 class="customBlue">Types de Trading</h2>
-<p>Avant d'aborder comment se composent les ordres vus plus haut et la manière de les utiliser en maitrisant votre risque, il est important que vous ayez à l'esprit qu'il existe plusieurs types de trading, dont certains correspondront plus à votre profil que d'autres.</p>
+<p>
+  Avant d'aborder comment se composent les ordres vus plus haut et la manière de
+  les utiliser en maitrisant votre risque, il est important que vous ayez à
+  l'esprit qu'il existe plusieurs types de trading, dont certains correspondront
+  plus à votre profil que d'autres.
+</p>
 <div class="accordion">
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Spot
+      <div class="triangle">&#9658;</div>
+      Spot
     </div>
     <div class="accordion-content">
-      <p>Le Spot va vous permettre de rentrer uniquement à l'achat sur un actif. Les traders visent généralement ici à accumuler des actifs (bags d'actifs) pour profiter d'une hausse future à long terme. Ici, le DCA est très souvent pratiqué, un concept que nous aborderons un peu plus loin.</p>
+      <p>
+        Le Spot va vous permettre de rentrer uniquement à l'achat sur un actif.
+        Les traders visent généralement ici à accumuler des actifs (bags
+        d'actifs) pour profiter d'une hausse future à long terme. Ici, le DCA
+        est très souvent pratiqué, un concept que nous aborderons un peu plus
+        loin.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Trading sur Contrats à Terme (Futures)
+      <div class="triangle">&#9658;</div>
+      Trading sur Contrats à Terme (Futures)
     </div>
     <div class="accordion-content">
-      <p>Le trading sur contrats à terme implique l'achat ou la vente de contrats à terme standardisés pour des actifs . Ces contrats fixent le prix et la date de règlement à l'avance, ce qui permet aux traders de spéculer sur la direction des prix.</p>
-      <p>On pourra inclure dans ce type de trading le trading de dérivées que l'on retrouve sur les exchanges de cryptomonnaies notamment, permettant de rentrer à l'achat comme à la vente sur les actifs présents sur la plateforme.</p>
+      <p>
+        Le trading sur contrats à terme implique l'achat ou la vente de contrats
+        à terme standardisés pour des actifs . Ces contrats fixent le prix et la
+        date de règlement à l'avance, ce qui permet aux traders de spéculer sur
+        la direction des prix.
+      </p>
+      <p>
+        On pourra inclure dans ce type de trading le trading de dérivées que
+        l'on retrouve sur les exchanges de cryptomonnaies notamment, permettant
+        de rentrer à l'achat comme à la vente sur les actifs présents sur la
+        plateforme.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Trading sur Marge
+      <div class="triangle">&#9658;</div>
+      Trading sur Marge
     </div>
     <div class="accordion-content">
-      <p>Le trading sur marge permet aux traders d'emprunter des fonds auprès de leur courtier pour augmenter leur exposition sur le marché. Cela peut amplifier les gains potentiels, mais augmente également le risque de pertes. Le trading sur marge est courant dans le trading de devises et de contrats à terme.</p>
+      <p>
+        Le trading sur marge permet aux traders d'emprunter des fonds auprès de
+        leur courtier pour augmenter leur exposition sur le marché. Cela peut
+        amplifier les gains potentiels, mais augmente également le risque de
+        pertes. Le trading sur marge est courant dans le trading de devises et
+        de contrats à terme.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Scalping
+      <div class="triangle">&#9658;</div>
+      Scalping
     </div>
     <div class="accordion-content">
-      <p>Le scalping est une stratégie de trading à très court terme où les traders cherchent à réaliser de petits gains en exploitant de petites fluctuations de prix. Les scalpers effectuent de nombreuses transactions dans une journée et recherchent des mouvements rapides du marché. La volatilité est donc généralement leur meilleur allié.</p>
+      <p>
+        Le scalping est une stratégie de trading à très court terme où les
+        traders cherchent à réaliser de petits gains en exploitant de petites
+        fluctuations de prix. Les scalpers effectuent de nombreuses transactions
+        dans une journée et recherchent des mouvements rapides du marché. La
+        volatilité est donc généralement leur meilleur allié.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Day Trading
+      <div class="triangle">&#9658;</div>
+      Day Trading
     </div>
     <div class="accordion-content">
-      <p>Les day traders ouvrent et ferment des positions au cours d'une seule journée de trading. Ils cherchent à profiter des mouvements de prix à court terme, mais ferment toutes leurs positions avant la fin de la journée pour éviter les risques liés aux mouvements de prix nocturnes. Leurs positions durent en général de quelques minutes à quelques heures.</p>
+      <p>
+        Les day traders ouvrent et ferment des positions au cours d'une seule
+        journée de trading. Ils cherchent à profiter des mouvements de prix à
+        court terme, mais ferment toutes leurs positions avant la fin de la
+        journée pour éviter les risques liés aux mouvements de prix nocturnes.
+        Leurs positions durent en général de quelques minutes à quelques heures.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Swing Trading
+      <div class="triangle">&#9658;</div>
+      Swing Trading
     </div>
     <div class="accordion-content">
-      <p>Les swing traders cherchent à capturer les mouvements de prix à moyen terme. Ils gardent souvent leurs positions ouvertes pendant plusieurs jours voire semaines, profitant des tendances et des retournements de marché.</p>
+      <p>
+        Les swing traders cherchent à capturer les mouvements de prix à moyen
+        terme. Ils gardent souvent leurs positions ouvertes pendant plusieurs
+        jours voire semaines, profitant des tendances et des retournements de
+        marché.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Position Trading
+      <div class="triangle">&#9658;</div>
+      Position Trading
     </div>
     <div class="accordion-content">
-      <p>Les position traders maintiennent leurs positions ouvertes pendant des périodes prolongées, allant de quelques semaines à plusieurs mois voire années. Ils visent à profiter des tendances à long terme et des changements fondamentaux.</p>
+      <p>
+        Les position traders maintiennent leurs positions ouvertes pendant des
+        périodes prolongées, allant de quelques semaines à plusieurs mois voire
+        années. Ils visent à profiter des tendances à long terme et des
+        changements fondamentaux.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Algotrading
+      <div class="triangle">&#9658;</div>
+      Algotrading
     </div>
     <div class="accordion-content">
-      <p>Catégorie très spécifique et souvent professionnelle, l'algotrading implique l'utilisation de programmes informatiques et d'algorithmes pour exécuter automatiquement des transactions en fonction de critères prédéfinis. Cette approche repose sur l'analyse de données et l'automatisation des décisions de trading.</p>
+      <p>
+        Catégorie très spécifique et souvent professionnelle, l'algotrading
+        implique l'utilisation de programmes informatiques et d'algorithmes pour
+        exécuter automatiquement des transactions en fonction de critères
+        prédéfinis. Cette approche repose sur l'analyse de données et
+        l'automatisation des décisions de trading.
+      </p>
     </div>
   </div>
 </div>
 
 <h2 class="customBlue">Chandeliers Japonais</h2>
-<p>Plusieurs types de graphiques existent pour vos analyses, les plus courants étant les graphiques en bars, les graphiques en lignes et les graphiques en chandeliers japonais (ou bougies). La figure ci-dessous illustre l'ensemble des informations que vous retrouvez sur un chandelier japonais, à savoir le cours d'ouverture et de fermture de la bougie, ainsi que les prix extrêmes touchés pendant la période sélectionnée, en sachant qu'une bougie équivaut à une période. Par exemple, un graphique en H1 vous montrera des bougies représentant les variations du cours sur une heure. Un graphique M5 vous présentera des bougies de période 5 minutes, etc...</p>
+<p>
+  Plusieurs types de graphiques existent pour vos analyses, les plus courants
+  étant les graphiques en bars, les graphiques en lignes et les graphiques en
+  chandeliers japonais (ou bougies). La figure ci-dessous illustre l'ensemble
+  des informations que vous retrouvez sur un chandelier japonais, à savoir le
+  cours d'ouverture et de fermture de la bougie, ainsi que les prix extrêmes
+  touchés pendant la période sélectionnée, en sachant qu'une bougie équivaut à
+  une période. Par exemple, un graphique en H1 vous montrera des bougies
+  représentant les variations du cours sur une heure. Un graphique M5 vous
+  présentera des bougies de période 5 minutes, etc...
+</p>
 <div class="fullscreenImage imgSolo">
   <div class="image-container">
-    <img src="https://www.academy-pathfinders.com/imgs/chandelier-japonais.jpg" alt="Chandeliers Japonais" class="fullscreenImageimg" loading="lazy">
+    <img
+      src="https://osdevil.github.io/Academy-PathFinders/imgs/chandelier-japonais.jpg"
+      alt="Chandeliers Japonais"
+      class="fullscreenImageimg"
+      loading="lazy"
+    />
   </div>
-    <p class="captionGD">Chandeliers Japonais</p>
+  <p class="captionGD">Chandeliers Japonais</p>
 </div>
 
 <h2 class="customBlue">Position Long et Short</h2>
-<p>Comme évoqué à demi-mots ci-dessus, il est parfois possible de rentrer sur les marchés dans deux directions : la hausse (long) et la baisse (short).</p>
+<p>
+  Comme évoqué à demi-mots ci-dessus, il est parfois possible de rentrer sur les
+  marchés dans deux directions : la hausse (long) et la baisse (short).
+</p>
 <div class="accordion">
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Position Long
+      <div class="triangle">&#9658;</div>
+      Position Long
     </div>
     <div class="accordion-content">
       <div class="containerGD">
         <div class="image-blockGD fullscreenImage">
           <div class="image-container">
-            <img src="https://www.academy-pathfinders.com/imgs/position-long.jpg" alt="Position Long" class="fullscreenImageimg" loading="lazy">
+            <img
+              src="https://osdevil.github.io/Academy-PathFinders/imgs/position-long.jpg"
+              alt="Position Long"
+              class="fullscreenImageimg"
+              loading="lazy"
+            />
           </div>
-            <p class="captionGD">Position Long</p>
+          <p class="captionGD">Position Long</p>
         </div>
         <div class="text-blockGD">
-          <p>Les positions long sont conceptuellement très facile à comprendre.</p>
-          <p>Le trader se positionne à l'achat puisque son analyse lui indique de fortes probabilités que le prix parte à la hausse. Il cherche donc à acheter bas et vendre haut.</p>
-          <p>Par exemple, le trader se positionne sur un actif à l'achat au prix de 100$, puis attendra que le prix atteigne 150$ pour le revendre. Il aura donc réalisé une plus-value sur la hausse.</p>
+          <p>
+            Les positions long sont conceptuellement très facile à comprendre.
+          </p>
+          <p>
+            Le trader se positionne à l'achat puisque son analyse lui indique de
+            fortes probabilités que le prix parte à la hausse. Il cherche donc à
+            acheter bas et vendre haut.
+          </p>
+          <p>
+            Par exemple, le trader se positionne sur un actif à l'achat au prix
+            de 100$, puis attendra que le prix atteigne 150$ pour le revendre.
+            Il aura donc réalisé une plus-value sur la hausse.
+          </p>
         </div>
       </div>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Position Short
+      <div class="triangle">&#9658;</div>
+      Position Short
     </div>
     <div class="accordion-content">
       <div class="containerGD">
         <div class="image-blockGD fullscreenImage">
           <div class="image-container">
-            <img src="https://www.academy-pathfinders.com/imgs/position-short.jpg" alt="Position Short" class="fullscreenImageimg" loading="lazy">
+            <img
+              src="https://osdevil.github.io/Academy-PathFinders/imgs/position-short.jpg"
+              alt="Position Short"
+              class="fullscreenImageimg"
+              loading="lazy"
+            />
           </div>
-            <p class="captionGD">Position Short</p>
+          <p class="captionGD">Position Short</p>
         </div>
         <div class="text-blockGD">
-          <p>Les positions short sont cette fois plus compliquées à comprendre puisque le trader souhaite se positionner à la vente.</p>
-          <p>Son analyse lui indique que le prix a de fortes probabilités de baisser et il souhaite profiter de ce mouvement. Il va donc placer un short, c'est-à-dire "vendre" virtuellement un actif, pour le racheter plus bas. Il ne possède donc cette fois pas l'actif en question lors de l'exécution de l'ordre, il le vend avec la promesse de le racheter plus tard.</p>
-          <p>Par exemple, le trader se positionne sur un actif à la vente au prix de 100$, puis attendra que le prix atteigne 50$ pour le racheter. Il aura donc réalisé une plus-value sur la baisse.</p>
+          <p>
+            Les positions short sont cette fois plus compliquées à comprendre
+            puisque le trader souhaite se positionner à la vente.
+          </p>
+          <p>
+            Son analyse lui indique que le prix a de fortes probabilités de
+            baisser et il souhaite profiter de ce mouvement. Il va donc placer
+            un short, c'est-à-dire "vendre" virtuellement un actif, pour le
+            racheter plus bas. Il ne possède donc cette fois pas l'actif en
+            question lors de l'exécution de l'ordre, il le vend avec la promesse
+            de le racheter plus tard.
+          </p>
+          <p>
+            Par exemple, le trader se positionne sur un actif à la vente au prix
+            de 100$, puis attendra que le prix atteigne 50$ pour le racheter. Il
+            aura donc réalisé une plus-value sur la baisse.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 
 <h2 class="customBlue">Stop-Loss (SL) et Take-Profit (TP)</h2>
-<p>Les ordres stop-loss (SL) et take-profit (TP) sont des outils essentiels pour gérer les positions de trading et atteindre des objectifs spécifiques en termes de pertes et de profits. Ces ordres vont vous permettre de mettre en place une gestion disciplinée des risques et de sécuriser vos gains potentiels.</p>
-<br>
+<p>
+  Les ordres stop-loss (SL) et take-profit (TP) sont des outils essentiels pour
+  gérer les positions de trading et atteindre des objectifs spécifiques en
+  termes de pertes et de profits. Ces ordres vont vous permettre de mettre en
+  place une gestion disciplinée des risques et de sécuriser vos gains
+  potentiels.
+</p>
+<br />
 <div class="fullscreenImage imgSolo">
   <div class="image-container">
-    <img src="https://www.academy-pathfinders.com/imgs/tp-sl.jpg" alt="TP / SL" class="fullscreenImageimg" loading="lazy">
+    <img
+      src="https://osdevil.github.io/Academy-PathFinders/imgs/tp-sl.jpg"
+      alt="TP / SL"
+      class="fullscreenImageimg"
+      loading="lazy"
+    />
   </div>
-    <p class="captionGD">TP / SL</p>
+  <p class="captionGD">TP / SL</p>
 </div>
 <div class="accordion">
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Stop-Loss (SL)
+      <div class="triangle">&#9658;</div>
+      Stop-Loss (SL)
     </div>
     <div class="accordion-content">
-      <p>L'ordre stop-loss (SL) est un niveau de prix prédéterminé auquel une position est automatiquement fermée pour limiter les pertes.</p>
-      <p>Par exemple, vous choisissez de rentrer à l'achat sur l'actif X avec un ordre limite au prix de 100$ avec un SL au niveau des 90$. Le prix atteint 100$, vous rentrez donc en position. Le prix fluctue, puis atteint 90$. Votre position est automatiquement fermée.</p>
-      <p>Ce qu'il est extrêmement important de comprendre, c'est que votre plan de trading (sauf exception sur de l'investissement en DCA) doit TOUJOURS être associé à un niveau d'invalidation. C'est-à-dire, un niveau de prix qui, s'il est franchit, vous indique que votre analyse était fausse. Votre Stop-Loss doit donc se trouver sur ce niveau, c'est votre ceinture de sécurité qui vous permet de limiter vos pertes lorsques vos analyses sont inexactes.</p>
-      <p>Nous aborderons un peu plus loin les bases de la gestion de risque, mais vous comprenez déjà pourquoi il est extrêmement important de placer un Stop-Loss à chaque trade sur lequel vous vous positionnez. En cas de mauvaise analyse, pas de mauvaise surprise, vous perdez ce que vous vous étiez autorisé à perdre et vous ne perdrez pas plus.</p>
+      <p>
+        L'ordre stop-loss (SL) est un niveau de prix prédéterminé auquel une
+        position est automatiquement fermée pour limiter les pertes.
+      </p>
+      <p>
+        Par exemple, vous choisissez de rentrer à l'achat sur l'actif X avec un
+        ordre limite au prix de 100$ avec un SL au niveau des 90$. Le prix
+        atteint 100$, vous rentrez donc en position. Le prix fluctue, puis
+        atteint 90$. Votre position est automatiquement fermée.
+      </p>
+      <p>
+        Ce qu'il est extrêmement important de comprendre, c'est que votre plan
+        de trading (sauf exception sur de l'investissement en DCA) doit TOUJOURS
+        être associé à un niveau d'invalidation. C'est-à-dire, un niveau de prix
+        qui, s'il est franchit, vous indique que votre analyse était fausse.
+        Votre Stop-Loss doit donc se trouver sur ce niveau, c'est votre ceinture
+        de sécurité qui vous permet de limiter vos pertes lorsques vos analyses
+        sont inexactes.
+      </p>
+      <p>
+        Nous aborderons un peu plus loin les bases de la gestion de risque, mais
+        vous comprenez déjà pourquoi il est extrêmement important de placer un
+        Stop-Loss à chaque trade sur lequel vous vous positionnez. En cas de
+        mauvaise analyse, pas de mauvaise surprise, vous perdez ce que vous vous
+        étiez autorisé à perdre et vous ne perdrez pas plus.
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Take-Profit (TP)
+      <div class="triangle">&#9658;</div>
+      Take-Profit (TP)
     </div>
     <div class="accordion-content">
-      <p>Tout comme le Stop-Loss, il est très important d'avoir déjà en tête vos objectifs de prise de profits lorsque vous entrez en trade, et ce pour plusieurs raisons.</p>
-      <p>Tout d'abord, placer vos TP et vous y astreindre est un exercice obligatoire pour que votre psychologie ne vous joue pas des tours que vous regretterez. Il est tellement facile de voir sa position en positif, vouloir pousser un peu le bouchon en espérant des profits toujours plus gros (ce qu'on appelle le greed), et de finalement voir le prix revenir à votre point d'entrée, voire pire, votre SL, sans avoir TP alors que vous en aviez l'opportunité...</p>
-      <p>Également, connaitre vos niveaux de TP et vos niveaux de SL vous permettra de déterminer ce qu'on appelle votre Risk-Reward. Il s'agit simplement du ratio entre ce que vous vous apprêtez à gagner en cas de TP et ce que vous êtes prêts à perdre en cas de SL. Par exemple, un PE à 100$, un SL à 90$ et un TP à 130$ vous offrira un RR de 3 (vous êtes prêt à perdre 10 pour gagner 30, 30/10 = 3). Ce petit ratio que nous reverrons plus tard vous permettra de trier vos setups pour ne garder que les plus intéressants qui maximiseront vos chances de gains sur le long terme.</p>
+      <p>
+        Tout comme le Stop-Loss, il est très important d'avoir déjà en tête vos
+        objectifs de prise de profits lorsque vous entrez en trade, et ce pour
+        plusieurs raisons.
+      </p>
+      <p>
+        Tout d'abord, placer vos TP et vous y astreindre est un exercice
+        obligatoire pour que votre psychologie ne vous joue pas des tours que
+        vous regretterez. Il est tellement facile de voir sa position en
+        positif, vouloir pousser un peu le bouchon en espérant des profits
+        toujours plus gros (ce qu'on appelle le greed), et de finalement voir le
+        prix revenir à votre point d'entrée, voire pire, votre SL, sans avoir TP
+        alors que vous en aviez l'opportunité...
+      </p>
+      <p>
+        Également, connaitre vos niveaux de TP et vos niveaux de SL vous
+        permettra de déterminer ce qu'on appelle votre Risk-Reward. Il s'agit
+        simplement du ratio entre ce que vous vous apprêtez à gagner en cas de
+        TP et ce que vous êtes prêts à perdre en cas de SL. Par exemple, un PE à
+        100$, un SL à 90$ et un TP à 130$ vous offrira un RR de 3 (vous êtes
+        prêt à perdre 10 pour gagner 30, 30/10 = 3). Ce petit ratio que nous
+        reverrons plus tard vous permettra de trier vos setups pour ne garder
+        que les plus intéressants qui maximiseront vos chances de gains sur le
+        long terme.
+      </p>
     </div>
   </div>
 </div>
 
 <h2 class="customBlue">Effets de levier</h2>
-<p>L'effet de levier est un outil très intéressant pour un trader puisqu'il va lui permettre de multiplier virtuellement son capital pour entrer en position. Mais attention ! Si cet outil paraît alléchant au premier abord, il faut bien comprendre qu'il peut être aussi bénéfique que dévastateur. Multiplier ses gains potentiels implique également l'autre côté de la balance : multiplier ses pertes.</p>
-<p>Pour faire simple, nous allons raisonner en taille de position. Entrer en position avec 10$ levier 10 est équivalent sur le marché à entrer avec 100$ levier 1. Ou encore 100$ en x5 équivaut à 5$ en x100. Alors quelle est la différence ? Le prix de liquidation.</p>
-<p>Avec 100$ en x5, une variation de 1% sur le marché équivaut à une variation de 5% sur votre capital. Si vous êtes en position isolée (voir section suivante), cela signifie qu'une variation de 20% sur le marché impliquera une variation de 100% sur votre position, c'est-à-dire, une liquidation de votre position, vous avez perdu 100$.</p>
-<p>Prenons maintenant 5$ en x100. Vous l'avez compris, une variation de 1% sur le marché équivaut déjà à une variation de 100% sur votre capital ! Dans les mêmes conditions, cette variation de 1% entrainera automatiquement la liquidation de votre position et la perte de vos 5$.</p>
-<p>En somme, utiliser un fort effet de levier est intéressant dans une dynamique d'ouverture simultanée de plusieurs positions avec un faible capital, autrement il ne servira qu'à vous la péter avec de gros %, c'est-à-dire à rien si ce n'est vous faire prendre des risques non réfléchis. Préférez donc généralement utiliser une grosse position et un faible levier, ainsi qu'un SL bien placé pour maitriser votre risque.</p>
-<p>En outre et puisque la question revient souvent concernant les frais de trading sur les exchanges crypto, que cela soit dit une bonne fois pour toute : C'est la taille qui compte (de position bien sûr, coquin). L'effet de levier n'a aucun impact sur les frais, 100$ en x5 ou 5$ en x100 impliquent tous les deux une position sur le marché de 500$, vous paierez les mêmes frais.</p>
+<p>
+  L'effet de levier est un outil très intéressant pour un trader puisqu'il va
+  lui permettre de multiplier virtuellement son capital pour entrer en position.
+  Mais attention ! Si cet outil paraît alléchant au premier abord, il faut bien
+  comprendre qu'il peut être aussi bénéfique que dévastateur. Multiplier ses
+  gains potentiels implique également l'autre côté de la balance : multiplier
+  ses pertes.
+</p>
+<p>
+  Pour faire simple, nous allons raisonner en taille de position. Entrer en
+  position avec 10$ levier 10 est équivalent sur le marché à entrer avec 100$
+  levier 1. Ou encore 100$ en x5 équivaut à 5$ en x100. Alors quelle est la
+  différence ? Le prix de liquidation.
+</p>
+<p>
+  Avec 100$ en x5, une variation de 1% sur le marché équivaut à une variation de
+  5% sur votre capital. Si vous êtes en position isolée (voir section suivante),
+  cela signifie qu'une variation de 20% sur le marché impliquera une variation
+  de 100% sur votre position, c'est-à-dire, une liquidation de votre position,
+  vous avez perdu 100$.
+</p>
+<p>
+  Prenons maintenant 5$ en x100. Vous l'avez compris, une variation de 1% sur le
+  marché équivaut déjà à une variation de 100% sur votre capital ! Dans les
+  mêmes conditions, cette variation de 1% entrainera automatiquement la
+  liquidation de votre position et la perte de vos 5$.
+</p>
+<p>
+  En somme, utiliser un fort effet de levier est intéressant dans une dynamique
+  d'ouverture simultanée de plusieurs positions avec un faible capital,
+  autrement il ne servira qu'à vous la péter avec de gros %, c'est-à-dire à rien
+  si ce n'est vous faire prendre des risques non réfléchis. Préférez donc
+  généralement utiliser une grosse position et un faible levier, ainsi qu'un SL
+  bien placé pour maitriser votre risque.
+</p>
+<p>
+  En outre et puisque la question revient souvent concernant les frais de
+  trading sur les exchanges crypto, que cela soit dit une bonne fois pour toute
+  : C'est la taille qui compte (de position bien sûr, coquin). L'effet de levier
+  n'a aucun impact sur les frais, 100$ en x5 ou 5$ en x100 impliquent tous les
+  deux une position sur le marché de 500$, vous paierez les mêmes frais.
+</p>
 
 <h2 class="customBlue">Trading croisé ou isolé ? (Cross / isolated)</h2>
-<p>Lorsque vous ferez vos premiers pas sur les marchés, et peut-être sur certains exchanges crypto pour trader en dérivées, vous serez amenés à choisir entre ouvrir une position isolée ou une position croisée. La différence est très simple et votre choix éclairé doit dépendre de la façon dont vous gérez votre risque :</p>
+<p>
+  Lorsque vous ferez vos premiers pas sur les marchés, et peut-être sur certains
+  exchanges crypto pour trader en dérivées, vous serez amenés à choisir entre
+  ouvrir une position isolée ou une position croisée. La différence est très
+  simple et votre choix éclairé doit dépendre de la façon dont vous gérez votre
+  risque :
+</p>
 <div class="accordion">
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Position isolée
+      <div class="triangle">&#9658;</div>
+      Position isolée
     </div>
     <div class="accordion-content">
-      <p>Ouvrir une position isolée signifie que vous utilisez seulement la marge allouée à une position pour qu'elle se déroule. En cas d'une variation de prix trop importante et de SL ou liquidation, seule cette marge sera perdue.</p>
-      <p>Imaginons que vous ayez 10 000$ sur votre compte et que vous souhaitez ouvrir une position long avec 1 000$ de marge en levier 20. Par exemple, vous achetez l'actif A au prix de 500$ l'unité. À ce stade, il vous reste 9 000$ sur votre compte et 1 000$ investis en long sur l'actif A.</p>
-      <p>Le levier 20, comme nous l'avons vu, multiplie les variations de prix. Autrement dit, une variation de 5% sur le prix de l'actif correspond à une variation de 100% sur votre capital ! Votre prix de liquidation se situe donc à 475$ (500*0.95); Si le prix atteint ce niveau et que votre SL n'était pas placé plus haut, l'entièreté de la marge disponible (1 000$) ne sera plus suffisante pour couvrir vos pertes, vous serez donc liquidé au prix de 475$, la position est fermée et vous perdez l'intégralité des 1 000$. Il ne vous reste plus que 9 000$ sur votre compte.</p>
-      <p>Vous l'avez compris, le gros avantage du trading en isolé pour un débutant est que vous assurez vos arrières ! En cas d'erreur, seule la marge allouée à votre trade pourra être perdue, aucun risque de perdre 100% de votre capital tant que vous n'êtes pas rentré en position avec 100% du capital de votre compte et sans SL...</p>
+      <p>
+        Ouvrir une position isolée signifie que vous utilisez seulement la marge
+        allouée à une position pour qu'elle se déroule. En cas d'une variation
+        de prix trop importante et de SL ou liquidation, seule cette marge sera
+        perdue.
+      </p>
+      <p>
+        Imaginons que vous ayez 10 000$ sur votre compte et que vous souhaitez
+        ouvrir une position long avec 1 000$ de marge en levier 20. Par exemple,
+        vous achetez l'actif A au prix de 500$ l'unité. À ce stade, il vous
+        reste 9 000$ sur votre compte et 1 000$ investis en long sur l'actif A.
+      </p>
+      <p>
+        Le levier 20, comme nous l'avons vu, multiplie les variations de prix.
+        Autrement dit, une variation de 5% sur le prix de l'actif correspond à
+        une variation de 100% sur votre capital ! Votre prix de liquidation se
+        situe donc à 475$ (500*0.95); Si le prix atteint ce niveau et que votre
+        SL n'était pas placé plus haut, l'entièreté de la marge disponible (1
+        000$) ne sera plus suffisante pour couvrir vos pertes, vous serez donc
+        liquidé au prix de 475$, la position est fermée et vous perdez
+        l'intégralité des 1 000$. Il ne vous reste plus que 9 000$ sur votre
+        compte.
+      </p>
+      <p>
+        Vous l'avez compris, le gros avantage du trading en isolé pour un
+        débutant est que vous assurez vos arrières ! En cas d'erreur, seule la
+        marge allouée à votre trade pourra être perdue, aucun risque de perdre
+        100% de votre capital tant que vous n'êtes pas rentré en position avec
+        100% du capital de votre compte et sans SL...
+      </p>
     </div>
   </div>
   <div class="accordion-item levelDeux">
     <div class="accordion-header" onclick="toggleAccordion(this)">
-      <div class="triangle">&#9658;</div> Position croisée
+      <div class="triangle">&#9658;</div>
+      Position croisée
     </div>
     <div class="accordion-content">
-      <p>Ouvrir une position croisée signifie que l'entièreté du capital de votre compte de trading peut être utilisée pour couvrir vos pertes en cas de mauvaise analyse. Attention ! C'est extrêmement dangereux pour votre compte si vous ne mettez pas de SL sur vos trades. Vous avez un risque de liquidation totale.</p>
-      <p>Reprenons notre exemple précédent, vous avez 10 000$ sur votre compte et ouvrez une position long sur l'actif A à 500$ l'unité, avec 1 000$ de marge et un levier 20.</p>
-      <p>Comme précédemment, une variation de 5% sur le prix de l'actif correspond à une variation de 100% sur votre capital. Mais cette fois, vous avez autorisé le broker à utiliser la marge totale disponible sur le compte (les 10 000$) pour couvrir vos pertes potentielles.</p>
-      <p>Votre analyse était fausse et le prix descend à 450$. Pour le moment, vous n'êtes pas liquidé, votre position n'est pas non plus fermée mais vous avez une perte latente de 2 000$ sur votre compte. C'est plus que les 1 000$ que vous aviez alloués en marge à votre position !</p>
-      <p>Scénario catastrophe, vous laissez courir, le prix passe à 250$, soit une variation réelle de 50% et donc 1 000% avec votre levier 20. La marge nécessaire à la couverture de cette perte latente est de 10 000$ et vous avez... 10 000$ sur votre compte. Pas plus. Votre position est liquidée et vous retrouvez votre compte avec 0$.</p>
-      <p>Alors quels sont les avantages d'une position croisée ? Très simple, vous pouvez vous permettre d'appliquer des leviers intéressants à vos positions (vous permettant virtuellement de multiplier votre capital, donc votre marge de manoeuvre), tout en autorisant des PNL (Profit & Loss) latents de plus de 100% sans vous faire liquider. Attention cependant, cette façon de procéder n'est vraiment pas adaptée pour un débutant.</p>
+      <p>
+        Ouvrir une position croisée signifie que l'entièreté du capital de votre
+        compte de trading peut être utilisée pour couvrir vos pertes en cas de
+        mauvaise analyse. Attention ! C'est extrêmement dangereux pour votre
+        compte si vous ne mettez pas de SL sur vos trades. Vous avez un risque
+        de liquidation totale.
+      </p>
+      <p>
+        Reprenons notre exemple précédent, vous avez 10 000$ sur votre compte et
+        ouvrez une position long sur l'actif A à 500$ l'unité, avec 1 000$ de
+        marge et un levier 20.
+      </p>
+      <p>
+        Comme précédemment, une variation de 5% sur le prix de l'actif
+        correspond à une variation de 100% sur votre capital. Mais cette fois,
+        vous avez autorisé le broker à utiliser la marge totale disponible sur
+        le compte (les 10 000$) pour couvrir vos pertes potentielles.
+      </p>
+      <p>
+        Votre analyse était fausse et le prix descend à 450$. Pour le moment,
+        vous n'êtes pas liquidé, votre position n'est pas non plus fermée mais
+        vous avez une perte latente de 2 000$ sur votre compte. C'est plus que
+        les 1 000$ que vous aviez alloués en marge à votre position !
+      </p>
+      <p>
+        Scénario catastrophe, vous laissez courir, le prix passe à 250$, soit
+        une variation réelle de 50% et donc 1 000% avec votre levier 20. La
+        marge nécessaire à la couverture de cette perte latente est de 10 000$
+        et vous avez... 10 000$ sur votre compte. Pas plus. Votre position est
+        liquidée et vous retrouvez votre compte avec 0$.
+      </p>
+      <p>
+        Alors quels sont les avantages d'une position croisée ? Très simple,
+        vous pouvez vous permettre d'appliquer des leviers intéressants à vos
+        positions (vous permettant virtuellement de multiplier votre capital,
+        donc votre marge de manoeuvre), tout en autorisant des PNL (Profit &
+        Loss) latents de plus de 100% sans vous faire liquider. Attention
+        cependant, cette façon de procéder n'est vraiment pas adaptée pour un
+        débutant.
+      </p>
     </div>
   </div>
 </div>
 <div class="fullscreenImage imgSolo">
   <div class="image-container">
-    <img src="https://www.academy-pathfinders.com/imgs/recap-croise-isole.jpg" alt="Isolé / Croisé" class="fullscreenImageimg" loading="lazy">
+    <img
+      src="https://osdevil.github.io/Academy-PathFinders/imgs/recap-croise-isole.jpg"
+      alt="Isolé / Croisé"
+      class="fullscreenImageimg"
+      loading="lazy"
+    />
   </div>
-    <p class="captionGD">Isolé vs Croisé - Récapitulatif</p>
+  <p class="captionGD">Isolé vs Croisé - Récapitulatif</p>
 </div>
 
 <h2 class="customBlue">Dollar-Cost Averaging (DCA)</h2>
-<p>Le DCA est une méthode d'investissement dont vous avez peut-être déjà entendu parler car elle a fait ses preuves et permet d'opter pour des stratégies très claires et sans prise de tête.</p>
-<p>Par définition, le DCA est une méthode d'investissement qui consiste à lisser son prix d'achat en effectuant des ordres réguliers sur le marché. Par exemple pour un investissement long terme sur un actif, un trader peut décider d'acheter tous les 1 du mois pour 100$ de cet actif, quel que soit son prix. De cette façon, il atténue les variations court-terme et son prix d'entrée s'approche du prix moyen de l'actif au cours de sa période d'investissement.</p>
-<p>Bien entendu, le DCA est un outil très puissant et peut être décliné en complément d'analyses plus poussées qu'un simple investissement bête et méchant. Vous pourriez par exemple considérer plusieurs niveaux de prix sur lesquels vous aimeriez rentrer sur un actif et placer plusieurs ordres sur ces niveaux. S'ils sont déclenchés et que le prix repart dans le sens souhaité, tant mieux ! Vous avez profité d'une stratégie de DCA alliée à une analyse technique ou fondamentale de l'actif.</p>
-<p>Un autre exemple de DCA est sur une position de trading, allant même jusqu'à des positions relativement court terme ! Nous aborderons ces notions plus tard, mais admettons que vous utilisiez les niveaux de Fibonnacci pour repérer des zones d'achat intéressantes sur un actif, vous pouvez très bien décider de faire un DCA sur plusieurs niveaux (exemple : 0.382 ; 0.5 et 0.618), plutôt que de tout envoyer dès le premier niveau touché !</p>
-
-
-
+<p>
+  Le DCA est une méthode d'investissement dont vous avez peut-être déjà entendu
+  parler car elle a fait ses preuves et permet d'opter pour des stratégies très
+  claires et sans prise de tête.
+</p>
+<p>
+  Par définition, le DCA est une méthode d'investissement qui consiste à lisser
+  son prix d'achat en effectuant des ordres réguliers sur le marché. Par exemple
+  pour un investissement long terme sur un actif, un trader peut décider
+  d'acheter tous les 1 du mois pour 100$ de cet actif, quel que soit son prix.
+  De cette façon, il atténue les variations court-terme et son prix d'entrée
+  s'approche du prix moyen de l'actif au cours de sa période d'investissement.
+</p>
+<p>
+  Bien entendu, le DCA est un outil très puissant et peut être décliné en
+  complément d'analyses plus poussées qu'un simple investissement bête et
+  méchant. Vous pourriez par exemple considérer plusieurs niveaux de prix sur
+  lesquels vous aimeriez rentrer sur un actif et placer plusieurs ordres sur ces
+  niveaux. S'ils sont déclenchés et que le prix repart dans le sens souhaité,
+  tant mieux ! Vous avez profité d'une stratégie de DCA alliée à une analyse
+  technique ou fondamentale de l'actif.
+</p>
+<p>
+  Un autre exemple de DCA est sur une position de trading, allant même jusqu'à
+  des positions relativement court terme ! Nous aborderons ces notions plus
+  tard, mais admettons que vous utilisiez les niveaux de Fibonnacci pour repérer
+  des zones d'achat intéressantes sur un actif, vous pouvez très bien décider de
+  faire un DCA sur plusieurs niveaux (exemple : 0.382 ; 0.5 et 0.618), plutôt
+  que de tout envoyer dès le premier niveau touché !
+</p>
